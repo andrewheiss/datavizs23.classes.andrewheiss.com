@@ -1,0 +1,146 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+  resources:
+    - "files/"
+  preview:
+    port: 3333
+
+execute:
+  freeze: auto  # Re-render only when source changes
+
+bibliography: files/bib/readings.bib
+csl: files/bib/chicago-author-date.csl
+description-meta: "Use R, ggplot2, and the principles of graphic design to create beautiful and truthful visualizations of data"
+
+website:
+  title: "Data Visualization with R"
+  site-url: "https://datavizs23.classes.andrewheiss.com"
+
+  favicon: "/files/favicon-512.png"
+
+  twitter-card:
+    image: "/files/social-image-s23.png"
+    card-style: summary_large_image
+    creator: "@andrewheiss"
+    # site: "@andrewheiss"
+
+  open-graph:
+    image: "/files/social-image-s23.png"
+    locale: en_US
+
+  navbar:
+    pinned: true
+    background: "#5e81ac"
+    right:
+      - syllabus.qmd
+      - schedule.qmd
+      - text: "Classes and readings"
+        file: content/index.qmd
+      - text: "Assignments"
+        file: assignment/index.qmd
+      - text: "Resources"
+        file: resource/index.qmd
+
+  sidebar:
+    - title: "Classes and readings"
+      style: "docked"
+      search: false
+      background: light
+      contents:
+        - section: "Overview"
+          contents:
+            - content/index.qmd
+        - section: "Capitalism, markets, and public policy"
+          contents:
+            - text: "1: Capitalism and measurement"
+              file: content/01-content.qmd
+            - text: "2: Governments and institutions"
+              file: content/02-content.qmd
+            - text: "3: Social interactions and economic outcomes"
+              file: content/03-content.qmd
+            - text: "4: Fairness and efficiency"
+              file: content/04-content.qmd
+        - section: "Economic models"
+          contents:
+            - text: "5–6: Work, wellbeing, and scarcity"
+              file: content/05-content.qmd
+            - text: "7–8: The firm"
+              file: content/07-content.qmd
+            - text: "9–10: Firms and markets"
+              file: content/09-content.qmd
+        - section: "Market failures and institutions"
+          contents:
+            - text: "11: Institutions, power, and inequality"
+              file: content/11-content.qmd
+            - text: "12: Market failures"
+              file: content/12-content.qmd
+            - text: "13: When governments go wrong"
+              file: content/13-content.qmd
+            - text: "14: Institutional alternatives"
+              file: content/14-content.qmd
+        - section: "Conclusions"
+          contents:
+            - text: "15: Markets, public policy, and public administration"
+              file: content/15-content.qmd
+
+    - title: "Assignments"
+      contents:
+        - section: "Overview"
+          contents:
+            - assignment/index.qmd
+        - section: "Problem sets"
+          contents:
+            - assignment/01-problem-set.qmd
+            - assignment/02-problem-set.qmd
+            - assignment/03-problem-set.qmd
+            - assignment/04-problem-set.qmd
+            - assignment/05-problem-set.qmd
+            - assignment/06-problem-set.qmd
+            - assignment/07-problem-set.qmd
+        - section: "Weekly check-ins"
+          contents:
+            - assignment/01-weekly-check-in.qmd
+            - assignment/02-weekly-check-in.qmd
+            - assignment/03-weekly-check-in.qmd
+            - assignment/04-weekly-check-in.qmd
+            - assignment/05-weekly-check-in.qmd
+            - assignment/06-weekly-check-in.qmd
+            - assignment/07-weekly-check-in.qmd
+    
+    - title: "Resources"
+      contents:
+        - section: "Resources"
+          contents:
+            - resource/design.qmd
+            - resource/visualization.qmd
+            - resource/r.qmd
+            - resource/style.qmd
+            - resource/data.qmd
+            - resource/citations.qmd
+        - section: "Guides"
+          contents:
+            - resource/install.qmd
+            - resource/markdown.qmd
+            - resource/rmarkdown.qmd
+            - resource/unzipping.qmd
+
+
+  page-footer:
+    left: |
+      Content {{< fa brands creative-commons >}} {{< var course.copyright_year >}} by [{{< var instructor.name_no_title >}}]({{< var instructor.url >}}) <br>
+      All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}}
+      [Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+    right: |
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
+      [View the source at {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+format:
+  html:
+    theme:
+      - litera
+      # - html/custom.scss
+    toc: true
+    highlight-style: monokai
