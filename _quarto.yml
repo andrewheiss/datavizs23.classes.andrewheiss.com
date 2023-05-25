@@ -113,6 +113,7 @@ website:
       contents:
         - section: "Resources"
           contents:
+            - resource/index.qmd
             - resource/design.qmd
             - resource/visualization.qmd
             - resource/r.qmd
