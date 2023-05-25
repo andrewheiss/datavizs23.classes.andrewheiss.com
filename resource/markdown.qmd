@@ -30,13 +30,13 @@ use empty lines between paragraphs.</pre></td>
 use empty lines between paragraphs.</p></td>
 </tr>
 <tr class="even">
-<td><code>*Italic*</code></td>
-<td><code>_Italic_</code></td>
+<td><code>\*Italic\*</code></td>
+<td><code>\_Italic\_</code></td>
 <td><em>Italic</em></td>
 </tr>
 <tr class="odd">
-<td><code>**Bold**</code></td>
-<td><code>__Bold__</code></td>
+<td><code>\*\*Bold\*\*</code></td>
+<td><code>\_\_Bold\_\_</code></td>
 <td><strong>Bold</strong></td>
 </tr>
 <tr class="even">
@@ -66,17 +66,17 @@ Heading 3
 <td></td>
 </tr>
 <tr class="even">
-<td><code>[Link text](http://www.example.com)</code></td>
+<td><code>\[Link text\](http://www.example.com)</code></td>
 <td></td>
 <td><a href="http://www.example.com">Link text</a></td>
 </tr>
 <tr class="odd">
-<td><code>![Image caption](/path/to/image.png)</code></td>
+<td><code>!\[Image caption\](/path/to/image.png)</code></td>
 <td></td>
 <td><img src="/img/mstile-144x144.png" title="fig:" alt="Class logo" /></td>
 </tr>
 <tr class="even">
-<td>`<code>Inline code` with backticks</code></td>
+<td>`` `Inline code` `` with backticks</code></td>
 <td></td>
 <td><code>Inline code</code> with backticks</td>
 </tr>
@@ -102,11 +102,11 @@ Heading 3
 </tr>
 <tr class="odd">
 <td><pre>1. Things in
-2. an ordered
-3. list</pre></td>
+1. an ordered
+2. list</pre></td>
 <td><pre>1) Things in
-2) an ordered
-3) list</pre></td>
+1) an ordered
+2) list</pre></td>
 <td><ol style="list-style-type: decimal">
 <li>Things in</li>
 <li>an ordered</li>
@@ -147,12 +147,12 @@ You can use math in two different ways: inline or in a display block. To use mat
 <tr class="odd">
 <td><pre>Based on the DAG, the regression model for
 estimating the effect of education on wages
-is &dollar;\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon&dollar;, or
-&dollar;\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon&dollar;.</pre></td>
+is $\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon$, or
+$\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon$.</pre></td>
 <td>Based on the DAG, the regression model for
 estimating the effect of education on wages
-is <span class="math inline">\(\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon\)</span>, or
-<span class="math inline">\(\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon\)</span>.</td>
+is $\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon$, or
+$\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon$.</td>
 </tr>
 </tbody>
 </table>
@@ -183,14 +183,14 @@ But now we just use computers to solve for $x$.
 
 ---
 
-Because dollar signs are used to indicate math equations, you can't just use dollar signs like normal if you're writing about actual dollars. For instance, if you write `This book costs \$5.75 and this other costs \$40`, Markdown will treat everything that comes between the dollar signs as math, like so: "This book costs $5.75 and this other costs $40". 
+Because dollar signs are used to indicate math equations, you can't just use dollar signs like normal if you're writing about actual dollars. For instance, if you write `This book costs $5.75 and this other costs $40`, Markdown will treat everything that comes between the dollar signs as math, like so: "This book costs \\(5.75 and this other costs \\)40". 
 
-To get around that, put a backslash (`\`) in front of the dollar signs, so that `This book costs \\\$5.75 and this other costs \\\$40` becomes "This book costs <span>$5.75</span> and this other costs <span>$40</span>".
+To get around that, put a backslash (`\`) in front of the dollar signs, so that `This book costs \$5.75 and this other costs \$40` becomes "This book costs <span>$5.75</span> and this other costs <span>$40</span>".
 
 
 ## Tables
 
-There are 4 different ways to hand-create tables in Markdown—I say "hand-create" because it's normally way easier to use R to generate these things with packages like [**pander**](https://rapporter.github.io/pander/) (use `pandoc.table()`) or **knitr** (use [`kable()`](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html)). The two most common are simple tables and pipe tables. [You should look at the full documentation here](https://pandoc.org/MANUAL.html#tables).
+There are 4 different ways to hand-create tables in Markdown—I say "hand-create" because it's normally way easier to use R to generate these things with packages like [{gt}](https://gt.rstudio.com/) or [{knitr}](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html) or [{kableExtra}](https://haozhu233.github.io/kableExtra/). The two most common are simple tables and pipe tables. [You should look at the full documentation here](https://pandoc.org/MANUAL.html#tables).
 
 **For simple tables, type…**
 

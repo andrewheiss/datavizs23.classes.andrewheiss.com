@@ -2,6 +2,10 @@
 title: Using R Markdown
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center")
+```
+
 [R Markdown](https://rmarkdown.rstudio.com/) is [regular Markdown](/reference/markdown/) with R code and output sprinkled in. You can do everything you can with [regular Markdown](/reference/markdown/), but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even [interactive dashboards](https://rmarkdown.rstudio.com/flexdashboard/index.html) with R Markdown. This whole course website is created with R Markdown (and [a package named **blogdown**](https://bookdown.org/yihui/blogdown/)).
 
 The [documentation for R Markdown](https://rmarkdown.rstudio.com/) is extremely comprehensive, and their [tutorials](https://rmarkdown.rstudio.com/lesson-1.html) and [cheatsheets](https://rmarkdown.rstudio.com/lesson-15.html) are excellent—rely on those.
@@ -14,19 +18,18 @@ Here are the most important things you'll need to know about R Markdown in this 
 
 - **Chunk**: A piece of R code that is included in your document. It looks like this:
 
-    ````markdown
-    `r ''````{r}
-    # Code goes here
-    ```
-    ````
+  ```{r}
+  #| echo: fenced
+  # Code goes here
+  ```
 
-    There must be an empty line before and after the chunk. The final three backticks must be the only thing on the line—if you add more text, or if you forget to add the backticks, or accidentally delete the backticks, your document will not knit correctly.
+  There must be an empty line before and after the chunk. The final three backticks must be the only thing on the line—if you add more text, or if you forget to add the backticks, or accidentally delete the backticks, your document will not knit correctly.
 
 - **Knit**: When you "knit" a document, R runs each of the chunks sequentially and converts the output of each chunk into Markdown. R then runs the knitted document through [pandoc](https://pandoc.org/) to convert it to HTML or PDF or Word (or whatever output you've selected).
 
-    You can knit by clicking on the "Knit" button at the top of the editor window, or by pressing `⌘⇧K` on macOS or `control + shift + K` on Windows.
+  You can knit by clicking on the "Knit" button at the top of the editor window, or by pressing `⌘⇧K` on macOS or `control + shift + K` on Windows.
 
-```{r knit-button, indent="    ", echo=FALSE, out.width="30%"}
+```{r knit-button, indent="  ", echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
 ```
 
@@ -39,7 +42,7 @@ There are three ways to insert chunks:
 
 - Click on the "Insert" button at the top of the editor window
 
-```{r insert-chunk, indent="    ", echo=FALSE, out.width="30%"}
+```{r insert-chunk, indent="  ", echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/reference/insert-chunk.png", error = FALSE)
 ```
 
@@ -56,11 +59,10 @@ knitr::include_graphics("/files/img/reference/chunk-toc.png", error = FALSE)
 
 To add a name, include it immediately after the `{r` in the first line of the chunk. Names cannot contain spaces, but they can contain underscores and dashes. **All chunk names in your document must be unique.**
 
-````markdown
-`r ''````{r name-of-this-chunk}
+```{r name-of-this-chunk}
+#| echo: fenced
 # Code goes here
 ```
-````
 
 
 ## Chunk options
@@ -69,11 +71,10 @@ There are a bunch of different options you can set for each chunk. You can see a
 
 Options go inside the `{r}` section of the chunk:
 
-````markdown
-`r ''````{r name-of-this-chunk, warning=FALSE, message=FALSE}
+```{r a-named-chunk-with-options, warning=FALSE, message=FALSE}
+#| echo: fenced
 # Code goes here
 ```
-````
 
 The most common chunk options are these:
 
@@ -95,12 +96,13 @@ You can also include R output directly in your text, which is really helpful if 
 
 It's generally easiest to calculate numbers in a regular chunk beforehand and then use an inline chunk to display the value in your text. For instance, this document…
 
-````markdown
-`r ''````{r find-avg-mpg, echo=FALSE}
+````
+```{{r find-avg-mpg, echo=FALSE}}
 avg_mpg <- mean(mtcars$mpg)
 ```
 
 The average fuel efficiency for cars from 1974 was `r "\u0060r round(avg_mpg, 1)\u0060"` miles per gallon.
+
 ````
 
 … would knit into this:
