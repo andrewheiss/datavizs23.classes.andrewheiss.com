@@ -77,7 +77,9 @@ viridisLite::viridis(8, option = "plasma", begin = 0.1, end = 0.9)
 ```{r show-plasma, fig.width=8, fig.height=1, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 
-pal_plasma <- viridisLite::viridis(8, option = "plasma", begin = 0.1, end = 0.9)
+pal_plasma <- viridisLite::viridis(8, option = "plasma", begin = 0.1, end = 0.9) %>% 
+  # Remove the trailing transparency "FF" from the hex codes
+  str_sub(end = -3)
 
 tibble(
   x = 1:length(pal_plasma),
