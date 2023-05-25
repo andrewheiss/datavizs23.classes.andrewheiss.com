@@ -55,11 +55,11 @@ list(
     targets_only = TRUE, outdated = FALSE,
     legend = FALSE, color = FALSE
   )),
-  tar_quarto(readme, here_rel("README.qmd"))#,
+  tar_quarto(readme, here_rel("README.qmd")),
   
   
   ## Build site ----
-  # tar_quarto(site, path = ".", quiet = FALSE),
+  tar_quarto(site, path = ".", quiet = FALSE)#,
   
   
   ## Upload site ----
