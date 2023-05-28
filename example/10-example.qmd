@@ -93,15 +93,8 @@ Great! That looks pretty good.
 
 To make it interactive, *all we have to do* is feed the `static_plot` object into `ggplotly()`. That's it.
 
-```{r strip-plot-basic-interactive-fake, eval=FALSE}
+```{r strip-plot-basic-interactive}
 ggplotly(static_plot)
-```
-
-```{r strip-plot-basic-interactive-real, echo=FALSE, warning=FALSE, message=FALSE}
-suppressPackageStartupMessages(library(widgetframe))
-
-# This makes the plot responsive
-ggplotly(static_plot) %>% frameWidget(height = 400)
 ```
 
 Not *everything* translates over to JavaScript—the caption is gone now, and the legend is back (which is fine, I guess, since the legend is interactive). But still, this is magic.
@@ -130,12 +123,8 @@ static_plot_toolip
 
 Now we can tell plotly to use this fake `text` aesthetic for the tooltip:
 
-```{r strip-plot-text-interactive-fake, eval=FALSE}
+```{r strip-plot-text-interactive}
 ggplotly(static_plot_toolip, tooltip = "text")
-```
-
-```{r strip-plot-text-interactive-real, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(static_plot_toolip, tooltip = "text") %>% frameWidget(height = 400)
 ```
 
 Now we should just see the country names in the tooltips!
@@ -193,12 +182,8 @@ static_plot_toolip_fancy <- ggplot(wdi_2019,
   theme_bw()
 ```
 
-```{r strip-plot-text-interactive-fancy-fake, eval=FALSE}
+```{r strip-plot-text-interactive-fancy-fake}
 ggplotly(static_plot_toolip_fancy, tooltip = "text")
-```
-
-```{r strip-plot-text-interactive-fancy-real, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(static_plot_toolip_fancy, tooltip = "text") %>% frameWidget(height = 400)
 ```
 
 Perfect!
