@@ -26,10 +26,14 @@ here_rel <- function(...) {fs::path_rel(here::here(...))}
 
 # Load functions for the pipeline
 # source("R/tar_calendar.R")
+source("R/tar_data.R")
 
 
 # THE MAIN PIPELINE ----
 list(
+  ## Data saving ----
+  save_data,
+
   ## Class schedule calendar ----
   # tar_target(schedule_file, here_rel("data", "schedule.csv"), format = "file"),
   # tar_target(schedule_page_data, build_schedule_for_page(schedule_file)),

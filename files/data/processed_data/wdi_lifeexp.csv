@@ -1,0 +1,267 @@
+country,iso2c,iso3c,year,life_expectancy,status,lastupdated,region,capital,longitude,latitude,income,lending
+Afghanistan,AF,AFG,2015,62.659,,2023-05-10,South Asia,Kabul,69.1761,34.5228,Low income,IDA
+Africa Eastern and Southern,ZH,AFE,2015,61.8564524336049,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Africa Western and Central,ZI,AFW,2015,56.1958723463674,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Albania,AL,ALB,2015,78.644,,2023-05-10,Europe & Central Asia,Tirane,19.8172,41.3317,Upper middle income,IBRD
+Algeria,DZ,DZA,2015,75.622,,2023-05-10,Middle East & North Africa,Algiers,3.05097,36.7397,Lower middle income,IBRD
+American Samoa,AS,ASM,2015,NA,,2023-05-10,East Asia & Pacific,Pago Pago,-170.691,-14.2846,Upper middle income,Not classified
+Andorra,AD,AND,2015,NA,,2023-05-10,Europe & Central Asia,Andorra la Vella,1.5218,42.5075,High income,Not classified
+Angola,AO,AGO,2015,60.655,,2023-05-10,Sub-Saharan Africa,Luanda,13.242,-8.81155,Lower middle income,IBRD
+Antigua and Barbuda,AG,ATG,2015,77.913,,2023-05-10,Latin America & Caribbean,Saint John's,-61.8456,17.1175,High income,IBRD
+Arab World,1A,ARB,2015,70.7582222288211,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Argentina,AR,ARG,2015,76.76,,2023-05-10,Latin America & Caribbean,Buenos Aires,-58.4173,-34.6118,Upper middle income,IBRD
+Armenia,AM,ARM,2015,74.436,,2023-05-10,Europe & Central Asia,Yerevan,44.509,40.1596,Upper middle income,IBRD
+Aruba,AW,ABW,2015,75.683,,2023-05-10,Latin America & Caribbean,Oranjestad,-70.0167,12.5167,High income,Not classified
+Australia,AU,AUS,2015,82.4,,2023-05-10,East Asia & Pacific,Canberra,149.129,-35.282,High income,Not classified
+Austria,AT,AUT,2015,81.190243902439,,2023-05-10,Europe & Central Asia,Vienna,16.3798,48.2201,High income,Not classified
+Azerbaijan,AZ,AZE,2015,71.451,,2023-05-10,Europe & Central Asia,Baku,49.8932,40.3834,Upper middle income,IBRD
+"Bahamas, The",BS,BHS,2015,73.104,,2023-05-10,Latin America & Caribbean,Nassau,-77.339,25.0661,High income,Not classified
+Bahrain,BH,BHR,2015,79.405,,2023-05-10,Middle East & North Africa,Manama,50.5354,26.1921,High income,Not classified
+Bangladesh,BD,BGD,2015,70.491,,2023-05-10,South Asia,Dhaka,90.4113,23.7055,Lower middle income,IDA
+Barbados,BB,BRB,2015,76.65,,2023-05-10,Latin America & Caribbean,Bridgetown,-59.6105,13.0935,High income,Not classified
+Belarus,BY,BLR,2015,73.6243902439025,,2023-05-10,Europe & Central Asia,Minsk,27.5766,53.9678,Upper middle income,IBRD
+Belgium,BE,BEL,2015,80.9926829268293,,2023-05-10,Europe & Central Asia,Brussels,4.36761,50.8371,High income,Not classified
+Belize,BZ,BLZ,2015,73.187,,2023-05-10,Latin America & Caribbean,Belmopan,-88.7713,17.2534,Upper middle income,IBRD
+Benin,BJ,BEN,2015,59.377,,2023-05-10,Sub-Saharan Africa,Porto-Novo,2.6323,6.4779,Lower middle income,IDA
+Bermuda,BM,BMU,2015,80.918,,2023-05-10,North America,Hamilton,-64.706,32.3293,High income,Not classified
+Bhutan,BT,BTN,2015,70.343,,2023-05-10,South Asia,Thimphu,89.6177,27.5768,Lower middle income,IDA
+Bolivia,BO,BOL,2015,67.318,,2023-05-10,Latin America & Caribbean,La Paz,-66.1936,-13.9908,Lower middle income,IBRD
+Bosnia and Herzegovina,BA,BIH,2015,76.182,,2023-05-10,Europe & Central Asia,Sarajevo,18.4214,43.8607,Upper middle income,IBRD
+Botswana,BW,BWA,2015,63.818,,2023-05-10,Sub-Saharan Africa,Gaborone,25.9201,-24.6544,Upper middle income,IBRD
+Brazil,BR,BRA,2015,74.332,,2023-05-10,Latin America & Caribbean,Brasilia,-47.9292,-15.7801,Upper middle income,IBRD
+British Virgin Islands,VG,VGB,2015,75.675,,2023-05-10,Latin America & Caribbean,Road Town,-64.623056,18.431389,High income,Not classified
+Brunei Darussalam,BN,BRN,2015,74.75,,2023-05-10,East Asia & Pacific,Bandar Seri Begawan,114.946,4.94199,High income,Not classified
+Bulgaria,BG,BGR,2015,74.6146341463415,,2023-05-10,Europe & Central Asia,Sofia,23.3238,42.7105,Upper middle income,IBRD
+Burkina Faso,BF,BFA,2015,58.845,,2023-05-10,Sub-Saharan Africa,Ouagadougou,-1.53395,12.3605,Low income,IDA
+Burundi,BI,BDI,2015,60.217,,2023-05-10,Sub-Saharan Africa,Bujumbura,29.3639,-3.3784,Low income,IDA
+Cabo Verde,CV,CPV,2015,74.62,,2023-05-10,Sub-Saharan Africa,Praia,-23.5087,14.9218,Lower middle income,Blend
+Cambodia,KH,KHM,2015,69.873,,2023-05-10,East Asia & Pacific,Phnom Penh,104.874,11.5556,Lower middle income,IDA
+Cameroon,CM,CMR,2015,59.658,,2023-05-10,Sub-Saharan Africa,Yaounde,11.5174,3.8721,Lower middle income,Blend
+Canada,CA,CAN,2015,81.8156097560976,,2023-05-10,North America,Ottawa,-75.6919,45.4215,High income,Not classified
+Caribbean small states,S3,CSS,2015,72.6102636224113,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Cayman Islands,KY,CYM,2015,NA,,2023-05-10,Latin America & Caribbean,George Town,-81.3857,19.3022,High income,Not classified
+Central African Republic,CF,CAF,2015,52.793,,2023-05-10,Sub-Saharan Africa,Bangui,21.6407,5.63056,Low income,IDA
+Central Europe and the Baltics,B8,CEB,2015,76.5718777647788,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Chad,TD,TCD,2015,51.589,,2023-05-10,Sub-Saharan Africa,N'Djamena,15.0445,12.1048,Low income,IDA
+Channel Islands,JG,CHI,2015,81.433,,2023-05-10,Europe & Central Asia,,,,High income,Not classified
+Chile,CL,CHL,2015,79.746,,2023-05-10,Latin America & Caribbean,Santiago,-70.6475,-33.475,High income,IBRD
+China,CN,CHN,2015,76.977,,2023-05-10,East Asia & Pacific,Beijing,116.286,40.0495,Upper middle income,IBRD
+Colombia,CO,COL,2015,76.257,,2023-05-10,Latin America & Caribbean,Bogota,-74.082,4.60987,Upper middle income,IBRD
+Comoros,KM,COM,2015,62.896,,2023-05-10,Sub-Saharan Africa,Moroni,43.2418,-11.6986,Lower middle income,IDA
+"Congo, Dem. Rep.",CD,COD,2015,58.49,,2023-05-10,Sub-Saharan Africa,Kinshasa,15.3222,-4.325,Low income,IDA
+"Congo, Rep.",CG,COG,2015,63.233,,2023-05-10,Sub-Saharan Africa,Brazzaville,15.2662,-4.2767,Lower middle income,Blend
+Costa Rica,CR,CRI,2015,79.086,,2023-05-10,Latin America & Caribbean,San Jose,-84.0089,9.63701,Upper middle income,IBRD
+Cote d'Ivoire,CI,CIV,2015,57.762,,2023-05-10,Sub-Saharan Africa,Yamoussoukro,-4.0305,5.332,Lower middle income,IDA
+Croatia,HR,HRV,2015,77.2756097560976,,2023-05-10,Europe & Central Asia,Zagreb,15.9614,45.8069,High income,IBRD
+Cuba,CU,CUB,2015,77.772,,2023-05-10,Latin America & Caribbean,Havana,-82.3667,23.1333,Upper middle income,Not classified
+Curacao,CW,CUW,2015,78.0756097560976,,2023-05-10,Latin America & Caribbean,Willemstad,,,High income,Not classified
+Cyprus,CY,CYP,2015,80.966,,2023-05-10,Europe & Central Asia,Nicosia,33.3736,35.1676,High income,Not classified
+Czechia,CZ,CZE,2015,78.5780487804878,,2023-05-10,NA,NA,NA,NA,NA,NA
+Denmark,DK,DNK,2015,80.7024390243902,,2023-05-10,Europe & Central Asia,Copenhagen,12.5681,55.6763,High income,Not classified
+Djibouti,DJ,DJI,2015,61.957,,2023-05-10,Middle East & North Africa,Djibouti,43.1425,11.5806,Lower middle income,IDA
+Dominica,DM,DMA,2015,68.727,,2023-05-10,Latin America & Caribbean,Roseau,-61.39,15.2976,Upper middle income,Blend
+Dominican Republic,DO,DOM,2015,72.953,,2023-05-10,Latin America & Caribbean,Santo Domingo,-69.8908,18.479,Upper middle income,IBRD
+Early-demographic dividend,V2,EAR,2015,69.8742623697907,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+East Asia & Pacific,Z4,EAS,2015,75.9488167254261,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+East Asia & Pacific (excluding high income),4E,EAP,2015,75.1230351733186,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+East Asia & Pacific (IDA & IBRD countries),T4,TEA,2015,75.1521464652061,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Ecuador,EC,ECU,2015,76.789,,2023-05-10,Latin America & Caribbean,Quito,-78.5243,-0.229498,Upper middle income,IBRD
+"Egypt, Arab Rep.",EG,EGY,2015,70.483,,2023-05-10,Middle East & North Africa,Cairo,31.2461,30.0982,Lower middle income,IBRD
+El Salvador,SV,SLV,2015,71.814,,2023-05-10,Latin America & Caribbean,San Salvador,-89.2073,13.7034,Lower middle income,IBRD
+Equatorial Guinea,GQ,GNQ,2015,60.103,,2023-05-10,Sub-Saharan Africa,Malabo,8.7741,3.7523,Upper middle income,IBRD
+Eritrea,ER,ERI,2015,66.033,,2023-05-10,Sub-Saharan Africa,Asmara,38.9183,15.3315,Low income,IDA
+Estonia,EE,EST,2015,77.590243902439,,2023-05-10,Europe & Central Asia,Tallinn,24.7586,59.4392,High income,Not classified
+Eswatini,SZ,SWZ,2015,55.019,,2023-05-10,Sub-Saharan Africa,Mbabane,31.4659,-26.5225,Lower middle income,IBRD
+Ethiopia,ET,ETH,2015,63.649,,2023-05-10,Sub-Saharan Africa,Addis Ababa,38.7468,9.02274,Low income,IDA
+Euro area,XC,EMU,2015,81.5712888246472,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Europe & Central Asia,Z7,ECS,2015,77.2313232302049,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Europe & Central Asia (excluding high income),7E,ECA,2015,72.5877307625611,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Europe & Central Asia (IDA & IBRD countries),T7,TEC,2015,73.1398854461592,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+European Union,EU,EUU,2015,80.5684394242096,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Faroe Islands,FO,FRO,2015,81.7926829268293,,2023-05-10,Europe & Central Asia,Torshavn,-6.91181,61.8926,High income,Not classified
+Fiji,FJ,FJI,2015,66.844,,2023-05-10,East Asia & Pacific,Suva,178.399,-18.1149,Upper middle income,Blend
+Finland,FI,FIN,2015,81.4804878048781,,2023-05-10,Europe & Central Asia,Helsinki,24.9525,60.1608,High income,Not classified
+Fragile and conflict affected situations,F1,FCS,2015,61.0122058229955,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+France,FR,FRA,2015,82.3219512195122,,2023-05-10,Europe & Central Asia,Paris,2.35097,48.8566,High income,Not classified
+French Polynesia,PF,PYF,2015,82.354,,2023-05-10,East Asia & Pacific,Papeete,-149.57,-17.535,High income,Not classified
+Gabon,GA,GAB,2015,65.46,,2023-05-10,Sub-Saharan Africa,Libreville,9.45162,0.38832,Upper middle income,IBRD
+"Gambia, The",GM,GMB,2015,62.494,,2023-05-10,Sub-Saharan Africa,Banjul,-16.5885,13.4495,Low income,IDA
+Georgia,GE,GEO,2015,73.297,,2023-05-10,Europe & Central Asia,Tbilisi,44.793,41.71,Upper middle income,IBRD
+Germany,DE,DEU,2015,80.6414634146341,,2023-05-10,Europe & Central Asia,Berlin,13.4115,52.5235,High income,Not classified
+Ghana,GH,GHA,2015,63.175,,2023-05-10,Sub-Saharan Africa,Accra,-0.20795,5.57045,Lower middle income,IDA
+Gibraltar,GI,GIB,2015,80.427,,2023-05-10,Europe & Central Asia,,,,High income,Not classified
+Greece,GR,GRC,2015,81.0365853658537,,2023-05-10,Europe & Central Asia,Athens,23.7166,37.9792,High income,Not classified
+Greenland,GL,GRL,2015,71.9773170731707,,2023-05-10,Europe & Central Asia,Nuuk,-51.7214,64.1836,High income,Not classified
+Grenada,GD,GRD,2015,75.013,,2023-05-10,Latin America & Caribbean,Saint George's,-61.7449,12.0653,Upper middle income,Blend
+Guam,GU,GUM,2015,76.616,,2023-05-10,East Asia & Pacific,Agana,144.794,13.4443,High income,Not classified
+Guatemala,GT,GTM,2015,72.103,,2023-05-10,Latin America & Caribbean,Guatemala City,-90.5328,14.6248,Upper middle income,IBRD
+Guinea,GN,GIN,2015,58.134,,2023-05-10,Sub-Saharan Africa,Conakry,-13.7,9.51667,Low income,IDA
+Guinea-Bissau,GW,GNB,2015,59.128,,2023-05-10,Sub-Saharan Africa,Bissau,-15.1804,11.8037,Low income,IDA
+Guyana,GY,GUY,2015,68.201,,2023-05-10,Latin America & Caribbean,Georgetown,-58.1548,6.80461,Upper middle income,IDA
+Haiti,HT,HTI,2015,63.237,,2023-05-10,Latin America & Caribbean,Port-au-Prince,-72.3288,18.5392,Lower middle income,IDA
+Heavily indebted poor countries (HIPC),XE,HPC,2015,61.6125477293904,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+High income,XD,,2015,80.4916881522767,,2023-05-10,NA,NA,NA,NA,NA,NA
+Honduras,HN,HND,2015,72.487,,2023-05-10,Latin America & Caribbean,Tegucigalpa,-87.4667,15.1333,Lower middle income,IDA
+"Hong Kong SAR, China",HK,HKG,2015,84.2780487804878,,2023-05-10,East Asia & Pacific,,114.109,22.3964,High income,Not classified
+Hungary,HU,HUN,2015,75.5682926829269,,2023-05-10,Europe & Central Asia,Budapest,19.0408,47.4984,High income,Not classified
+IBRD only,XF,IBD,2015,73.1507668486487,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Iceland,IS,ISL,2015,82.4682926829268,,2023-05-10,Europe & Central Asia,Reykjavik,-21.8952,64.1353,High income,Not classified
+IDA & IBRD total,ZT,IBT,2015,70.5246121502089,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+IDA blend,XH,IDB,2015,60.3602067828122,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+IDA only,XI,IDX,2015,63.9540548833674,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+IDA total,XG,IDA,2015,62.7520649911735,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+India,IN,IND,2015,69.636,,2023-05-10,South Asia,New Delhi,77.225,28.6353,Lower middle income,IBRD
+Indonesia,ID,IDN,2015,69.699,,2023-05-10,East Asia & Pacific,Jakarta,106.83,-6.19752,Lower middle income,IBRD
+"Iran, Islamic Rep.",IR,IRN,2015,75.124,,2023-05-10,Middle East & North Africa,Tehran,51.4447,35.6878,Lower middle income,IBRD
+Iraq,IQ,IRQ,2015,69.44,,2023-05-10,Middle East & North Africa,Baghdad,44.394,33.3302,Upper middle income,IBRD
+Ireland,IE,IRL,2015,81.4536585365854,,2023-05-10,Europe & Central Asia,Dublin,-6.26749,53.3441,High income,Not classified
+Isle of Man,IM,IMN,2015,78.905,,2023-05-10,Europe & Central Asia,Douglas,-4.47928,54.1509,High income,Not classified
+Israel,IL,ISR,2015,82.0512195121951,,2023-05-10,Middle East & North Africa,,35.2035,31.7717,High income,Not classified
+Italy,IT,ITA,2015,82.5439024390244,,2023-05-10,Europe & Central Asia,Rome,12.4823,41.8955,High income,Not classified
+Jamaica,JM,JAM,2015,72.394,,2023-05-10,Latin America & Caribbean,Kingston,-76.792,17.9927,Upper middle income,IBRD
+Japan,JP,JPN,2015,83.7939024390244,,2023-05-10,East Asia & Pacific,Tokyo,139.77,35.67,High income,Not classified
+Jordan,JO,JOR,2015,75.011,,2023-05-10,Middle East & North Africa,Amman,35.9263,31.9497,Upper middle income,IBRD
+Kazakhstan,KZ,KAZ,2015,71.97,,2023-05-10,Europe & Central Asia,Astana,71.4382,51.1879,Upper middle income,IBRD
+Kenya,KE,KEN,2015,61.892,,2023-05-10,Sub-Saharan Africa,Nairobi,36.8126,-1.27975,Lower middle income,Blend
+Kiribati,KI,KIR,2015,66.059,,2023-05-10,East Asia & Pacific,Tarawa,172.979,1.32905,Lower middle income,IDA
+"Korea, Dem. People's Rep.",KP,PRK,2015,72.784,,2023-05-10,East Asia & Pacific,Pyongyang,125.754,39.0319,Low income,Not classified
+"Korea, Rep.",KR,KOR,2015,82.0243902439024,,2023-05-10,East Asia & Pacific,Seoul,126.957,37.5323,High income,Not classified
+Kosovo,XK,XKX,2015,78.922,,2023-05-10,Europe & Central Asia,Pristina,20.926,42.565,Upper middle income,IDA
+Kuwait,KW,KWT,2015,79.562,,2023-05-10,Middle East & North Africa,Kuwait City,47.9824,29.3721,High income,Not classified
+Kyrgyz Republic,KG,KGZ,2015,70.6512195121951,,2023-05-10,Europe & Central Asia,Bishkek,74.6057,42.8851,Lower middle income,IDA
+Lao PDR,LA,LAO,2015,66.67,,2023-05-10,East Asia & Pacific,Vientiane,102.177,18.5826,Lower middle income,IDA
+Late-demographic dividend,V3,LTE,2015,76.0131449870926,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Latin America & Caribbean,ZJ,LCN,2015,74.6119695820582,,2023-05-10,NA,NA,NA,NA,NA,NA
+Latin America & Caribbean (excluding high income),XJ,LAC,2015,74.4637996016462,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Latin America & the Caribbean (IDA & IBRD countries),T2,TLA,2015,74.5211645368618,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Latvia,LV,LVA,2015,74.4804878048781,,2023-05-10,Europe & Central Asia,Riga,24.1048,56.9465,High income,Not classified
+Least developed countries: UN classification,XL,LDC,2015,63.4957831265039,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Lebanon,LB,LBN,2015,79.229,,2023-05-10,Middle East & North Africa,Beirut,35.5134,33.8872,Lower middle income,IBRD
+Lesotho,LS,LSO,2015,51.101,,2023-05-10,Sub-Saharan Africa,Maseru,27.7167,-29.5208,Lower middle income,IDA
+Liberia,LR,LBR,2015,59.148,,2023-05-10,Sub-Saharan Africa,Monrovia,-10.7957,6.30039,Low income,IDA
+Libya,LY,LBY,2015,71.698,,2023-05-10,Middle East & North Africa,Tripoli,13.1072,32.8578,Upper middle income,IBRD
+Liechtenstein,LI,LIE,2015,82.6560975609756,,2023-05-10,Europe & Central Asia,Vaduz,9.52148,47.1411,High income,Not classified
+Lithuania,LT,LTU,2015,74.3219512195122,,2023-05-10,Europe & Central Asia,Vilnius,25.2799,54.6896,High income,Not classified
+Low & middle income,XO,LMY,2015,70.4400621404165,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Low income,XM,,2015,61.4128809976106,,2023-05-10,NA,NA,NA,NA,NA,NA
+Lower middle income,XN,,2015,68.2001551147756,,2023-05-10,NA,NA,NA,NA,NA,NA
+Luxembourg,LU,LUX,2015,82.2926829268293,,2023-05-10,Europe & Central Asia,Luxembourg,6.1296,49.61,High income,Not classified
+"Macao SAR, China",MO,MAC,2015,83.984,,2023-05-10,East Asia & Pacific,,113.55,22.1667,High income,Not classified
+Madagascar,MG,MDG,2015,64.339,,2023-05-10,Sub-Saharan Africa,Antananarivo,45.7167,-20.4667,Low income,IDA
+Malawi,MW,MWI,2015,61.378,,2023-05-10,Sub-Saharan Africa,Lilongwe,33.7703,-13.9899,Low income,IDA
+Malaysia,MY,MYS,2015,75.094,,2023-05-10,East Asia & Pacific,Kuala Lumpur,101.684,3.12433,Upper middle income,IBRD
+Maldives,MV,MDV,2015,79.695,,2023-05-10,South Asia,Male,73.5109,4.1742,Upper middle income,IDA
+Mali,ML,MLI,2015,58.363,,2023-05-10,Sub-Saharan Africa,Bamako,-7.50034,13.5667,Low income,IDA
+Malta,MT,MLT,2015,81.8975609756097,,2023-05-10,Middle East & North Africa,Valletta,14.5189,35.9042,High income,Not classified
+Marshall Islands,MH,MHL,2015,63.827,,2023-05-10,East Asia & Pacific,Majuro,171.135,7.11046,Upper middle income,IDA
+Mauritania,MR,MRT,2015,64.485,,2023-05-10,Sub-Saharan Africa,Nouakchott,-15.9824,18.2367,Lower middle income,IDA
+Mauritius,MU,MUS,2015,74.3531707317073,,2023-05-10,Sub-Saharan Africa,Port Louis,57.4977,-20.1605,Upper middle income,IBRD
+Mexico,MX,MEX,2015,74.682,,2023-05-10,Latin America & Caribbean,Mexico City,-99.1276,19.427,Upper middle income,IBRD
+"Micronesia, Fed. Sts.",FM,FSM,2015,71.408,,2023-05-10,East Asia & Pacific,Palikir,158.185,6.91771,Lower middle income,IDA
+Middle East & North Africa,ZQ,MEA,2015,72.8895160840123,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Middle East & North Africa (excluding high income),XQ,MNA,2015,71.9861891242774,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Middle East & North Africa (IDA & IBRD countries),T3,TMN,2015,71.9585514664059,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Middle income,XP,MIC,2015,71.4092581175294,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Moldova,MD,MDA,2015,69.24,,2023-05-10,Europe & Central Asia,Chisinau,28.8497,47.0167,Upper middle income,IBRD
+Monaco,MC,MCO,2015,NA,,2023-05-10,Europe & Central Asia,Monaco,7.41891,43.7325,High income,Not classified
+Mongolia,MN,MNG,2015,69.498,,2023-05-10,East Asia & Pacific,Ulaanbaatar,106.937,47.9129,Lower middle income,IBRD
+Montenegro,ME,MNE,2015,76.4487804878049,,2023-05-10,Europe & Central Asia,Podgorica,19.2595,42.4602,Upper middle income,IBRD
+Morocco,MA,MAR,2015,72.92,,2023-05-10,Middle East & North Africa,Rabat,-6.8704,33.9905,Lower middle income,IBRD
+Mozambique,MZ,MOZ,2015,58.151,,2023-05-10,Sub-Saharan Africa,Maputo,32.5713,-25.9664,Low income,IDA
+Myanmar,MM,MMR,2015,65.561,,2023-05-10,East Asia & Pacific,Naypyidaw,95.9562,21.914,Lower middle income,IDA
+Namibia,NA,NAM,2015,60.7,,2023-05-10,Sub-Saharan Africa,Windhoek,17.0931,-22.5648,Upper middle income,IBRD
+Nauru,NR,NRU,2015,62.269,,2023-05-10,East Asia & Pacific,Yaren District,166.920867,-0.5477,High income,IBRD
+Nepal,NP,NPL,2015,67.456,,2023-05-10,South Asia,Kathmandu,85.3157,27.6939,Lower middle income,IDA
+Netherlands,NL,NLD,2015,81.509756097561,,2023-05-10,Europe & Central Asia,Amsterdam,4.89095,52.3738,High income,Not classified
+New Caledonia,NC,NCL,2015,77.2804878048781,,2023-05-10,East Asia & Pacific,Noum'ea,166.464,-22.2677,High income,Not classified
+New Zealand,NZ,NZL,2015,81.6124390243903,,2023-05-10,East Asia & Pacific,Wellington,174.776,-41.2865,High income,Not classified
+Nicaragua,NI,NIC,2015,72.983,,2023-05-10,Latin America & Caribbean,Managua,-86.2734,12.1475,Lower middle income,IDA
+Niger,NE,NER,2015,61.083,,2023-05-10,Sub-Saharan Africa,Niamey,2.1073,13.514,Low income,IDA
+Nigeria,NG,NGA,2015,51.841,,2023-05-10,Sub-Saharan Africa,Abuja,7.48906,9.05804,Lower middle income,Blend
+North America,XU,NAC,2015,79.0036457097,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+North Macedonia,MK,MKD,2015,75.4024390243902,,2023-05-10,Europe & Central Asia,Skopje,21.4361,42.0024,Upper middle income,IBRD
+Northern Mariana Islands,MP,MNP,2015,NA,,2023-05-10,East Asia & Pacific,Saipan,145.765,15.1935,High income,Not classified
+Norway,NO,NOR,2015,82.3048780487805,,2023-05-10,Europe & Central Asia,Oslo,10.7387,59.9138,High income,Not classified
+Not classified,XY,,2015,NA,,2023-05-10,NA,NA,NA,NA,NA,NA
+OECD members,OE,OED,2015,79.7907649605864,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Oman,OM,OMN,2015,77.687,,2023-05-10,Middle East & North Africa,Muscat,58.5874,23.6105,High income,Not classified
+Other small states,S4,OSS,2015,67.2887714569841,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Pacific island small states,S2,PSS,2015,68.562208761319,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Pakistan,PK,PAK,2015,65.697,,2023-05-10,South Asia,Islamabad,72.8,30.5167,Lower middle income,Blend
+Palau,PW,PLW,2015,NA,,2023-05-10,East Asia & Pacific,Koror,134.479,7.34194,Upper middle income,IBRD
+Panama,PA,PAN,2015,77.468,,2023-05-10,Latin America & Caribbean,Panama City,-79.5188,8.99427,High income,IBRD
+Papua New Guinea,PG,PNG,2015,64.701,,2023-05-10,East Asia & Pacific,Port Moresby,147.194,-9.47357,Lower middle income,Blend
+Paraguay,PY,PRY,2015,73.191,,2023-05-10,Latin America & Caribbean,Asuncion,-57.6362,-25.3005,Upper middle income,IBRD
+Peru,PE,PER,2015,75.621,,2023-05-10,Latin America & Caribbean,Lima,-77.0465,-12.0931,Upper middle income,IBRD
+Philippines,PH,PHL,2015,71.268,,2023-05-10,East Asia & Pacific,Manila,121.035,14.5515,Lower middle income,IBRD
+Poland,PL,POL,2015,77.4512195121951,,2023-05-10,Europe & Central Asia,Warsaw,21.02,52.26,High income,IBRD
+Portugal,PT,PRT,2015,81.1243902439025,,2023-05-10,Europe & Central Asia,Lisbon,-9.13552,38.7072,High income,Not classified
+Post-demographic dividend,V4,PST,2015,80.3820254160595,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Pre-demographic dividend,V1,PRE,2015,59.1193712621413,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Puerto Rico,PR,PRI,2015,79.695,,2023-05-10,Latin America & Caribbean,San Juan,-66,18.23,High income,Not classified
+Qatar,QA,QAT,2015,80.064,,2023-05-10,Middle East & North Africa,Doha,51.5082,25.2948,High income,Not classified
+Romania,RO,ROU,2015,74.9121951219512,,2023-05-10,Europe & Central Asia,Bucharest,26.0979,44.4479,High income,IBRD
+Russian Federation,RU,RUS,2015,71.1834146341463,,2023-05-10,Europe & Central Asia,Moscow,37.6176,55.7558,Upper middle income,IBRD
+Rwanda,RW,RWA,2015,65.298,,2023-05-10,Sub-Saharan Africa,Kigali,30.0587,-1.95325,Low income,IDA
+Samoa,WS,WSM,2015,72.515,,2023-05-10,East Asia & Pacific,Apia,-171.752,-13.8314,Lower middle income,IDA
+San Marino,SM,SMR,2015,NA,,2023-05-10,Europe & Central Asia,San Marino,12.4486,43.9322,High income,Not classified
+Sao Tome and Principe,ST,STP,2015,67.249,,2023-05-10,Sub-Saharan Africa,Sao Tome,6.6071,0.20618,Lower middle income,IDA
+Saudi Arabia,SA,SAU,2015,76.918,,2023-05-10,Middle East & North Africa,Riyadh,46.6977,24.6748,High income,Not classified
+Senegal,SN,SEN,2015,66.879,,2023-05-10,Sub-Saharan Africa,Dakar,-17.4734,14.7247,Lower middle income,IDA
+Serbia,RS,SRB,2015,75.2878048780488,,2023-05-10,Europe & Central Asia,Belgrade,20.4656,44.8024,Upper middle income,IBRD
+Seychelles,SC,SYC,2015,74.2951219512195,,2023-05-10,Sub-Saharan Africa,Victoria,55.4466,-4.6309,High income,IBRD
+Sierra Leone,SL,SLE,2015,57.189,,2023-05-10,Sub-Saharan Africa,Freetown,-13.2134,8.4821,Low income,IDA
+Singapore,SG,SGP,2015,82.7439024390244,,2023-05-10,East Asia & Pacific,Singapore,103.85,1.28941,High income,Not classified
+Sint Maarten (Dutch part),SX,SXM,2015,76.954,,2023-05-10,Latin America & Caribbean,Philipsburg,,,High income,Not classified
+Slovak Republic,SK,SVK,2015,76.5634146341463,,2023-05-10,Europe & Central Asia,Bratislava,17.1073,48.1484,High income,Not classified
+Slovenia,SI,SVN,2015,80.7756097560976,,2023-05-10,Europe & Central Asia,Ljubljana,14.5044,46.0546,High income,Not classified
+Small states,S1,SST,2015,68.3472498433806,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Solomon Islands,SB,SLB,2015,69.583,,2023-05-10,East Asia & Pacific,Honiara,159.949,-9.42676,Lower middle income,IDA
+Somalia,SO,SOM,2015,54.857,,2023-05-10,Sub-Saharan Africa,Mogadishu,45.3254,2.07515,Low income,IDA
+South Africa,ZA,ZAF,2015,63.95,,2023-05-10,Sub-Saharan Africa,Pretoria,28.1871,-25.746,Upper middle income,IBRD
+South Asia,8S,SAS,2015,69.1425888809621,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+South Asia (IDA & IBRD),T5,TSA,2015,69.1425888809621,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+South Sudan,SS,SSD,2015,55.566,,2023-05-10,Sub-Saharan Africa,Juba,31.6,4.85,Low income,IDA
+Spain,ES,ESP,2015,82.8317073170732,,2023-05-10,Europe & Central Asia,Madrid,-3.70327,40.4167,High income,Not classified
+Sri Lanka,LK,LKA,2015,74.927,,2023-05-10,South Asia,Colombo,79.8528,6.92148,Lower middle income,IBRD
+St. Kitts and Nevis,KN,KNA,2015,70.763,,2023-05-10,Latin America & Caribbean,Basseterre,-62.7309,17.3,High income,IBRD
+St. Lucia,LC,LCA,2015,73.138,,2023-05-10,Latin America & Caribbean,Castries,-60.9832,14,Upper middle income,Blend
+St. Martin (French part),MF,MAF,2015,79.309,,2023-05-10,Latin America & Caribbean,Marigot,,,High income,Not classified
+St. Vincent and the Grenadines,VC,VCT,2015,74.407,,2023-05-10,Latin America & Caribbean,Kingstown,-61.2653,13.2035,Upper middle income,Blend
+Sub-Saharan Africa,ZG,SSF,2015,59.5629776824937,,2023-05-10,NA,NA,NA,NA,NA,NA
+Sub-Saharan Africa (excluding high income),ZF,SSA,2015,59.5616131621504,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Sub-Saharan Africa (IDA & IBRD countries),T6,TSS,2015,59.5629776824937,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+Sudan,SD,SDN,2015,64.659,,2023-05-10,Sub-Saharan Africa,Khartoum,32.5363,15.5932,Low income,IDA
+Suriname,SR,SUR,2015,70.8,,2023-05-10,Latin America & Caribbean,Paramaribo,-55.1679,5.8232,Upper middle income,IBRD
+Sweden,SE,SWE,2015,82.2048780487805,,2023-05-10,Europe & Central Asia,Stockholm,18.0645,59.3327,High income,Not classified
+Switzerland,CH,CHE,2015,82.8975609756098,,2023-05-10,Europe & Central Asia,Bern,7.44821,46.948,High income,Not classified
+Syrian Arab Republic,SY,SYR,2015,65.124,,2023-05-10,Middle East & North Africa,Damascus,36.3119,33.5146,Low income,IDA
+Tajikistan,TJ,TJK,2015,69.306,,2023-05-10,Europe & Central Asia,Dushanbe,68.7864,38.5878,Lower middle income,IDA
+Tanzania,TZ,TZA,2015,64.651,,2023-05-10,Sub-Saharan Africa,Dodoma,35.7382,-6.17486,Lower middle income,IDA
+Thailand,TH,THA,2015,77.717,,2023-05-10,East Asia & Pacific,Bangkok,100.521,13.7308,Upper middle income,IBRD
+Timor-Leste,TL,TLS,2015,67.137,,2023-05-10,East Asia & Pacific,Dili,125.567,-8.56667,Lower middle income,Blend
+Togo,TG,TGO,2015,59.396,,2023-05-10,Sub-Saharan Africa,Lome,1.2255,6.1228,Low income,IDA
+Tonga,TO,TON,2015,70.607,,2023-05-10,East Asia & Pacific,Nuku'alofa,-175.216,-21.136,Upper middle income,IDA
+Trinidad and Tobago,TT,TTO,2015,74.503,,2023-05-10,Latin America & Caribbean,Port-of-Spain,-61.4789,10.6596,High income,IBRD
+Tunisia,TN,TUN,2015,75.692,,2023-05-10,Middle East & North Africa,Tunis,10.21,36.7899,Lower middle income,IBRD
+Turkiye,TR,TUR,2015,76.646,,2023-05-10,Europe & Central Asia,Ankara,32.3606,39.7153,Upper middle income,IBRD
+Turkmenistan,TM,TKM,2015,68.782,,2023-05-10,Europe & Central Asia,Ashgabat,58.3794,37.9509,Upper middle income,IBRD
+Turks and Caicos Islands,TC,TCA,2015,76.912,,2023-05-10,Latin America & Caribbean,Grand Turk,-71.141389,21.4602778,High income,Not classified
+Tuvalu,TV,TUV,2015,64.06,,2023-05-10,East Asia & Pacific,Funafuti,179.089567,-8.6314877,Upper middle income,IDA
+Uganda,UG,UGA,2015,61.086,,2023-05-10,Sub-Saharan Africa,Kampala,32.5729,0.314269,Low income,IDA
+Ukraine,UA,UKR,2015,71.189512195122,,2023-05-10,Europe & Central Asia,Kiev,30.5038,50.4536,Lower middle income,IBRD
+United Arab Emirates,AE,ARE,2015,79.223,,2023-05-10,Middle East & North Africa,Abu Dhabi,54.3705,24.4764,High income,Not classified
+United Kingdom,GB,GBR,2015,80.9560975609756,,2023-05-10,Europe & Central Asia,London,-0.126236,51.5002,High income,Not classified
+United States,US,USA,2015,78.690243902439,,2023-05-10,North America,Washington D.C.,-77.032,38.8895,High income,Not classified
+Upper middle income,XT,,2015,75.569782341862,,2023-05-10,NA,NA,NA,NA,NA,NA
+Uruguay,UY,URY,2015,77.483,,2023-05-10,Latin America & Caribbean,Montevideo,-56.0675,-34.8941,High income,IBRD
+Uzbekistan,UZ,UZB,2015,70.475,,2023-05-10,Europe & Central Asia,Tashkent,69.269,41.3052,Lower middle income,Blend
+Vanuatu,VU,VUT,2015,69.513,,2023-05-10,East Asia & Pacific,Port-Vila,168.321,-17.7404,Lower middle income,IDA
+"Venezuela, RB",VE,VEN,2015,73.006,,2023-05-10,Latin America & Caribbean,Caracas,-69.8371,9.08165,Not classified,IBRD
+Vietnam,VN,VNM,2015,73.876,,2023-05-10,East Asia & Pacific,Hanoi,105.825,21.0069,Lower middle income,IBRD
+Virgin Islands (U.S.),VI,VIR,2015,79.0170731707317,,2023-05-10,Latin America & Caribbean,Charlotte Amalie,-64.8963,18.3358,High income,Not classified
+West Bank and Gaza,PS,PSE,2015,74.406,,2023-05-10,Middle East & North Africa,,,,Lower middle income,Not classified
+World,1W,WLD,2015,72.0950779627176,,2023-05-10,Aggregates,,,,Aggregates,Aggregates
+"Yemen, Rep.",YE,YEM,2015,65.873,,2023-05-10,Middle East & North Africa,Sana'a,44.2075,15.352,Low income,IDA
+Zambia,ZM,ZMB,2015,61.208,,2023-05-10,Sub-Saharan Africa,Lusaka,28.2937,-15.3982,Low income,IDA
+Zimbabwe,ZW,ZWE,2015,59.591,,2023-05-10,Sub-Saharan Africa,Harare,31.0672,-17.8312,Lower middle income,Blend
