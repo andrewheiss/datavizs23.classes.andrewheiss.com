@@ -52,37 +52,41 @@ website:
         - section: "Overview"
           contents:
             - content/index.qmd
-        - section: "Capitalism, markets, and public policy"
+        - section: "Foundations"
           contents:
-            - text: "1: Capitalism and measurement"
+            - text: "1: Truth, beauty, and data + the tidyverse"
               file: content/01-content.qmd
-            - text: "2: Governments and institutions"
+            - text: "2: Graphic design"
               file: content/02-content.qmd
-            - text: "3: Social interactions and economic outcomes"
+            - text: "3: Mapping data to graphics"
               file: content/03-content.qmd
-            - text: "4: Fairness and efficiency"
+        - section: "Core types of graphics"
+          contents:
+            - text: "4: Amounts and proportions"
               file: content/04-content.qmd
-        - section: "Economic models"
-          contents:
-            - text: "5–6: Work, wellbeing, and scarcity"
+            - text: "5: Themes"
               file: content/05-content.qmd
-            - text: "7–8: The firm"
+            - text: "6: Uncertainty"
+              file: content/06-content.qmd
+            - text: "7: Relationships"
               file: content/07-content.qmd
-            - text: "9–10: Firms and markets"
+            - text: "8: Comparisons"
+              file: content/08-content.qmd
+            - text: "9: Annotations"
               file: content/09-content.qmd
-        - section: "Market failures and institutions"
+        - section: "Special applications"
           contents:
-            - text: "11: Institutions, power, and inequality"
+            - text: "10: Interactivity"
+              file: content/10-content.qmd
+            - text: "11: Time"
               file: content/11-content.qmd
-            - text: "12: Market failures"
+            - text: "12: Space"
               file: content/12-content.qmd
-            - text: "13: When governments go wrong"
+            - text: "13: Text"
               file: content/13-content.qmd
-            - text: "14: Institutional alternatives"
+            - text: "14: Enhancing graphics"
               file: content/14-content.qmd
-        - section: "Conclusions"
-          contents:
-            - text: "15: Markets, public policy, and public administration"
+            - text: "15: Truth, beauty, and data revisited"
               file: content/15-content.qmd
     
     - title: "Examples"

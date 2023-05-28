@@ -1,0 +1,61 @@
+---
+title: "Truth, beauty, and data + R and tidyverse"
+date: "2022-06-06"
+date_end: "2022-06-10"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sHom5NPjrZAeMTYS5orTl9c"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "tVcomh6jQ2Y", "Introduction", "1", TRUE,
+  "UbQ8IW3UI9E", "Facts, truth, and beauty", "facts-truth-beauty", FALSE,
+  "DldFVc08YY4", "Data, truth, and beauty", "data-truth-beauty", FALSE,
+  "6MTC9uGMNFg", "Beautiful visualizations", "beautiful-visualizations", FALSE,
+  "_TclSs8iLMY", "Class details", "class-details", FALSE
+)
+```
+
+## Readings
+
+- The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
+- <i class="fas fa-podcast"></i> Tim Harford, ["Florence Nightingale: Data Viz Pioneer,"](https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/) *99% Invisible*, episode 433, March 2, 2021 (*this is a podcast; listen to it in your browser or use an app like [Overcast](https://overcast.fm/) or [Spotify](https://spotify.com/)*)
+- <i class="fas fa-book"></i> [Chapter 1](http://socviz.co/lookatdata.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+- <i class="fas fa-book"></i> Chapters 2 and 3 in Alberto Cairo, *The Truthful Art* [@Cairo:2016] (*skim the introduction and chapter 1*)
+- <i class="fas fa-external-link-square-alt"></i> [Study: Charts change hearts and minds better than words do](https://www.washingtonpost.com/news/wonk/wp/2018/06/15/study-charts-change-hearts-and-minds-better-than-words-do/?utm_term=.4474599c0d5e)
+
+
+### Questions to reflect on
+
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
+- How do we know what is true?
+- Are facts truth?
+- Why do we visualize data?
+- What makes a great visualization?
+- How do you choose which kind of visualization to use?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_buttons("/slides/01-slides")
+slide_tabs(slide_details, "/slides/01-slides.html")
+```
+
+:::{.callout-tip}
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
