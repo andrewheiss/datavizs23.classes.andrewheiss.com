@@ -84,6 +84,48 @@ website:
           contents:
             - text: "15: Markets, public policy, and public administration"
               file: content/15-content.qmd
+    
+    - title: "Examples"
+      contents:
+        - section: "Overview"
+          contents:
+            - example/index.qmd
+        - section: "Foundations"
+          contents:
+            - text: "1: Introduction to R and the tidyverse"
+              file: example/01-example.qmd
+            - text: "2: Graphic design"
+              file: example/02-example.qmd
+            - text: "3: Mapping data to graphics"
+              file: example/03-example.qmd
+        - section: "Core types of graphics"
+          contents:
+            - text: "4: Amounts and proportions"
+              file: example/04-example.qmd
+            - text: "5: Themes"
+              file: example/05-example.qmd
+            - text: "6: Uncertainty"
+              file: example/06-example.qmd
+            - text: "7: Relationships"
+              file: example/07-example.qmd
+            - text: "8: Comparisons"
+              file: example/08-example.qmd
+            - text: "9: Annotations"
+              file: example/09-example.qmd
+        - section: "Special applications"
+          contents:
+            - text: "10: Interactivity"
+              file: example/10-example.qmd
+            - text: "11: Time"
+              file: example/11-example.qmd
+            - text: "12: Space"
+              file: example/12-example.qmd
+            - text: "13: Text"
+              file: example/13-example.qmd
+            - text: "14: Enhancing graphics"
+              file: example/14-example.qmd
+            - text: "15: Sharing R output online"
+              file: example/15-example.qmd
 
     - title: "Assignments"
       contents:

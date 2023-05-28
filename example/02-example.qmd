@@ -1,0 +1,41 @@
+---
+title: "Graphic design"
+date: "2022-06-06"
+date_end: "2022-06-10"
+---
+
+For this example, I'm going to critique and improve this random flyer I found posted in the BYU library in September 2018:
+
+```{r safe-kids-bad, echo=FALSE, out.width="50%"}
+knitr::include_graphics("/projects/02-example/original-from-hbll.jpg", error = FALSE)
+```
+
+It's not the best designed poster, but it's incredibly typical of what you see in the real world. By applying the principles of CRAP, we can improve the poster significantly.
+
+If you download and unzip this file, you can follow along too (but you don't have to—you can just sit back and enjoy the ride).
+
+- [<i class="fas fa-file-archive"></i> `02-example.zip`](/projects/02-example.zip)
+
+## Critique
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/K0sd-j6eMiI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+</div>
+
+## Redesign in Canva
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/G1857weuvIc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+</div>
+
+## Redesign in Illustrator
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/5Z8FQtDVlYQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+</div>
+
+## Final versions
+
+```{r safe-kids-finished, echo=FALSE, out.width="100%"}
+knitr::include_graphics("/files/img/examples/combined-output@2x.png", error = FALSE)
+```
