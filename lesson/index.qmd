@@ -11,8 +11,10 @@ Each class session has an interactive lesson that you will work through ***after
 
 Interactive code sections look like this. Make changes in the text box and click on the green "Run Code" button to see the results. Sometimes there will be a button with a hint or solution.
 
-:::puzzle
-**Your turn**: Modify the code here to show the relationship between health and wealth for 2002 instead of 2007.
+::: {.callout-important}
+### Your turn
+
+Modify the code here to show the relationship between health and wealth for 2002 instead of 2007.
 :::
 
 ```{r echo=FALSE, results="asis"}
