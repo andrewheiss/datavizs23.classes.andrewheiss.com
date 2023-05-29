@@ -36,8 +36,12 @@ website:
     right:
       - syllabus.qmd
       - schedule.qmd
-      - text: "Classes and readings"
+      - text: "Content"
         file: content/index.qmd
+      - text: "Lessons"
+        file: lesson/index.qmd
+      - text: "Examples"
+        file: example/index.qmd
       - text: "Assignments"
         file: assignment/index.qmd
       - text: "Resources"
@@ -176,6 +180,48 @@ website:
               file: assignment/14-exercise.qmd
             - text: "15: Truth, beauty, and data revisited"
               file: assignment/15-exercise.qmd
+    
+    - title: "Classes and readings"
+      contents:
+        - section: "Overview"
+          contents:
+            - lesson/index.qmd
+        - section: "Foundations"
+          contents:
+            - text: "1: Truth, beauty, and data + the tidyverse"
+              file: lesson/01-lesson.qmd
+            - text: "2: Graphic design"
+              file: lesson/02-lesson.qmd
+            - text: "3: Mapping data to graphics"
+              file: lesson/03-lesson.qmd
+        - section: "Core types of graphics"
+          contents:
+            - text: "4: Amounts and proportions"
+              file: lesson/04-lesson.qmd
+            - text: "5: Themes"
+              file: lesson/05-lesson.qmd
+            - text: "6: Uncertainty"
+              file: lesson/06-lesson.qmd
+            - text: "7: Relationships"
+              file: lesson/07-lesson.qmd
+            - text: "8: Comparisons"
+              file: lesson/08-lesson.qmd
+            - text: "9: Annotations"
+              file: lesson/09-lesson.qmd
+        - section: "Special applications"
+          contents:
+            - text: "10: Interactivity"
+              file: lesson/10-lesson.qmd
+            - text: "11: Time"
+              file: lesson/11-lesson.qmd
+            - text: "12: Space"
+              file: lesson/12-lesson.qmd
+            - text: "13: Text"
+              file: lesson/13-lesson.qmd
+            - text: "14: Enhancing graphics"
+              file: lesson/14-lesson.qmd
+            - text: "15: Truth, beauty, and data revisited"
+              file: lesson/15-lesson.qmd
     
     - title: "Resources"
       contents:

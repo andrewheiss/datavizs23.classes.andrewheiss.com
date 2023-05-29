@@ -1,0 +1,8 @@
+---
+title: "Interactivity"
+date: "2020-05-22"
+---
+
+Again, there's no lesson for this. The only way to learn how to use `ggplotly()` and create dashboards with {flexdashboard} is to try them out in RStudio, not in a mini browser-based R session here.
+
+So [head over to the exercise](/assignment/10-exercise/) to get started!
