@@ -31,11 +31,23 @@ Here's your roadmap for the semester!
 
 - [**Assignment**](/assignment/) ({{< fa pen-ruler >}}): This page contains the instructions for either the session exercise (1–3 brief tasks), or for the two mini projects and final project. **Assignments are due by 11:59 PM on the Monday after their corresponding sessions.** That’s confusing in sentence form—see the schedule table below to see how it works.
 
+:::::: {.row .d-flex .justify-content-center}
+::::: {.col-md-6}
+:::: {.card .bg-danger .text-white}
+::: {.card-body}
+
 **tl;dr**: You should follow this general process for each session:
 
-- Do everything on the content ({{< fa book-open-reader >}}) page
-- Work through the lesson ({{< fa chalkboard-teacher >}}) page
+- Do everything on the content page ({{< fa book-open-reader >}})
+- Work through the lesson page ({{< fa chalkboard-teacher >}})
 - Complete the assignment ({{< fa pen-ruler >}}) while referencing the example ({{< fa laptop-code >}})
+
+:::
+::::
+:::::
+::::::
+
+---
 
 ::: {.callout-tip}
 
