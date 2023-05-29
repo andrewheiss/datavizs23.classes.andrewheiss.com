@@ -139,6 +139,24 @@ ggplot(mpg, aes(x = displ, y = hwy,
 
 # And this!
 
+```{r save-defaults, include=FALSE}
+# There's a weird bug/feature in {hrbrthemes} where using theme_modern_rc()
+# updates the default colors and fills for all geoms to be light blue
+#
+# - https://github.com/hrbrmstr/hrbrthemes/blob/master/R/modern.r
+# - https://github.com/hrbrmstr/hrbrthemes/issues/58
+#
+# So we need to revert it all back to the defaults
+default_point <- ggplot2:::check_subclass("point", "Geom")$default_aes
+default_line <- ggplot2:::check_subclass("line", "Geom")$default_aes
+default_area <- ggplot2:::check_subclass("area", "Geom")$default_aes
+default_rect <- ggplot2:::check_subclass("rect", "Geom")$default_aes
+default_density <- ggplot2:::check_subclass("density", "Geom")$default_aes
+default_bar <- ggplot2:::check_subclass("bar", "Geom")$default_aes
+default_col <- ggplot2:::check_subclass("col", "Geom")$default_aes
+default_text <- ggplot2:::check_subclass("text", "Geom")$default_aes
+```
+
 .left-code[
 ```{r hrbrdark, tidy=FALSE, message=FALSE, fig.show="hide", fig.dim=c(4.8, 3.75), out.width="100%"}
 library(hrbrthemes)
@@ -153,6 +171,17 @@ ggplot(mpg, aes(x = displ, y = hwy,
 .right-plot[
 ![](`r knitr::fig_chunk("hrbrdark", "png")`)
 ]
+
+```{r fix-defaults, include=FALSE}
+update_geom_defaults("point", default_point)
+update_geom_defaults("line", default_line)
+update_geom_defaults("area", default_area)
+update_geom_defaults("rect", default_rect)
+update_geom_defaults("density", default_density)
+update_geom_defaults("bar", default_bar)
+update_geom_defaults("col", default_col)
+update_geom_defaults("text", default_text)
+```
 
 ---
 
