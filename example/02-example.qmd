@@ -6,7 +6,7 @@ date_end: "2022-06-10"
 
 For this example, I'm going to critique and improve this random flyer I found posted in the BYU library in September 2018:
 
-```{r safe-kids-bad, echo=FALSE, out.width="50%"}
+```{r safe-kids-bad, echo=FALSE, out.width="50%", fig.align="center"}
 knitr::include_graphics("/projects/02-example/original-from-hbll.jpg", error = FALSE)
 ```
 
