@@ -41,10 +41,10 @@ title: Using Markdown
 | ```                                      |                                                                             |
 | ````                                     |                                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------+
-| Optionally specify a language:           |                                                                             |
+| Optionally specify [a language][langs]:  |                                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------+
 | ```` default                             | ``` r                                                                       |
-| ``` r                                    | x <- c(1, 3, 5, 7)                                                          |
+| ```r                                     | x <- c(1, 3, 5, 7)                                                          |
 | x <- c(1, 3, 5, 7)                       | plot(x)                                                                     |
 | plot(x)                                  | ```                                                                         |
 | ```                                      |                                                                             |
@@ -52,30 +52,31 @@ title: Using Markdown
 +------------------------------------------+-----------------------------------------------------------------------------+
 | `> Blockquote`                           | > Blockquote                                                                |
 +------------------------------------------+-----------------------------------------------------------------------------+
-| ``` default                              | -   Things in                                                               |
-| - Things in                              | -   an unordered                                                            |
-| - an unordered                           | -   list                                                                    |
+| ``` default                              | - Things in                                                                 |
+| - Things in                              | - an unordered                                                              |
+| - an unordered                           | - list                                                                      |
 | - list                                   |                                                                             |
 | ```                                      |                                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------+
-| ``` default                              | 1.  Things in                                                               |
-| 1. Things in                             | 2.  an ordered                                                              |
-| 1. an ordered                            | 3.  list                                                                    |
-| 2. list                                  | 4.  Notice that the                                                         |
-| 3. Notice that the                       | 5.  numbers don't                                                           |
-| 8. numbers don't                         | 6.  matter                                                                  |
+| ``` default                              | 1. Things in                                                                |
+| 1. Things in                             | 2. an ordered                                                               |
+| 1. an ordered                            | 3. list                                                                     |
+| 2. list                                  | 4. Notice that the                                                          |
+| 3. Notice that the                       | 5. numbers don't                                                            |
+| 8. numbers don't                         | 6. matter                                                                   |
 | 18. matter                               |                                                                             |
 | ```                                      |                                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------+
-| ``` default                              | Horizontal line                                                             |
-| Horizontal line                          |                                                                             |
-|                                          | ---                                                                         |
+| Horizontal line                          | Horizontal line                                                             |
+|                                          |                                                                             |
+| ``` default                              | ---                                                                         |
 | ---                                      |                                                                             |
 | ```                                      |                                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------+
 
 : {tbl-colwidths="[50,50]"}
 
+[langs]: https://github.com/jgm/skylighting/tree/master/skylighting-core/xml
 
 ## Math
 
@@ -89,10 +90,8 @@ You can use math in two different ways: inline or in a display block. To use mat
 **Type…**
 
 ```default
-Based on the DAG, the regression model for
-estimating the effect of education on wages
-is $\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon$, or
-$\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon$.
+Based on the DAG, the regression model for estimating the effect of education on wages
+is $\hat{y} = \beta_0 + \beta_1 x_1 + \epsilon$, or $\text{Wages} = \beta_0 + \beta_1 \text{Education} + \epsilon$.
 ```
 
 **…to get…**
