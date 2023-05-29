@@ -7,6 +7,10 @@
 /_site/
 /_freeze/
 
+slides/*.pdf
+slides/*.html
+slides/**/*_cache/*
+
 # caching stuff
 **/*_cache/*
 

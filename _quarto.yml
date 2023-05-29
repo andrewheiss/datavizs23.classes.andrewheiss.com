@@ -2,8 +2,15 @@ project:
   type: website
   render:
     - "*.qmd"
+    - "!slides/"
   resources:
     - "files/"
+    - "slides/*.html"
+    - "slides/*.pdf"
+    - "slides/img/"
+    - "slides/libs/"
+    - "slides/css/"
+    - "slides/*_files/"
   preview:
     port: 3333
 

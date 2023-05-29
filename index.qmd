@@ -13,6 +13,14 @@ format:
 course-logo: /files/course-icon.png
 ---
 
+```{r set-dependencies, include=FALSE}
+# Site-wide targets dependencies
+withr::with_dir(here::here(), {
+  targets::tar_load(xaringan_slides)
+  targets::tar_load(xaringan_pdfs)
+})
+```
+
 ::: {.home}
 
 ::: {.grid .course-details}
