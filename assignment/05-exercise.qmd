@@ -13,7 +13,7 @@ For this assignment, you're going to work with data compiled by [data journalist
 
 You'll need to download one CSV file and put them somewhere on your computer or upload them to RStudio.cloud—preferably in a folder named `data` in your project folder:
 
-- [<i class="fas fa-file-csv"></i> `Dogs-Database.csv`](/projects/05-exercise/data/Dogs-Database.csv)
+- [<i class="fas fa-file-csv"></i> `Dogs-Database.csv`](/files/data/external_data/Dogs-Database.csv)
 
 To help you, I've created a skeleton R Markdown file with a template for this exercise, along with some code to clean up the data a little. Download that here and include it in your project:
 

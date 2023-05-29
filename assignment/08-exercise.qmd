@@ -13,7 +13,7 @@ For this exercise you'll use state-level unemployment data from 2006 to 2016 tha
 
 You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
-- [<i class="fas fa-file-csv"></i> `unemployment.csv`](/projects/08-exercise/data/unemployment.csv)
+- [<i class="fas fa-file-csv"></i> `unemployment.csv`](/files/data/external_data/unemployment.csv)
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
 

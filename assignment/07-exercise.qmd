@@ -13,7 +13,7 @@ For this exercise you'll use precinct-level data from the 2016 presidential elec
 
 You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
-- [<i class="fas fa-file-csv"></i> `results_2016.csv`](/projects/07-exercise/data/results_2016.csv)
+- [<i class="fas fa-file-csv"></i> `results_2016.csv`](/files/data/external_data/results_2016.csv)
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
 

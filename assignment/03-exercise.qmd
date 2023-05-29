@@ -13,9 +13,9 @@ You'll be doing all your R work in R Markdown this time (and from now on). You s
 
 You'll need to download three CSV files and put them somewhere on your computer or upload them to RStudio.cloud—preferably in a folder named `data` in your project folder:
 
-- [<i class="fas fa-file-csv"></i> `The_Fellowship_Of_The_Ring.csv`](/projects/03-exercise/data/The_Fellowship_Of_The_Ring.csv)
-- [<i class="fas fa-file-csv"></i> `The_Two_Towers.csv`](/projects/03-exercise/data/The_Two_Towers.csv)
-- [<i class="fas fa-file-csv"></i> `The_Return_Of_The_King.csv`](/projects/03-exercise/data/The_Return_Of_The_King.csv)
+- [<i class="fas fa-file-csv"></i> `The_Fellowship_Of_The_Ring.csv`](/files/data/external_data/The_Fellowship_Of_The_Ring.csv)
+- [<i class="fas fa-file-csv"></i> `The_Two_Towers.csv`](/files/data/external_data/The_Two_Towers.csv)
+- [<i class="fas fa-file-csv"></i> `The_Return_Of_The_King.csv`](/files/data/external_data/The_Return_Of_The_King.csv)
 
 To help you, I've created a skeleton R Markdown file with a template for this exercise. Download that here and include it in your project:
 
