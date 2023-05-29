@@ -32,7 +32,7 @@ website:
 
   navbar:
     pinned: true
-    background: "#5e81ac"
+    background: "#E16462"
     right:
       - syllabus.qmd
       - schedule.qmd
@@ -188,6 +188,6 @@ format:
   html:
     theme:
       - litera
-      # - html/custom.scss
+      - html/custom.scss
     toc: true
     highlight-style: monokai

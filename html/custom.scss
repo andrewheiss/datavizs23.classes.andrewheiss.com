@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #ddd !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// Plasma colors
+// viridisLite::viridis(7, option = "plasma", begin = 0, end = 0.9)
+
+// Viridis colors
+// viridisLite::viridis(6, option = "viridis", begin = 0, end = 1)
+$blue:   #0D0887 !default;  // Plasma[1]
+$indigo: #5601A4 !default;  // Plasma[2]
+$purple: #900DA4 !default;  // Plasma[3]
+$pink:   #BF3984 !default;  // Plasma[4]
+$red:    #E16462 !default;  // Plasma[5]
+$orange: #F89441 !default;  // Plasma[6]
+$yellow: #FCCE25 !default;  // Plasma[7]
+$green:  #7AD151 !default;  // Viridis[5]
+$teal:   #2A788E !default;  // Viridis[3]
+$cyan:   #22A884 !default;  // Viridis[4]
+
+$primary:       $red !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $pink !default;
+$warning:       $yellow !default;
+$danger:        $orange !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$font-family-sans-serif:      Fira Sans Condensed, sans-serif !default;
+$font-family-serif:           Barlow, serif !default;  /* Not actually a serif font but whatever */
+
+$font-size-base:              1.15rem !default;
+$headings-font-weight:        700 !default;
+
+$h1-font-size: $font-size-base * 2.35;
+$h2-font-size: $font-size-base * 1.8;
+$h3-font-size: $font-size-base * 1.45;
+$h4-font-size: $font-size-base * 1.1;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * 0.8;
+
+$toc-font-size: 0.95rem;
+$sidebar-font-size: 1.1rem;
+$sidebar-font-size-section: 0.9rem;
+
+$link-color: $red;
+$link-hover-color: $yellow;
+
+// Inline code
+$code-bg: $gray-200 !default;
+$code-color: $gray-900 !default;
+
+// Block code
+$monokai-bg: #2e3440;
+
+
+/*-- scss:rules --*/
+h2 {
+  border-bottom: 1px solid $gray-500;
+}
+
+ul,
+ol {
+  font-family: $font-family-serif;
+}
+
+// Home page stuff
+.title-block {
+  margin: 1em 0;
+  border-bottom: 3px solid $gray-200;
+  padding-bottom: 1em;
+}
+
+.course-details {
+  margin: 0 0 1em;
+  border-bottom: 3px solid $gray-200;
+  padding-bottom: 1em;
+}
+
+.course-details h3 {
+  margin-top: 0;
+}
+
+.course-title {
+  font-size: 3.5rem;
+  margin-top: 0;
+}
+
+.course-subtitle {
+  font-size: 1.7rem;
+}
+
+.course-meta {
+  font-size: 1.2rem;
+  color: $gray-600;
+}
+
+.course-details ul {
+  list-style: none;
+  text-indent: -0.7rem;
+  padding-left: 1.4rem;
+}
+
+.contact-policy p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.course-details-smaller li {
+  font-size: 1rem;
+}
+
+.course-details-smaller h3 {
+  font-size: 1.4rem;
+}
+
+
+// Active links in navbar and sidebar
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+div.sidebar-item-container .active,
+div.sidebar-item-container .show>.nav-link,
+div.sidebar-item-container .sidebar-link>code{
+  color: $yellow;
+
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-brand:hover {
+  color: $orange;
+}
+
+
+// Footer stuff
+.nav-footer-left {
+  text-align: left;
+}
+
+.nav-footer-right {
+  text-align: right;
+}
+
+
+// Schedule stuff
+.content-title {
+  font-weight: 700;
+  color: $blue;
+}
+
+.content-date {
+  font-weight: 700;
+}
+
+.content-note {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.content-session {
+  font-size: 0.85em;
+}
+
+.content-flag {
+  font-weight: 700;
+  color: $orange;
+}
+
+.schedule-page h3 {
+  text-align: left;
+  margin-top: 3rem;
+  // border-bottom: 3px solid $indigo;
+  // padding-bottom: 0.5rem;
+}
+
+.download-btn {
+  padding-top: 0.25rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+// Markdown reference page
+// No top margin on code blocks inside tables
+.table .sourceCode {
+  margin-top: 0;
+}
+
+.table h1 {
+  font-size: 2.1em;
+  margin-top: 0;
+}
+
+.table h2 {
+  font-size: 1.7em;
+  margin-top: 0;
+  border-bottom: 0;
+}
+
+.table h3 {
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+
+// Content page stuff
+// Date bar
+.date-block {
+  font-size: 1.1rem;
+
+  p.date {
+    margin-bottom: 0 !important;
+  }
+}
+
+.bg-class {
+  background-color: $orange;
+}
+
+.bg-assignment {
+  background-color: $red;
+}
+
+.fake-date-block {
+  margin-bottom: 1em;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Slightly larger buttons
+p a.btn, .buttons span.btn {
+  font-size: 1.1rem;
+}
+
+.buttons .btn {
+  margin-bottom: 1rem;
+}
+
+main {
+  // No space after lists-within-lists
+  ol ol,
+  ul ul,
+  ol ul,
+  ul ol {
+    margin-bottom: 0em;
+  }
+
+  // But yes space after lists-within-lists when paragraphs are involved
+  ol p + ol,
+  ul p + ul,
+  ol p + ul,
+  ul p + ol {
+    margin-bottom: 1em;
+  }
+}
+
+
+// Make callout text and icon bigger
+// .callout.callout-style-default {
+//   > div.callout-header,
+//   > .callout-body {
+//     font-size: 1rem;
+//   }
+//
+//   .callout-icon::before {
+//     height: 1rem;
+//     width: 1rem;
+//     background-size: 1rem 1rem;
+//   }
+// }
+
+// Increase font size in sidebar
+.sidebar-navigation .sidebar-section .sidebar-item,
+.sidebar-navigation .sidebar-item{
+  line-height: 1.2;
+  padding-bottom: 0.4rem;
+}
+
+.sidebar-item .sidebar-item-toggle .bi {
+  // The dongle for opening and closing sections
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+// Increase font size in TOC
+#TOC {
+  padding-bottom: 0.1em;
+}
+
+#toc-title {
+  font-weight: 700;
+}
+
+.sidebar nav[role="doc-toc"] > ul li a {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+
+  &.active {
+    border-left: 1px solid $orange;
+    color: $orange !important;
+  }
+}
+
+// Code stuff
+// Shrink blocks of code
+pre.text, pre.sourceCode, .cell-output pre {
+  font-size: 0.775em;
+}
+
+// Slight bottom margin to output
+.cell-output {
+  margin: 0 0 1em;
+}
+
+// Remove margin on pre in output
+.cell-output pre {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+// Format output and plain text blocks like code
+.cell-output, pre.text {
+  border: none;
+  padding: .4em;
+  background-color: $monokai-bg;
+  border: 1px solid $monokai-bg;
+  border-radius: .25rem;
+}
+
+pre.text {
+  color: #ffffff;
+}
