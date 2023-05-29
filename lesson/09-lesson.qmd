@@ -1,6 +1,7 @@
 ---
 title: "Annotations"
-date: "2020-05-21"
+date: "2023-07-03"
+date_end: "2023-07-07"
 ---
 
 Ha, so in the video I said there would be interactive lessons, but *I changed my mind!* You're only working with a few new functions this session (`annotate()`, `geom_text()`, `geom_label()`, `geom_text_repel()`, and `geom_label_repel()`), and the best way to figure out how to use them is to use them!

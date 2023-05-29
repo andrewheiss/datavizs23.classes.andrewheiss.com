@@ -1,7 +1,7 @@
 ---
 title: "Relationships"
-date: "2022-06-27"
-date_end: "2022-07-01"
+date: "2023-06-26"
+date_end: "2023-06-30"
 ---
 
 For this example, we're going to use historical weather data from the now-defunct [Dark Sky](https://darksky.net/forecast/33.7546,-84.39/us12/en) about wind speed and temperature trends for downtown Atlanta ([specifically `33.754557, -84.390009`](https://www.google.com/maps/place/33°45'16.4"N+84°23'24.0"W/@33.754557,-84.3921977,17z/)) in 2019. I downloaded this data using Dark Sky's (now-retired-because-they-were-bought-by-Apple) API using the [ {darksky} package](https://github.com/hrbrmstr/darksky).

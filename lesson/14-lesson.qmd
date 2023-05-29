@@ -1,6 +1,7 @@
 ---
 title: "Enhancing graphics"
-date: "2020-05-29"
+date: "2023-07-17"
+date_end: "2023-07-21"
 ---
 
 There's no lesson for this session. In your exercise today you'll export a plot from ggplot, open it in a vector editor like [Illustrator](https://www.adobe.com/products/illustrator.html), [Inkscape](https://inkscape.org/), or [Gravit Designer](https://www.designer.io/en/), and make it extra pretty and well-designed. The best way to learn this is by actually doing it.

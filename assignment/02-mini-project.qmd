@@ -1,6 +1,6 @@
 ---
 title: "Mini project 2"
-date: "2022-07-18"
+date: "2023-07-17"
 ---
 
 The United States has resettled more than 600,000 refugees from 60 different countries since 2006.

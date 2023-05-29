@@ -1,11 +1,5 @@
 ---
 title: Code examples
-menu:
-  example:
-    parent: Overview
-    weight: 1
-type: docs
-weight: 1
 ---
 
 This section contains fully annotated R code that you can use as a reference for creating your own visualizations. In the lessons section, you sequentially build up your understanding of R and {ggplot2}; here you can see how all the pieces work together. 
