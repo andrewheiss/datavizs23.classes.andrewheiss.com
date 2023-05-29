@@ -17,7 +17,7 @@ You don't need to download any CSV files for this assignment. If you run `librar
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
 
-- [<i class="fab fa-r-project"></i> `06-exercise.Rmd`](/projects/06-exercise/06-exercise.Rmd)
+- [{{< fa brands r-project >}} `06-exercise.Rmd`](/projects/06-exercise/06-exercise.Rmd)
 
 In the end, the structure of your project directory should look something like this:
 
@@ -29,7 +29,7 @@ your-project-name\
 
 To check that you put everything in the right places, you can download and unzip this file, which contains everything in the correct structure:
 
-- [<i class="fas fa-file-archive"></i> `06-exercise.zip`](/projects/06-exercise.zip)
+- [{{< fa file-archive >}} `06-exercise.zip`](/projects/06-exercise.zip)
 
 
 ## Task 1: Reflection

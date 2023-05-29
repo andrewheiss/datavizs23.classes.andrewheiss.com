@@ -15,7 +15,7 @@ You should use an RStudio Project to keep your files well organized (either on y
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some helpful starter code. Download that here and include it in your project:
 
-- [<i class="fab fa-r-project"></i> `13-exercise.Rmd`](/projects/13-exercise/13-exercise.Rmd)
+- [{{< fa brands r-project >}} `13-exercise.Rmd`](/projects/13-exercise/13-exercise.Rmd)
 
 In the end, the structure of your project directory should look something like this:
 
@@ -27,7 +27,7 @@ your-project-name\
 
 To check that you put everything in the right places, you can download and unzip this file, which contains everything in the correct structure:
 
-- [<i class="fas fa-file-archive"></i> `13-exercise.zip`](/projects/13-exercise.zip)
+- [{{< fa file-archive >}} `13-exercise.zip`](/projects/13-exercise.zip)
 
 The [example from today's session](/example/13-example/) will be incredibly helpful for this exercise.
 

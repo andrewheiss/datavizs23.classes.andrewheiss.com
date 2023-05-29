@@ -13,13 +13,13 @@ For this exercise, you'll export a PDF and/or an SVG from R, open it in Adobe Il
 
 I have given you 100% of the R code you need to use. All you have to do is run it. You need to download one CSV file: 
 
-- [<i class="fas fa-table"></i> `hot-dog-contest-winners.csv`](/data/hot-dog-contest-winners.csv)
+- [{{< fa table >}} `hot-dog-contest-winners.csv`](/data/hot-dog-contest-winners.csv)
 
 You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with all the code you'll need. Download that here and include it in your project:
 
-- [<i class="fab fa-r-project"></i> `14-exercise.Rmd`](/projects/14-exercise/14-exercise.Rmd)
+- [{{< fa brands r-project >}} `14-exercise.Rmd`](/projects/14-exercise/14-exercise.Rmd)
 
 In the end, the structure of your project directory should look something like this:
 
@@ -33,7 +33,7 @@ your-project-name\
 
 To check that you put everything in the right places, you can download and unzip this file, which contains everything in the correct structure:
 
-- [<i class="fas fa-file-archive"></i> `14-exercise.zip`](/projects/14-exercise.zip)
+- [{{< fa file-archive >}} `14-exercise.zip`](/projects/14-exercise.zip)
 
 
 ## Task 1: Reflection

@@ -21,21 +21,21 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- <i class="fas fa-book"></i> Chapter 10 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
-- <i class="fas fa-book"></i> [Chapter 7](http://socviz.co/maps.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+- {{< fa book >}} Chapter 10 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- {{< fa book >}} [Chapter 7](http://socviz.co/maps.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
 
 It looks like this is a lot of reading, but lots of these are short videos or tweets or interactive websites, so don't worry!
 
-- <i class="fab fa-youtube"></i> [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
-- <i class="fas fa-external-link-square-alt"></i> [The True Size Of…](https://thetruesize.com)
-- <i class="fas fa-external-link-square-alt"></i> [Projection comparison](https://observablehq.com/@d3/projection-comparison)
-- <i class="fas fa-external-link-square-alt"></i> [Map projections](https://xkcd.com/977/) (try comparing Robinson with Mercator to see how badly Mercator exaggerates the northern hemisphere)
-- <i class="fab fa-youtube"></i> [Gall-Peters Projection](https://www.youtube.com/watch?v=vVX-PrBRtTY)
-- <i class="fas fa-external-link-square-alt"></i> ["When Maps Lie"](https://www.citylab.com/design/2015/06/when-maps-lie/396761/)
-- <i class="fas fa-external-link-square-alt"></i> [Animated Mercator distortion](https://twitter.com/neilrkaye/status/1050740679008296967)
-- <i class="fas fa-external-link-square-alt"></i> ["These Twisted Maps Prove That America Isn't a Red Country"](https://newrepublic.com/article/115550/cartograms-are-important-inforgraphic-tool)
-- <i class="fas fa-external-link-square-alt"></i> ["The next great fake news threat? Bot-designed maps"](https://www.fastcompany.com/90230916/the-next-great-fake-news-threat-bot-designed-maps)
-- <i class="fas fa-external-link-square-alt"></i> ["New World Map That Accurately Shows Earth in 2D Created by Scientists"](https://www.newsweek.com/equal-earth-map-continents-accurate-2d-1102404)
+- {{< fa brands youtube >}} [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
+- {{< fa arrow-up-right-from-square >}} [The True Size Of…](https://thetruesize.com)
+- {{< fa arrow-up-right-from-square >}} [Projection comparison](https://observablehq.com/@d3/projection-comparison)
+- {{< fa arrow-up-right-from-square >}} [Map projections](https://xkcd.com/977/) (try comparing Robinson with Mercator to see how badly Mercator exaggerates the northern hemisphere)
+- {{< fa brands youtube >}} [Gall-Peters Projection](https://www.youtube.com/watch?v=vVX-PrBRtTY)
+- {{< fa arrow-up-right-from-square >}} ["When Maps Lie"](https://www.citylab.com/design/2015/06/when-maps-lie/396761/)
+- {{< fa arrow-up-right-from-square >}} [Animated Mercator distortion](https://twitter.com/neilrkaye/status/1050740679008296967)
+- {{< fa arrow-up-right-from-square >}} ["These Twisted Maps Prove That America Isn't a Red Country"](https://newrepublic.com/article/115550/cartograms-are-important-inforgraphic-tool)
+- {{< fa arrow-up-right-from-square >}} ["The next great fake news threat? Bot-designed maps"](https://www.fastcompany.com/90230916/the-next-great-fake-news-threat-bot-designed-maps)
+- {{< fa arrow-up-right-from-square >}} ["New World Map That Accurately Shows Earth in 2D Created by Scientists"](https://www.newsweek.com/equal-earth-map-continents-accurate-2d-1102404)
 
 ### Questions to reflect on
 

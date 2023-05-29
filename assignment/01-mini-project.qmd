@@ -70,7 +70,7 @@ Here's what you need to do:
 
 2. **Download** New York City's database of rat sightings since 2010:
 
-   - <a href="https://raw.githubusercontent.com/andrewheiss/datavizf18.classes.andrewheiss.com/master/static/data/Rat_Sightings.csv" target="_blank" download><i class="fas fa-file-csv"></i> `Rat_Sightings.csv`</a> 
+   - <a href="https://raw.githubusercontent.com/andrewheiss/datavizf18.classes.andrewheiss.com/master/static/data/Rat_Sightings.csv" target="_blank" download>{{< fa file-csv >}} `Rat_Sightings.csv`</a> 
 
    - Place this in the `data` subfolder you created in step 1. You might need to right click on this link and choose "Save link as…", since your browser may try to display it as text. The data was originally [uploaded by the City of New York to Kaggle](https://www.kaggle.com/new-york-city/nyc-rat-sightings/data), and is provided with a public domain license.
 
@@ -123,7 +123,7 @@ Here's what you need to do:
 
 You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
 
-- [<i class="fas fa-file-pdf"></i> `mini-project-1-rubric.pdf`](/files/mini-project-1-rubric.pdf)
+- [{{< fa file-pdf >}} `mini-project-1-rubric.pdf`](/files/mini-project-1-rubric.pdf)
 
 For this assignment, I am less concerned with detailed graphic design principles—select appropriate colors, change fonts if you're brave, and choose a nice ggplot theme and make some adjustments like moving the legend around (`theme(legend.position = "bottom")`).
 

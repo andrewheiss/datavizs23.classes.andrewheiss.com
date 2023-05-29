@@ -8,7 +8,7 @@ For this example, we're going to use historical weather data from the now-defunc
 
 If you want to follow along with this example, you can download the data below (you'll likely need to right click and choose "Save Link As…"):
 
-- [<i class="fas fa-file-csv"></i> `atl-weather-2019.csv`](/files/data/external_data/atl-weather-2019.csv)
+- [{{< fa file-csv >}} `atl-weather-2019.csv`](/files/data/external_data/atl-weather-2019.csv)
 
 
 ## Live coding example

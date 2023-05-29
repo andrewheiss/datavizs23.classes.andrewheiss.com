@@ -7,5 +7,5 @@ Ha, so in the video I said there would be interactive lessons, but *I changed my
 
 There are some helpful blog posts and other resources online with examples and explanations. Read through these in addition to the documentation for [`annotate()`](https://ggplot2.tidyverse.org/reference/annotate.html), [`geom_text()/geom_label()`](https://ggplot2.tidyverse.org/reference/geom_text.html) and [{ggrepel}](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html):
 
-- <i class="fas fa-external-link-square-alt"></i> ["Add shapes with `annotate()`"](https://www.r-graph-gallery.com/233-add-annotations-on-ggplot2-chart.html)
-- <i class="fas fa-external-link-square-alt"></i> ["Annotations"](https://ggplot2-book.org/annotations.html)
+- {{< fa arrow-up-right-from-square >}} ["Add shapes with `annotate()`"](https://www.r-graph-gallery.com/233-add-annotations-on-ggplot2-chart.html)
+- {{< fa arrow-up-right-from-square >}} ["Annotations"](https://ggplot2-book.org/annotations.html)

@@ -63,7 +63,7 @@ Alternatively, instead of using these index numbers, you can use any of the name
 
 I use a lot of different shapefiles in this example. To save you from having to go find and download each individual one, you can download this zip file:
 
-- [<i class="fas fa-file-archive"></i> `shapefiles.zip`](https://datavizm20.s3.amazonaws.com/shapefiles.zip)
+- [{{< fa file-archive >}} `shapefiles.zip`](https://datavizm20.s3.amazonaws.com/shapefiles.zip)
 
 Unzip this and put all the contained folders in a folder named `data` if you want to follow along. **You don't need to follow along!**
 
@@ -89,14 +89,14 @@ your-project-name\
 
 These shapefiles all came from these sources:
 
-- <i class="far fa-map"></i> **World map**: [110m "Admin 0 - Countries" from Natural Earth](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
-- <i class="far fa-map"></i> **US states**: [20m 2022 state boundaries from the US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
-- <i class="far fa-map"></i> **US counties**: [5m 2022 county boundaries from the US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
-- <i class="far fa-map"></i> **US states high resolution**: [10m "Admin 1 – States, Provinces" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
-- <i class="far fa-map"></i> **Global rivers**: [10m "Rivers + lake centerlines" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
-- <i class="far fa-map"></i> **North American rivers**: [10m "Rivers + lake centerlines, North America supplement" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
-- <i class="far fa-map"></i> **Global lakes**: [10m "Lakes + Reservoirs" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
-- <i class="far fa-map"></i> **Georgia K–12 schools, 2009**: ["Georgia K-12 Schools" from the Georgia Department of Education](https://data.georgiaspatial.org/index.asp?body=preview&dataId=41516) *(you must be logged in to access this)*
+- {{< fa map >}} **World map**: [110m "Admin 0 - Countries" from Natural Earth](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
+- {{< fa map >}} **US states**: [20m 2022 state boundaries from the US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
+- {{< fa map >}} **US counties**: [5m 2022 county boundaries from the US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
+- {{< fa map >}} **US states high resolution**: [10m "Admin 1 – States, Provinces" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
+- {{< fa map >}} **Global rivers**: [10m "Rivers + lake centerlines" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
+- {{< fa map >}} **North American rivers**: [10m "Rivers + lake centerlines, North America supplement" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+- {{< fa map >}} **Global lakes**: [10m "Lakes + Reservoirs" from Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+- {{< fa map >}} **Georgia K–12 schools, 2009**: ["Georgia K-12 Schools" from the Georgia Department of Education](https://data.georgiaspatial.org/index.asp?body=preview&dataId=41516) *(you must be logged in to access this)*
 
 
 ## Live coding example

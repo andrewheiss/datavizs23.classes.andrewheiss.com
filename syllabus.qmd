@@ -100,9 +100,9 @@ Each session has (1) a set of readings and an accompanying lecture, (2) a lesson
 
 I recommend following this general process for each session:
 
-- Do everything on the content (<i class="fas fa-book-reader"></i>) page
-- Work through the lesson (<i class="fas fa-chalkboard-teacher"></i>) page
-- Complete the assignment (<i class="fas fa-pencil-ruler"></i>) while referencing the example (<i class="fas fa-laptop-code"></i>)
+- Do everything on the content ({{< fa book-open-reader >}}) page
+- Work through the lesson ({{< fa chalkboard-teacher >}}) page
+- Complete the assignment ({{< fa pen-ruler >}}) while referencing the example ({{< fa laptop-code >}})
 
 
 ## Course policies

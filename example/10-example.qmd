@@ -14,7 +14,7 @@ For this example we'll use data from the [World Bank](https://data.worldbank.org
 
 If you want to skip the data downloading, you can download the data below (you'll likely need to right click and choose "Save Link As…"):
 
-- [<i class="fas fa-file-csv"></i> `wdi_parliament.csv`](/`r wdi_path`)
+- [{{< fa file-csv >}} `wdi_parliament.csv`](/`r wdi_path`)
 
 
 ## Live coding example

@@ -71,9 +71,9 @@ If you don't want to go through the process of creating a full-blown git reposit
 
 If you're interested in learning more about data storytelling and science communication, check out these resources:
 
-- <i class="fas fa-university"></i> [BUSM 491R: Telling Stories with Data](https://www.jessemaegan.com/post/so-you-ve-been-asked-to-make-a-reprex/) (BYU, Fall 2017)
-- <i class="fas fa-book"></i> Cole Nussbaumer Knaflic, [*Storytelling with Data: A Data Visualization Guide for Business Professionals*](https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/1119002257) (Hoboken, New Jersey: John Wiley & Sons, Inc., 2015).
-- <i class="fas fa-book"></i> Alan Alda, [*If I Understood You, Would I Have This Look on My Face? My Adventures in the Art and Science of Relating and Communicating*](https://www.amazon.com/Understood-Would-Have-This-Look/dp/0812989147) (New York: Random House, 2017). 
-- <i class="fas fa-book"></i> Nancy Duarte, [*Resonate: Present Visual Stories That Transform Audiences*](https://www.amazon.com/Resonate-Present-Stories-Transform-Audiences/dp/0470632011) (Hoboken, New Jersey: John Wiley & Sons, Inc., 2010).
-- <i class="fab fa-youtube"></i> ["Understanding the way scientists speak,"](http://www.msnbc.com/morning-joe/watch/understanding-the-way-scientists-speak-27745859874) MSNBC Morning Joe, 2013-04-24
-- <i class="fab fa-youtube"></i> ["Improvisation for Scientists: Workshops by Alan Alda and the Center for Communicating Science,"](https://www.youtube.com/watch?v=JtdyA7SibG8) Stony Brook Journalism, 2010-03-23
+- {{< fa university >}} [BUSM 491R: Telling Stories with Data](https://www.jessemaegan.com/post/so-you-ve-been-asked-to-make-a-reprex/) (BYU, Fall 2017)
+- {{< fa book >}} Cole Nussbaumer Knaflic, [*Storytelling with Data: A Data Visualization Guide for Business Professionals*](https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/1119002257) (Hoboken, New Jersey: John Wiley & Sons, Inc., 2015).
+- {{< fa book >}} Alan Alda, [*If I Understood You, Would I Have This Look on My Face? My Adventures in the Art and Science of Relating and Communicating*](https://www.amazon.com/Understood-Would-Have-This-Look/dp/0812989147) (New York: Random House, 2017). 
+- {{< fa book >}} Nancy Duarte, [*Resonate: Present Visual Stories That Transform Audiences*](https://www.amazon.com/Resonate-Present-Stories-Transform-Audiences/dp/0470632011) (Hoboken, New Jersey: John Wiley & Sons, Inc., 2010).
+- {{< fa brands youtube >}} ["Understanding the way scientists speak,"](http://www.msnbc.com/morning-joe/watch/understanding-the-way-scientists-speak-27745859874) MSNBC Morning Joe, 2013-04-24
+- {{< fa brands youtube >}} ["Improvisation for Scientists: Workshops by Alan Alda and the Center for Communicating Science,"](https://www.youtube.com/watch?v=JtdyA7SibG8) Stony Brook Journalism, 2010-03-23

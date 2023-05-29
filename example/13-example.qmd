@@ -17,14 +17,14 @@ You can follow along if you want, but **don't feel like you have too**. This is 
 
 If you want to play with part-of-speech tagging, you can download an already-tagged version of *Little Women* here (you'll likely need to right click and choose "Save Link As…"):
 
-- [<i class="fas fa-file-csv"></i> `little_women_tagged.csv`](/`r little_women_path`)
+- [{{< fa file-csv >}} `little_women_tagged.csv`](/`r little_women_path`)
 
 If you want to see other examples of text visualizations with the {tidytext} package, check out some of these:
 
-- <i class="fas fa-external-link-square-alt"></i> [Harry Potter Sentiment Analysis for Beginners](https://rstudio-pubs-static.s3.amazonaws.com/300624_8260952d1f0346969e65f41a97006bf5.html) (this uses [the {harrypotter} package](https://github.com/bradleyboehmke/harrypotter), which you can install from GitHub (not from CRAN))
-- <i class="fas fa-external-link-square-alt"></i> Peer Christensen ["Fair is foul, and foul is fair: a tidytext sentiment analysis of Shakespeare’s tragedies"](https://peerchristensen.netlify.app/post/fair-is-foul-and-foul-is-fair-a-tidytext-entiment-analysis-of-shakespeare-s-tragedies/)
-- <i class="fas fa-external-link-square-alt"></i> ["Tidy text, parts of speech, and unique words in the Bible"](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)
-- <i class="fas fa-external-link-square-alt"></i> ["Tidy text, parts of speech, and unique words in the Qur'an"](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)
+- {{< fa arrow-up-right-from-square >}} [Harry Potter Sentiment Analysis for Beginners](https://rstudio-pubs-static.s3.amazonaws.com/300624_8260952d1f0346969e65f41a97006bf5.html) (this uses [the {harrypotter} package](https://github.com/bradleyboehmke/harrypotter), which you can install from GitHub (not from CRAN))
+- {{< fa arrow-up-right-from-square >}} Peer Christensen ["Fair is foul, and foul is fair: a tidytext sentiment analysis of Shakespeare’s tragedies"](https://peerchristensen.netlify.app/post/fair-is-foul-and-foul-is-fair-a-tidytext-entiment-analysis-of-shakespeare-s-tragedies/)
+- {{< fa arrow-up-right-from-square >}} ["Tidy text, parts of speech, and unique words in the Bible"](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)
+- {{< fa arrow-up-right-from-square >}} ["Tidy text, parts of speech, and unique words in the Qur'an"](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)
 
 
 ## Live coding example
@@ -471,8 +471,8 @@ These are external programs that are not written in R and don't naturally commun
 
 You can see other examples of part-of-speech tagging (along with instructions for how to install spaCy and coreNLP) here:
 
-- <i class="fas fa-external-link-square-alt"></i> ["Tidy text, parts of speech, and unique words in the Bible"](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)
-- <i class="fas fa-external-link-square-alt"></i> ["Tidy text, parts of speech, and unique words in the Qur'an"](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)
+- {{< fa arrow-up-right-from-square >}} ["Tidy text, parts of speech, and unique words in the Bible"](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)
+- {{< fa arrow-up-right-from-square >}} ["Tidy text, parts of speech, and unique words in the Qur'an"](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)
 
 Here's the general process for tagging (or "annotating") text with the {cleanNLP} package:
 

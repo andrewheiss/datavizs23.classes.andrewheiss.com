@@ -8,8 +8,8 @@ For this example, we're going to use real world data to demonstrate some differe
 
 If you want to follow along with this example, you can download the data directly from [GitHub](https://github.com/fivethirtyeight/data/tree/master/births) or by using these links (you'll likely need to right click on these and choose "Save Link As…"):
 
-- [<i class="fas fa-file-csv"></i> `US_births_1994-2003_CDC_NCHS.csv`](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_1994-2003_CDC_NCHS.csv)
-- [<i class="fas fa-file-csv"></i> `US_births_2000-2014_SSA.csv`](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_2000-2014_SSA.csv)
+- [{{< fa file-csv >}} `US_births_1994-2003_CDC_NCHS.csv`](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_1994-2003_CDC_NCHS.csv)
+- [{{< fa file-csv >}} `US_births_2000-2014_SSA.csv`](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_2000-2014_SSA.csv)
 
 
 ## Live coding example

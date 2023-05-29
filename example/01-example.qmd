@@ -10,7 +10,7 @@ For this example, I'm going to create a new RStudio project, download some data,
 
 To follow along, download this CSV file here (you may need to right click on it and select "Save As…"):
 
-- [<i class="fas fa-file-csv"></i> `gapminder.csv`](/files/data/package_data/gapminder.csv)
+- [{{< fa file-csv >}} `gapminder.csv`](/files/data/package_data/gapminder.csv)
 
 Here's a video walkthrough of how to get started:
 

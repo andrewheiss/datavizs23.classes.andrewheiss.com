@@ -75,7 +75,7 @@ Upload the following files to iCollege:
 
 I will use [this rubric](/files/final-project-rubric.xlsx) to grade the final product:
 
-- [<i class="fas fa-file-excel"></i> `final-project-rubric.xlsx`](/files/final-project-rubric.xlsx)
+- [{{< fa file-excel >}} `final-project-rubric.xlsx`](/files/final-project-rubric.xlsx)
 
 I am happy to give feedback and help along the way—please don't hesitate to get help! My goal is for you to have a beautiful graphic in the end that you'll want to show off to all your friends, family, neighbors, employers, and strangers on the street—I'm not trying to trip you up or give you trick questions!
 
@@ -92,9 +92,9 @@ Here are some great examples of student projects from past versions of this clas
 
 ### Travel runs in Yellowstone
 
-[<i class="fas fa-file-pdf"></i> Project description][yellowstone-memo]&ensp;
-[<i class="fas fa-file-pdf"></i> Final PDF][yellowstone-pdf]&ensp;
-[<i class="far fa-image"></i> Final PNG][yellowstone-png]
+[{{< fa file-pdf >}} Project description][yellowstone-memo]&ensp;
+[{{< fa file-pdf >}} Final PDF][yellowstone-pdf]&ensp;
+[{{< fa image >}} Final PNG][yellowstone-png]
 
 [![Yellowstone travel final project][yellowstone-png]][yellowstone-pdf]
 
@@ -104,9 +104,9 @@ Here are some great examples of student projects from past versions of this clas
 
 ### Firefighter fatalities
 
-[<i class="fas fa-file-pdf"></i> Project description][firefighters-memo]&ensp;
-[<i class="fas fa-file-pdf"></i> Final PDF][firefighters-pdf]&ensp;
-[<i class="far fa-image"></i> Final PNG][firefighters-png]
+[{{< fa file-pdf >}} Project description][firefighters-memo]&ensp;
+[{{< fa file-pdf >}} Final PDF][firefighters-pdf]&ensp;
+[{{< fa image >}} Final PNG][firefighters-png]
 
 [![Firefighter fatalities final project][firefighters-png]][firefighters-pdf]
 
@@ -116,9 +116,9 @@ Here are some great examples of student projects from past versions of this clas
 
 ### Scripture use by *The Killers*
 
-[<i class="fas fa-file-pdf"></i> Project description][killers-scripture-memo]&ensp;
-[<i class="fas fa-file-pdf"></i> Final PDF][killers-scripture-pdf]&ensp;
-[<i class="far fa-image"></i> Final PNG][killers-scripture-png]
+[{{< fa file-pdf >}} Project description][killers-scripture-memo]&ensp;
+[{{< fa file-pdf >}} Final PDF][killers-scripture-pdf]&ensp;
+[{{< fa image >}} Final PNG][killers-scripture-png]
 
 [![Firefighter fatalities final project][killers-scripture-png]][killers-scripture-pdf]
 
@@ -128,9 +128,9 @@ Here are some great examples of student projects from past versions of this clas
 
 ### Utah nonprofits
 
-[<i class="fas fa-file-pdf"></i> Project description][utah-nonprofits-memo]&ensp;
-[<i class="fas fa-file-pdf"></i> Final PDF][utah-nonprofits-pdf]&ensp;
-[<i class="far fa-image"></i> Final PNG][utah-nonprofits-png]
+[{{< fa file-pdf >}} Project description][utah-nonprofits-memo]&ensp;
+[{{< fa file-pdf >}} Final PDF][utah-nonprofits-pdf]&ensp;
+[{{< fa image >}} Final PNG][utah-nonprofits-png]
 
 [![Firefighter fatalities final project][utah-nonprofits-png]][utah-nonprofits-pdf]
 
@@ -140,9 +140,9 @@ Here are some great examples of student projects from past versions of this clas
 
 ### Buckethead
 
-[<i class="fas fa-file-pdf"></i> Project description][buckethead-memo]&ensp;
-[<i class="fas fa-file-pdf"></i> Final PDF][buckethead-pdf]&ensp;
-[<i class="far fa-image"></i> Final PNG][buckethead-png]
+[{{< fa file-pdf >}} Project description][buckethead-memo]&ensp;
+[{{< fa file-pdf >}} Final PDF][buckethead-pdf]&ensp;
+[{{< fa image >}} Final PNG][buckethead-png]
 
 [![Firefighter fatalities final project][buckethead-png]][buckethead-pdf]
 

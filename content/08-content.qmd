@@ -20,11 +20,11 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- <i class="fas fa-book"></i> [Chapter 9](https://clauswilke.com/dataviz/boxplots-violins.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
-- <i class="fas fa-external-link-square-alt"></i> Mike Bostock, ["Methods of Comparison, Compared"](https://observablehq.com/@mbostock/methods-of-comparison-compared). Explanation of the differences between showing relative differences, absolute differences, and log ratios.
-- <i class="fas fa-external-link-square-alt"></i> [Sparkline theory and practice](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). This is a collection of posts by Edward Tufte about sparklines—scroll down a ways and check out his examples, analysis, and critiques.
-- <i class="fas fa-external-link-square-alt"></i> [Time series sparklines](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/02-time-series-sparklines-2/)
-- <i class="fas fa-external-link-square-alt"></i> [Comparisons with lollipop charts](https://uc-r.github.io/lollipop). If you're feeling adventurous (and you should!), do this tutorial as you read it.
+- {{< fa book >}} [Chapter 9](https://clauswilke.com/dataviz/boxplots-violins.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- {{< fa arrow-up-right-from-square >}} Mike Bostock, ["Methods of Comparison, Compared"](https://observablehq.com/@mbostock/methods-of-comparison-compared). Explanation of the differences between showing relative differences, absolute differences, and log ratios.
+- {{< fa arrow-up-right-from-square >}} [Sparkline theory and practice](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). This is a collection of posts by Edward Tufte about sparklines—scroll down a ways and check out his examples, analysis, and critiques.
+- {{< fa arrow-up-right-from-square >}} [Time series sparklines](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/02-time-series-sparklines-2/)
+- {{< fa arrow-up-right-from-square >}} [Comparisons with lollipop charts](https://uc-r.github.io/lollipop). If you're feeling adventurous (and you should!), do this tutorial as you read it.
 
 ### Reproducible examples
 
@@ -32,9 +32,9 @@ Reprexes (or reproducible examples) are the best way to (1) get help online and 
 
 Making a good reprex is tricky, but it's a very valuable skill to know (regardless of programming language!). Here are some helpful resources for making them:
 
-- <i class="fas fa-external-link-square-alt"></i> [What's a reproducible example (`reprex`) and how do I do one?](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219)
-- <i class="fas fa-external-link-square-alt"></i> [So you've been asked to make a reprex](https://www.jessemaegan.com/post/so-you-ve-been-asked-to-make-a-reprex/)
-- <i class="fab fa-r-project"></i> [The reprex package](https://reprex.tidyverse.org/index.html)
+- {{< fa arrow-up-right-from-square >}} [What's a reproducible example (`reprex`) and how do I do one?](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219)
+- {{< fa arrow-up-right-from-square >}} [So you've been asked to make a reprex](https://www.jessemaegan.com/post/so-you-ve-been-asked-to-make-a-reprex/)
+- {{< fa brands r-project >}} [The reprex package](https://reprex.tidyverse.org/index.html)
 
 ### Questions to reflect on
 

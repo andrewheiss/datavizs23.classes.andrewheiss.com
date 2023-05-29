@@ -10,7 +10,7 @@ The data I'll use comes from the BBC's corporate charity, [BBC Children in Need]
 
 If you want to follow along with this example (highly recommended!), you can download the data directly from [360Giving](http://data.threesixtygiving.org/) or by using this link:
 
-- [<i class="fas fa-file-excel"></i> `360-giving-data.xlsx`](/files/data/external_data/360-giving-data.xlsx)
+- [{{< fa file-excel >}} `360-giving-data.xlsx`](/files/data/external_data/360-giving-data.xlsx)
 
 
 ## Live coding example

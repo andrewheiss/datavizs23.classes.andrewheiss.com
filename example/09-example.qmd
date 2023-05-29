@@ -14,7 +14,7 @@ For this example, we're again going to use cross-national data from the [World B
 
 If you want to skip the data downloading, you can download the data below (you'll likely need to right click and choose "Save Link As…"):
 
-- [<i class="fas fa-file-csv"></i> `wdi_annotations.csv`](/`r wdi_path`)
+- [{{< fa file-csv >}} `wdi_annotations.csv`](/`r wdi_path`)
 
 
 ## Live coding example

@@ -21,23 +21,23 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- <i class="fas fa-book"></i> Chapter 8 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
-- <i class="fas fa-video"></i> [The Nuclear Threat—The Shadow Peace, part 1](http://www.fallen.io/shadow-peace/1/)
-- <i class="fas fa-external-link-square-alt"></i> [11 Ways to Visualize Changes Over Time – A Guide](https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/)
+- {{< fa book >}} Chapter 8 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- {{< fa video >}} [The Nuclear Threat—The Shadow Peace, part 1](http://www.fallen.io/shadow-peace/1/)
+- {{< fa arrow-up-right-from-square >}} [11 Ways to Visualize Changes Over Time – A Guide](https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/)
 - A bunch of (really) short blog posts:
-    - <i class="fas fa-external-link-square-alt"></i> [What a Hundred Million Calls to 311 Reveal About New York](https://www.wired.com/2010/11/ff_311_new_york/) (just look at the picture; you don't need to read this unless you're really curious about trends in 311 calls)
-    - <i class="fas fa-external-link-square-alt"></i> [A century of ocean shipping animated](https://flowingdata.com/2012/04/12/a-century-of-ocean-shipping-animated/)
-    - <i class="fas fa-external-link-square-alt"></i> [What is seasonal adjustment and why is it used?](http://junkcharts.typepad.com/junk_charts/2010/11/what-is-seasonal-adjustment-and-why-is-it-used.html)
-    - <i class="fas fa-external-link-square-alt"></i> [The start-at-zero rule](http://junkcharts.typepad.com/junk_charts/2005/09/the_startatzero.html)
-    - <i class="fas fa-external-link-square-alt"></i> [Keeping one's appetite after touring the sausage factory](http://junkcharts.typepad.com/numbersruleyourworld/2011/02/keeping-ones-appetite-after-touring-the-sausage-factory.html)
-    - <i class="fas fa-external-link-square-alt"></i> [How Common is Your Birthday? This Visualization Might Surprise You](http://thedailyviz.com/2016/09/17/how-common-is-your-birthday-dailyviz/)
+    - {{< fa arrow-up-right-from-square >}} [What a Hundred Million Calls to 311 Reveal About New York](https://www.wired.com/2010/11/ff_311_new_york/) (just look at the picture; you don't need to read this unless you're really curious about trends in 311 calls)
+    - {{< fa arrow-up-right-from-square >}} [A century of ocean shipping animated](https://flowingdata.com/2012/04/12/a-century-of-ocean-shipping-animated/)
+    - {{< fa arrow-up-right-from-square >}} [What is seasonal adjustment and why is it used?](http://junkcharts.typepad.com/junk_charts/2010/11/what-is-seasonal-adjustment-and-why-is-it-used.html)
+    - {{< fa arrow-up-right-from-square >}} [The start-at-zero rule](http://junkcharts.typepad.com/junk_charts/2005/09/the_startatzero.html)
+    - {{< fa arrow-up-right-from-square >}} [Keeping one's appetite after touring the sausage factory](http://junkcharts.typepad.com/numbersruleyourworld/2011/02/keeping-ones-appetite-after-touring-the-sausage-factory.html)
+    - {{< fa arrow-up-right-from-square >}} [How Common is Your Birthday? This Visualization Might Surprise You](http://thedailyviz.com/2016/09/17/how-common-is-your-birthday-dailyviz/)
 
 
 ### Recommended
 
-- <i class="fas fa-video"></i> [The Fallen of World War II](http://www.fallen.io/ww2/)
-- <i class="far fa-file-pdf"></i> [Visualizing Statistical Mix Effects and Simpson's Paradox](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42901.pdf) [@ArmstrongWattenberg:2014]
-- <i class="fas fa-external-link-square-alt"></i> [How To Fix a Toilet (And Other Things We Couldn't Do Without Search)](http://how-to-fix-a-toilet.com/)
+- {{< fa video >}} [The Fallen of World War II](http://www.fallen.io/ww2/)
+- {{< fa file-pdf >}} [Visualizing Statistical Mix Effects and Simpson's Paradox](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42901.pdf) [@ArmstrongWattenberg:2014]
+- {{< fa arrow-up-right-from-square >}} [How To Fix a Toilet (And Other Things We Couldn't Do Without Search)](http://how-to-fix-a-toilet.com/)
 
 
 ### Questions to reflect on
