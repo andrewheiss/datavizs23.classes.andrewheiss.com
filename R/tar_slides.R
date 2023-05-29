@@ -7,7 +7,13 @@ render_xaringan <- function(slide_path) {
   # disable it here. This is the same thing that tarchetypes::tar_render() does
   # behind the scenes too.
   withr::local_options(list(crayon.enabled = NULL))
-  rmarkdown::render(slide_path, quiet = TRUE)
+  
+  rmarkdown::render(
+    slide_path, 
+    envir = parent.frame(),
+    quiet = TRUE
+  )
+  
   return(paste0(tools::file_path_sans_ext(slide_path), ".html"))
 }
 
