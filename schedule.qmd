@@ -10,15 +10,13 @@ library(tidyverse)
 library(knitr)
 library(kableExtra)
 
-# withr::with_dir(here::here(), {
-#   schedule_nested <- targets::tar_read(schedule_page_data)
-#   targets::tar_load(schedule_ical_file)
-# })
+withr::with_dir(here::here(), {
+  schedule_nested <- targets::tar_read(schedule_page_data)
+  targets::tar_load(schedule_ical_file)
+})
 
-schedule_ical_file <- "blah"
-# base_url <- yaml::read_yaml(here::here("_quarto.yml"))$website$`site-url`
-# ical_url_absolute <- paste0(base_url, "/", schedule_ical_file)
-ical_url_absolute <- "blahblah"
+base_url <- yaml::read_yaml(here::here("_quarto.yml"))$website$`site-url`
+ical_url_absolute <- paste0(base_url, "/", schedule_ical_file)
 ```
 
 ::: {.schedule-page}
@@ -59,21 +57,18 @@ show_table <- function(group_id) {
   
   # Make the table
   tbl <- schedule_nested$data[[group_id]] %>% 
-    select(-subgroup) %>% 
-    kbl(escape = FALSE, align = "rlccc", table.attr = 'class="schedule-table"') %>% 
+    kbl(escape = FALSE, align = "rlcccc", table.attr = 'class="schedule-table"') %>% 
     kable_styling() %>% 
     column_spec(1, width = "20%", extra_css = "padding-right: 20px;") %>% 
-    column_spec(2, width = "50%") %>% 
-    column_spec(3:5, width = "10%") %>% 
-    pack_rows(index = schedule_nested$subgroup_index[[group_id]],
-              label_row_css = "border-bottom: 2px solid #000000;")
+    column_spec(2, width = "48%") %>% 
+    column_spec(3:6, width = "8%")
   
   cat(tbl)
 }
 ```
 
 ```{r show-table, echo=FALSE, results="asis"}
-# walk(seq(1, nrow(schedule_nested)), ~show_table(.x))
+walk(seq(1, nrow(schedule_nested)), ~show_table(.x))
 ```
 
 :::
