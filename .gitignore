@@ -10,6 +10,7 @@
 slides/*.pdf
 slides/*.html
 slides/**/*_cache/*
+projects/*.zip
 
 # caching stuff
 **/*_cache/*

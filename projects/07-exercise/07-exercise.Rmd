@@ -1,0 +1,71 @@
+---
+title: "Exercise 7"
+author: "Put your name here"
+date: "Put the date here"
+---
+
+# Task 1: Reflection
+
+Put your reflection here
+
+
+# Task 2: Combining plots
+
+```{r load-libraries-data}
+library(tidyverse)
+library(patchwork)
+library(broom)
+
+results_2016 <- read_csv("data/results_2016.csv")
+```
+
+Make 2–3 plots of anything you want from the `results_2016` data (histogram, density, boxplot, scatterplot, whatever) and combine them with **patchwork**. Look at [the documentation](https://patchwork.data-imaginist.com/articles/guides/assembly.html) to see fancy ways of combining them, like having two rows inside a column.
+
+```{r combine-plots}
+# Make some plots and combine them here
+```
+
+# Task 3: Visualizing regression
+
+## Coefficient plot
+
+Use the `results_2016` data to create a model that predicts the percent of Democratic votes in a precinct based on age, race, income, rent, and state (hint: the formula will look like this: `percent_dem ~ median_age + percent_white + per_capita_income + median_rent + state`)
+
+Use `tidy()` in the **broom** package and `geom_pointrange()` to create a coefficient plot for the model estimates. You'll have 50 rows for all the states, and that's excessive for a plot like this, so you'll want to filter out the state rows. You can do that by adding this:
+
+```{r example-filtering, eval=FALSE}
+tidy(...) %>%
+  filter(!str_detect(term, "state"))
+```
+
+The `str_detect()` function looks for the characters "state" in the term column. The `!` negates it. This is thus saying "only keep rows where the word 'state' is not in the term name".
+
+You should also get rid of the intercept (`filter(term != "(Intercept)")`).
+
+
+## Predicted values
+
+Show what happens to `percent_dem` as one (or more) of your model's variables changes. To make life easy, refer to the ["Predicted values and marginal effects in 2023"](https://datavizs23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section in this session's example and use `predictions()` rather than creating your own `newdata` data set by hand. You'll do something like this (assuming you're manipulating `per_capita_income`; try using a different variable when you do the assignment, though):
+
+```{r example-predictions, eval=FALSE}
+my_predictions <- predictions(
+  model_name,
+  newdata = datagrid(per_capita_income = seq(9000, 60000, by = 100),
+                     state = "Georgia"))
+```
+
+Plot your varied variable on the x-axis, the fitted values (`predicted`) on the y-axis, show the relationship with a line, and add a ribbon to show the 95% confidence interval.
+
+
+# Bonus task 1! Correlograms
+
+**This is entirely optional but might be fun.**
+
+For extra fun times, if you feel like it, create a correlogram heatmap, either with `geom_tile()` or with points sized by the correlation. Use any variables you want from `results_2016`.
+
+
+# Bonus task 2! Marginal effects
+
+**This is also entirely optional but will be super useful if you use regression for anything in your own work.**
+
+For extra super bonus fun times, create a more complex model that predicts `percent_dem` that uses polynomial terms (e.g. age squared) and/or interaction terms (e.g. age × state). Plot predictions from the model, use `marginaleffects()` to find the slopes of those predictions at different values, and plot the slopes in a marginal effects plot. (The ["Predicted values and marginal effects in 2023"](https://datavizs23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section from the example will be indispensable here.)

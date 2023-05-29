@@ -66,7 +66,7 @@ Make a map showing the proportion of individuals in each country that had access
 *Bonus optional extra fun*: Use your comparison/time skills to show the change in internet access between 2000 and 2015, perhaps with facetting some years, or [calculating ratios or proportions or percent changes](https://observablehq.com/@mbostock/methods-of-comparison-compared)
 
 
-## Bonus (optional) task!: Personal map
+## Task 3: Personal map
 
 Draw your own map with your own points. This could be a map of places you've lived, or a map of places you've visited, or a map of places you want to visit. Anything!
 

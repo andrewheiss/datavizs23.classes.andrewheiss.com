@@ -21,6 +21,13 @@ copy_file <- function(original_file, new_folder) {
     overwrite = TRUE)
 }
 
+# fs::dir_copy() works just like file_copy()
+copy_folder <- function(original_folder, new_folder) {
+  fs::dir_copy(path = original_folder,
+    new_path = fs::path(new_folder, basename(original_folder)),
+    overwrite = TRUE)
+}
+
 
 # Pipeline just for generating, saving, and copying data ----
 save_data <- list(
@@ -32,6 +39,7 @@ save_data <- list(
     save_csv(gapminder::gapminder,
       here_rel("files", "data", "package_data", "gapminder.csv")),
     format = "file"),
+
   
   ### Get data from different APIs ----
   tar_target(get_data_wdi_comparisons, get_wdi_comparisons()),
@@ -89,7 +97,7 @@ save_data <- list(
     save_csv(little_women_tagged$spacy$token, 
       here_rel("files", "data", "processed_data", "little_women_tagged.csv")),
     format = "file"
-  )
+  ),
   
   ### Copy files to project folders ----
   # tar_target(copy_penguins,
@@ -98,6 +106,64 @@ save_data <- list(
   # tar_target(copy_food_health_politics,
   #   copy_file(here_rel("files", "data", "external_data", "food_health_politics.csv"),
   #     new_folder = here_rel("projects", "problem-set-2", "data")))
+  
+  # LOTR words spoken via https://github.com/jennybc/lotr-tidy
+  tar_target(copy_lotr_fellowship,
+    copy_file(here_rel("files", "data", "external_data", "The_Fellowship_Of_The_Ring.csv"),
+      new_folder = here_rel("projects", "03-exercise", "data")),
+    format = "file"),
+  tar_target(copy_lotr_tt,
+    copy_file(here_rel("files", "data", "external_data", "The_Two_Towers.csv"),
+      new_folder = here_rel("projects", "03-exercise", "data")),
+    format = "file"),
+  tar_target(copy_lotr_rotk,
+    copy_file(here_rel("files", "data", "external_data", "The_Return_Of_The_King.csv"),
+      new_folder = here_rel("projects", "03-exercise", "data")),
+    format = "file"),
+  
+  # NYC pandemic-era essential construction via 
+  # https://www1.nyc.gov/assets/buildings/html/essential-active-construction.html
+  tar_target(copy_essential_construction,
+    copy_file(here_rel("files", "data", "external_data", "EssentialConstruction.csv"),
+      new_folder = here_rel("projects", "04-exercise", "data")),
+    format = "file"),
+  
+  # Soviet space dogs via https://airtable.com/universe/expG3z2CFykG1dZsp/sovet-space-dogs
+  tar_target(copy_space_dogs,
+    copy_file(here_rel("files", "data", "external_data", "Dogs-Database.csv"),
+      new_folder = here_rel("projects", "05-exercise", "data")),
+    format = "file"),
+  
+  # Election data via https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
+  tar_target(copy_2016_election,
+    copy_file(here_rel("files", "data", "external_data", "results_2016.csv"),
+      new_folder = here_rel("projects", "07-exercise", "data")),
+    format = "file"),
+  
+  # Data via BLS and collected/processed here
+  # https://datavizs23.classes.andrewheiss.com/exercise/08-exercise.html#postscript-how-i-got-this-unemployment-data
+  tar_target(copy_unemployment,
+    copy_file(here_rel("files", "data", "external_data", "unemployment.csv"),
+      new_folder = here_rel("projects", "08-exercise", "data")),
+    format = "file"),
+  
+  # Data via https://ourworldindata.org/internet/
+  tar_target(copy_internet,
+    copy_file(here_rel("files", "data", "external_data", "share-of-individuals-using-the-internet-1990-2015.csv"),
+      new_folder = here_rel("projects", "12-exercise", "data")),
+    format = "file"),
+  
+  # Data via https://www.naturalearthdata.com/downloads/110m-cultural-vectors/
+  tar_target(copy_natural_earth,
+    copy_folder(here_rel("files", "data", "external_data", "maps", "ne_110m_admin_0_countries"),
+      new_folder = here_rel("projects", "12-exercise", "data")),
+    format = "file"),
+  
+  # Data via https://flowingdata.com/2009/07/02/whos-going-to-win-nathans-hot-dog-eating-contest/
+  tar_target(copy_hot_dogs,
+    copy_file(here_rel("files", "data", "external_data", "hot-dog-contest-winners.csv"),
+      new_folder = here_rel("projects", "14-exercise", "data")),
+    format = "file")
 )
 
 
