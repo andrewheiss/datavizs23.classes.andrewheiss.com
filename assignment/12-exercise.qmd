@@ -16,7 +16,7 @@ Download these two data files:
 - [{{< fa table >}} `share-of-individuals-using-the-internet-1990-2015.csv`](/data/share-of-individuals-using-the-internet-1990-2015.csv)
 - [{{< fa file-archive >}} `ne_110m_admin_0_countries.zip`](/data/ne_110m_admin_0_countries.zip). This is the ["110m Admin 0—Countries"](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/) shapefile from Natural Earth. It will download as a .zip file. Unzip the file and move the entire `ne_110m_admin_0_countries` directory into your data folder.
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and join the two datasets. Download that here and include it in your project:
 

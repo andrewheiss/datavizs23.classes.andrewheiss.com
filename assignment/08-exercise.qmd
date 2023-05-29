@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this exercise you'll use state-level unemployment data from 2006 to 2016 that comes from the US Bureau of Labor Statistics (if you're curious, [I describe how I built this dataset down below](#postscript-how-i-got-this-unemployment-data)). 
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 - [{{< fa file-csv >}} `unemployment.csv`](/files/data/external_data/unemployment.csv)
 

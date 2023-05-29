@@ -9,9 +9,9 @@ knitr::opts_chunk$set(fig.align = "center")
 
 ## Getting started
 
-You'll be doing all your R work in R Markdown this time (and from now on). You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You'll be doing all your R work in R Markdown this time (and from now on). You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
-You'll need to download three CSV files and put them somewhere on your computer or upload them to RStudio.cloud—preferably in a folder named `data` in your project folder:
+You'll need to download three CSV files and put them somewhere on your computer or upload them to Posit.cloud—preferably in a folder named `data` in your project folder:
 
 - [{{< fa file-csv >}} `The_Fellowship_Of_The_Ring.csv`](/files/data/external_data/The_Fellowship_Of_The_Ring.csv)
 - [{{< fa file-csv >}} `The_Two_Towers.csv`](/files/data/external_data/The_Two_Towers.csv)

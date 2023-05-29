@@ -16,12 +16,12 @@ You'll learn some of the basics of R, as well as some powerful methods for manip
 Complete these:
 
 - **The Basics**
-	- [Visualization Basics](https://rstudio.cloud/learn/primers/1.1)
-	- [Programming Basics](https://rstudio.cloud/learn/primers/1.2)
+	- [Visualization Basics](https://posit.cloud/learn/primers/1.1)
+	- [Programming Basics](https://posit.cloud/learn/primers/1.2)
 - **Work with Data**
-	- [Working with Tibbles](https://rstudio.cloud/learn/primers/2.1)
-	- [Isolating Data with dplyr](https://rstudio.cloud/learn/primers/2.2)
-	- [Deriving Information with dplyr](https://rstudio.cloud/learn/primers/2.3)
+	- [Working with Tibbles](https://posit.cloud/learn/primers/2.1)
+	- [Isolating Data with dplyr](https://posit.cloud/learn/primers/2.2)
+	- [Deriving Information with dplyr](https://posit.cloud/learn/primers/2.3)
 
 The content from these primers comes from the (free and online!) book [*R for Data Science* by Garrett Grolemund and Hadley Wickham](https://r4ds.had.co.nz/). I highly recommend the book as a reference and for continuing to learn and use R in the future (like running regression models and other types of statistical analysis)
 

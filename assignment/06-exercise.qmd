@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this exercise you'll revisit Hans Rosling's gapminder data on health and wealth.
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 You don't need to download any CSV files for this assignment. If you run `library(gapminder)` you'll have access to a data frame named `gapminder` that contains all the data. 
 

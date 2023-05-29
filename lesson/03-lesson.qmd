@@ -14,14 +14,14 @@ For the first part of today's lesson, you need to work through RStudio's introdu
 It seems like there are a lot, but they're short and go fairly quickly (especially as you get the hang of the `ggplot()` syntax). Complete these:
 
 - **Visualize Data**
-  - [Exploratory Data Analysis](https://rstudio.cloud/learn/primers/3.1)
-  - [Bar Charts](https://rstudio.cloud/learn/primers/3.2)
-  - [Histograms](https://rstudio.cloud/learn/primers/3.3)
-  - [Boxplots and Counts](https://rstudio.cloud/learn/primers/3.4)
-  - [Scatterplots](https://rstudio.cloud/learn/primers/3.5)
-  - [Line plots](https://rstudio.cloud/learn/primers/3.6)
-  - [Overplotting and Big Data](https://rstudio.cloud/learn/primers/3.7)
-  - [Customize Your Plots](https://rstudio.cloud/learn/primers/3.8)
+  - [Exploratory Data Analysis](https://posit.cloud/learn/primers/3.1)
+  - [Bar Charts](https://posit.cloud/learn/primers/3.2)
+  - [Histograms](https://posit.cloud/learn/primers/3.3)
+  - [Boxplots and Counts](https://posit.cloud/learn/primers/3.4)
+  - [Scatterplots](https://posit.cloud/learn/primers/3.5)
+  - [Line plots](https://posit.cloud/learn/primers/3.6)
+  - [Overplotting and Big Data](https://posit.cloud/learn/primers/3.7)
+  - [Customize Your Plots](https://posit.cloud/learn/primers/3.8)
 
 
 ## Part 2: Reshaping data with {tidyr}
@@ -31,7 +31,7 @@ For the last part of today's lesson, you'll work through just one RStudio primer
 Complete this:
 
 - **Tidy Your Data**
-  - [Reshape Data](https://rstudio.cloud/learn/primers/4.1)
+  - [Reshape Data](https://posit.cloud/learn/primers/4.1)
 
 ::: {.callout-note}
 ### Pivoting

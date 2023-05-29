@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this exercise, you'll visualize something over time. You can use whatever data you want. Use a dataset from a past exercise, use one of the built-in datasets like `gapminder` from the {gapminder} package, download stuff from the World Bank with the {WDI} package, or download stuff from FRED using the {tidyquant} package. 
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
 

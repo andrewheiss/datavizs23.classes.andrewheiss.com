@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this exercise, you'll use whatever data you want to make a plot and add annotations to it. Use a dataset from a past exercise, use one of the built-in datasets like `mpg` or `gapminder` from the {gapminder} package, download stuff from the World Bank using the {WDI} package, or use something from [this list of datasets](/resource/data/).
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 **To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
 

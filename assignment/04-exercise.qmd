@@ -13,9 +13,9 @@ The New York City Department of Buildings (DOB) maintains a list of construction
 
 For this exercise, you're going to use this data to visualize the amounts or proportions of different types of essential projects in the five boroughs of New York City (Brooklyn, Manhattan, the Bronx, Queens, and Staten Island). 
 
-You'll be doing all your R work in R Markdown this time (and from now on). You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You'll be doing all your R work in R Markdown this time (and from now on). You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
-You'll need to download one CSV file and put it somewhere on your computer or upload it to RStudio.cloud—preferably in a folder named `data` in your project folder. You can download the data from [the DOB's map](https://www1.nyc.gov/assets/buildings/html/essential-active-construction.html), or use this link to get it directly:
+You'll need to download one CSV file and put it somewhere on your computer or upload it to Posit.cloud—preferably in a folder named `data` in your project folder. You can download the data from [the DOB's map](https://www1.nyc.gov/assets/buildings/html/essential-active-construction.html), or use this link to get it directly:
 
 - [{{< fa file-csv >}} `EssentialConstruction.csv`](/files/data/external_data/EssentialConstruction.csv)
 

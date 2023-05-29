@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this exercise you'll use precinct-level data from the 2016 presidential election to visualize relationships between variables. This data comes from the [MIT Election Data and Science Lab](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ).
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on RStudio.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
 - [{{< fa file-csv >}} `results_2016.csv`](/files/data/external_data/results_2016.csv)
 

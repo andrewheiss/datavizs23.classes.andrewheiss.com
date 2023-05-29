@@ -11,7 +11,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 For this assignment, you're going to work with data compiled by [data journalist Duncan Greere](https://www.duncangeere.com/) related to 48 Soviet dogs who flew as test subjects in USSR's space program in the 1950s and 60s. [The original data can be found here](https://airtable.com/universe/expG3z2CFykG1dZsp/sovet-space-dogs).
 
-You'll need to download one CSV file and put them somewhere on your computer or upload them to RStudio.cloud—preferably in a folder named `data` in your project folder:
+You'll need to download one CSV file and put them somewhere on your computer or upload them to Posit.cloud—preferably in a folder named `data` in your project folder:
 
 - [{{< fa file-csv >}} `Dogs-Database.csv`](/files/data/external_data/Dogs-Database.csv)
 
