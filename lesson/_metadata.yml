@@ -1,0 +1,10 @@
+date-heading:
+  content: "Lesson for"
+  class: "bg-lesson"
+date-format: "full"
+
+format:
+  html:
+    filters: ["../filters/format_date_end.lua"]
+    template-partials:
+      - ../html/title-block.html
