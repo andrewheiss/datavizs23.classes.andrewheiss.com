@@ -7,10 +7,6 @@ date: "2022-06-13"
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
-```{r write-data, include=FALSE}
-# readr::write_csv(ggplot2::mpg, here::here("static", "data", "cars.csv"))
-```
-
 ## Task 1: Make an RStudio Project
 
 1. Use either Posit.cloud or RStudio on your computer (preferably RStudio on your computer! [Follow these instructions to get started!](/resource/install/)) to create a new RStudio Project.
@@ -19,7 +15,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 3. Download this CSV file and place it in that folder:
 
-   - [<i class="fas fa-file-csv"></i> `cars.csv`](/data/cars.csv)
+   - [<i class="fas fa-file-csv"></i> `cars.csv`](/files/data/package_data/cars.csv)
 
 4. In RStudio, go to "File" > "New File…" > "R Markdown…" and click "OK" in the dialog without changing anything.
 

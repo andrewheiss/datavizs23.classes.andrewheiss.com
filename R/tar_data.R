@@ -34,6 +34,12 @@ save_data <- list(
   ## Generate or save data ----
   #
   ### Save any data files from packages ----
+  # ggplot2::mpg
+  tar_target(data_mpg,
+    save_csv(ggplot2::mpg,
+      here_rel("files", "data", "package_data", "cars.csv")),
+    format = "file"),
+  
   # gapminder
   tar_target(data_gapminder,
     save_csv(gapminder::gapminder,
@@ -100,13 +106,7 @@ save_data <- list(
   ),
   
   ### Copy files to project folders ----
-  # tar_target(copy_penguins,
-  #   copy_file(data_penguins,
-  #     new_folder = here_rel("projects", "problem-set-2", "data"))),
-  # tar_target(copy_food_health_politics,
-  #   copy_file(here_rel("files", "data", "external_data", "food_health_politics.csv"),
-  #     new_folder = here_rel("projects", "problem-set-2", "data")))
-  
+
   # LOTR words spoken via https://github.com/jennybc/lotr-tidy
   tar_target(copy_lotr_fellowship,
     copy_file(here_rel("files", "data", "external_data", "The_Fellowship_Of_The_Ring.csv"),
