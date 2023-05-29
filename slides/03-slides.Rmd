@@ -637,7 +637,7 @@ ggplot(eg, aes(x = x, y = y, alpha = x)) +
 
 .box-inv-2[There are dozens of possible geoms and<br>each class session will cover different ones.]
 
-.box-2[See [the **ggplot2** documentation](https://ggplot2.tidyverse.org/reference/index.html#section-layer-geoms) for<br>complete examples of all the different geom layers]
+.box-2[See [the {ggplot2} documentation](https://ggplot2.tidyverse.org/reference/index.html#section-layer-geoms) for<br>complete examples of all the different geom layers]
 
 ---
 
@@ -953,7 +953,7 @@ ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp, color = continent, size =
 
 # Theme
 
-.box-inv-2[There are collections of pre-built themes online,<br>like [the **ggthemes** package](https://jrnold.github.io/ggthemes/)]
+.box-inv-2[There are collections of pre-built themes online,<br>like [the {ggthemes} package](https://jrnold.github.io/ggthemes/)]
 
 .center[
 <figure>
@@ -1000,7 +1000,7 @@ theme(legend.position = "bottom",
 .pull-right[
 .box-inv-2[These were just a few examples of layers!]
 
-.box-2[See [the **ggplot2** documentation](https://ggplot2.tidyverse.org/reference/index.html) for<br>complete examples of everything you can do]
+.box-2[See [the {ggplot2} documentation](https://ggplot2.tidyverse.org/reference/index.html) for<br>complete examples of everything you can do]
 ]
 
 ---
@@ -1364,7 +1364,7 @@ class: title title-3
 # Time
 
 .left-code[
-.box-inv-3[Use **gganimate** to map variables to a time aesthetic]
+.box-inv-3[Use {gganimate} to map variables to a time aesthetic]
 
 ```{r gganimate-example, tidy=FALSE, eval=FALSE}
 ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, 
@@ -1455,7 +1455,7 @@ class: title title-6
 
 --
 
-.box-6[All the packages in the **tidyverse** work best with<br>tidy data; that why it's called that!]
+.box-6[All the packages in the {tidyverse} work best with<br>tidy data; that why it's called that!]
 
 ---
 
@@ -1520,7 +1520,7 @@ class: title title-6
 
 ???
 
-Figure by Garrick Aden-Buie in [**tidyexplain**](https://github.com/gadenbuie/tidyexplain)
+Figure by Garrick Aden-Buie in [{tidyexplain}](https://github.com/gadenbuie/tidyexplain)
 
 ---
 
@@ -1534,6 +1534,6 @@ Figure by Garrick Aden-Buie in [**tidyexplain**](https://github.com/gadenbuie/ti
 
 ???
 
-Figure by Garrick Aden-Buie in [**tidyexplain**](https://github.com/gadenbuie/tidyexplain)
+Figure by Garrick Aden-Buie in [{tidyexplain}](https://github.com/gadenbuie/tidyexplain)
 
 --

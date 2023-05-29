@@ -73,7 +73,7 @@ Here's what you need to do:
     2. A standalone PNG version of your graphic. You'll export this from Illustrator or Inkscape.
     3. A standalone PDF version of your graphic. You'll export this from Illustrator or Inkscape.
 
-You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and **ggplot2**, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-2-rubric.pdf) to make comments and provide you with a simulated grade.
+You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-2-rubric.pdf) to make comments and provide you with a simulated grade.
 
 - [<i class="fas fa-file-pdf"></i> `mini-project-2-rubric.pdf`](/files/mini-project-2-rubric.pdf)
 
@@ -98,7 +98,7 @@ These are the main issues with the data:
 
 - Maintaining consistent country names across different datasets is *literally* the woooooooorst. Countries have different formal official names and datasets are never consistent in how they use those names.[^names] It's such a tricky problem that social scientists have spent their careers just figuring out how to properly name and code countries. Really.[^ccodes] There are international standards for country codes, though, like [ISO 3166-1 alpha 3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) (my favorite), also known as ISO3. It's not perfect—it omits microstates (some Polynesian countries) and gray area states (Palestine, Kosovo)—but it's an international standard, so it has that going for it.
 
-- To ensure that country names are consistent in this data, we use the **countrycode** package (install it if you don't have it), which is amazing. The `countrycode()` function will take a country name in a given coding scheme and convert it to a different coding scheme using this syntax:
+- To ensure that country names are consistent in this data, we use the {countrycode} package (install it if you don't have it), which is amazing. The `countrycode()` function will take a country name in a given coding scheme and convert it to a different coding scheme using this syntax:
 
   ```r
   countrycode(variable, "current-coding-scheme", "new-coding-scheme")

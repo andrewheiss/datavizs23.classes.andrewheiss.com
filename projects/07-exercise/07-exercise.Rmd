@@ -19,7 +19,7 @@ library(broom)
 results_2016 <- read_csv("data/results_2016.csv")
 ```
 
-Make 2–3 plots of anything you want from the `results_2016` data (histogram, density, boxplot, scatterplot, whatever) and combine them with **patchwork**. Look at [the documentation](https://patchwork.data-imaginist.com/articles/guides/assembly.html) to see fancy ways of combining them, like having two rows inside a column.
+Make 2–3 plots of anything you want from the `results_2016` data (histogram, density, boxplot, scatterplot, whatever) and combine them with {patchwork}. Look at [the documentation](https://patchwork.data-imaginist.com/articles/guides/assembly.html) to see fancy ways of combining them, like having two rows inside a column.
 
 ```{r combine-plots}
 # Make some plots and combine them here
@@ -31,7 +31,7 @@ Make 2–3 plots of anything you want from the `results_2016` data (histogram, d
 
 Use the `results_2016` data to create a model that predicts the percent of Democratic votes in a precinct based on age, race, income, rent, and state (hint: the formula will look like this: `percent_dem ~ median_age + percent_white + per_capita_income + median_rent + state`)
 
-Use `tidy()` in the **broom** package and `geom_pointrange()` to create a coefficient plot for the model estimates. You'll have 50 rows for all the states, and that's excessive for a plot like this, so you'll want to filter out the state rows. You can do that by adding this:
+Use `tidy()` in the {broom} package and `geom_pointrange()` to create a coefficient plot for the model estimates. You'll have 50 rows for all the states, and that's excessive for a plot like this, so you'll want to filter out the state rows. You can do that by adding this:
 
 ```{r example-filtering, eval=FALSE}
 tidy(...) %>%

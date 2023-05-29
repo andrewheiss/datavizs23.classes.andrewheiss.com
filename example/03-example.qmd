@@ -192,7 +192,7 @@ ggplot(bbc, aes(x = grant_year_category, y = grant_amount, color = grant_program
 
 ### Summaries
 
-We can also make smaller summarized datasets with **dplyr** functions like `group_by()` and `summarize()` and plot those. First let's look at grant totals, averages, and counts over time:
+We can also make smaller summarized datasets with {dplyr} functions like `group_by()` and `summarize()` and plot those. First let's look at grant totals, averages, and counts over time:
 
 ```{r make-data-year}
 bbc_by_year <- bbc %>% 

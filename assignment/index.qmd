@@ -39,7 +39,7 @@ You will turn these reflections in via iCollege. You will write them using R Mar
 
 Each class session has [interactive lessons](/lesson/) and [fully annotated examples](/example/) of code that teach and demonstrate how to do specific tasks in R. However, without practicing these principles and making graphics on your own, you won't remember what you learn! 
 
-To practice working with **ggplot2** and making data-based graphics, you will complete a brief set of exercises for each class session. These exercises will have 1–3 short tasks that are directly related to the topic for the day. You need to show that you made a good faith effort to work each question. The problem sets will also be graded using a check system:
+To practice working with {ggplot2} and making data-based graphics, you will complete a brief set of exercises for each class session. These exercises will have 1–3 short tasks that are directly related to the topic for the day. You need to show that you made a good faith effort to work each question. The problem sets will also be graded using a check system:
 
 - ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document is clean and easy to follow. Work is exceptional. I will not assign these often.
 - ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct. This is the expected level of performance.

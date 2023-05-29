@@ -121,7 +121,7 @@ Here's what you need to do:
       ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)
       ```
 
-You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and **ggplot2**, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
+You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
 
 - [<i class="fas fa-file-pdf"></i> `mini-project-1-rubric.pdf`](/files/mini-project-1-rubric.pdf)
 

@@ -1078,7 +1078,7 @@ ggplot(predicted_mpg_fancy,
 
 --
 
-.box-6.small[Bayesian models<br><small>(These are extra pretty with the [**tidybayes** package](https://github.com/mjskay/tidybayes))</small>]
+.box-6.small[Bayesian models<br><small>(These are extra pretty with the [{tidybayes} package](https://github.com/mjskay/tidybayes))</small>]
 
 --
 

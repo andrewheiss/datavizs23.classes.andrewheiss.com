@@ -46,9 +46,9 @@ It looks like this is a lot of reading, but lots of these are short videos or tw
 
 ## Other resources
 
-Check out [this post where someone used **ggplot2** and **sf** to create fancy city map-based art that she printed for a friend](https://www.katiejolly.io/blog/2019-01-21/map-cutouts). You can do similar things after this session!
+Check out [this post where someone used {ggplot2} and {sf} to create fancy city map-based art that she printed for a friend](https://www.katiejolly.io/blog/2019-01-21/map-cutouts). You can do similar things after this session!
 
-In addition to the example for this session, you can [check out this tutorial on using the **sf** package to create maps](https://r-spatial.org//r/2018/10/25/ggplot2-sf.html). It shows how to include fancy map stuff like a north arrow and scale bar. 
+In addition to the example for this session, you can [check out this tutorial on using the {sf} package to create maps](https://r-spatial.org//r/2018/10/25/ggplot2-sf.html). It shows how to include fancy map stuff like a north arrow and scale bar. 
 
 
 ## Slides

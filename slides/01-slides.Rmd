@@ -699,7 +699,7 @@ class: title title-7
 
 .box-inv-7.medium[**“Push through. You’ll suck less.”**]
 
-.box-inv-7.tiny[Hadley Wickham, author of **ggplot2**]
+.box-inv-7.tiny[Hadley Wickham, author of {ggplot2}]
 ]
 
 ???

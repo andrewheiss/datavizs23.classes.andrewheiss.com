@@ -124,7 +124,7 @@ https://fivethirtyeight.com/features/catcher-is-baseballs-most-endangered-positi
 
 # The way of the future
 
-.box-inv-5.medium[**patchwork** and **ggtext**<br>are removing the need to edit<br>graphs by hand in Illustrator]
+.box-inv-5.medium[{patchwork} and {ggtext}<br>are removing the need to edit<br>graphs by hand in Illustrator]
 
 --
 
@@ -132,4 +132,4 @@ https://fivethirtyeight.com/features/catcher-is-baseballs-most-endangered-positi
 
 --
 
-.box-5[Interactivity not quite at the same level,<br>but it's getting there with **plotly**]
+.box-5[Interactivity not quite at the same level,<br>but it's getting there with {plotly}]

@@ -197,7 +197,7 @@ There are some interesting points in the low ends, likely because of holidays li
 
 ### Beeswarm plot
 
-We can add some structure to these points if we use the [**ggbeeswarm** package](https://github.com/eclarke/ggbeeswarm), with either `geom_beeswarm()` or `geom_quasirandom()`. `geom_quasirandom()` actually works better here since there are so many points—`geom_beeswarm()` makes the clusters of points way too wide.
+We can add some structure to these points if we use the [{ggbeeswarm} package](https://github.com/eclarke/ggbeeswarm), with either `geom_beeswarm()` or `geom_quasirandom()`. `geom_quasirandom()` actually works better here since there are so many points—`geom_beeswarm()` makes the clusters of points way too wide.
 
 ```{r beeswarm-plot}
 library(ggbeeswarm)

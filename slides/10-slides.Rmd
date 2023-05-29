@@ -80,19 +80,19 @@ class: title title-6
 
 # Three general methods
 
-.box-inv-6.medium[Single plots with **plotly**]
+.box-inv-6.medium[Single plots with {plotly}]
 
 .box-6.small.sp-after[Easy!]
 
 --
 
-.box-inv-6.medium[Dashboards with **flexdashboard**]
+.box-inv-6.medium[Dashboards with {flexdashboard}]
 
 .box-6.small.sp-after[Slightly more complicated]
 
 --
 
-.box-inv-6.medium[Complete interactive apps with **Shiny**]
+.box-inv-6.medium[Complete interactive apps with Shiny]
 
 .box-6.small[Super complicated!]
 
@@ -108,7 +108,7 @@ class: title title-6
 
 --
 
-.box-6[`ggplotly()` in the **plotly** R package translates<br>between R and Javascript for you!]
+.box-6[`ggplotly()` in the {plotly} R package translates<br>between R and Javascript for you!]
 
 ---
 
@@ -199,7 +199,7 @@ ggplotly(car_hist)
 
 # Save as HTML
 
-.box-inv-6[Save a self-contained HTML version of it with<br>`saveWidget()` in the **htmlwidgets** R package]
+.box-inv-6[Save a self-contained HTML version of it with<br>`saveWidget()` in the {htmlwidgets} R package]
 
 ```{r save-widget, eval=FALSE}
 # This is like ggsave, but for interactive HTML plots
@@ -218,20 +218,20 @@ htmlwidgets::saveWidget(interactive_plot, "fancy_plot.html")
 
 # Three general methods
 
-.box-inv-6.medium[Single plots with **plotly**]
+.box-inv-6.medium[Single plots with {plotly}]
 
 .box-6.small.sp-after[Easy!]
 
 --
 
-.box-inv-6.medium[Dashboards with **flexdashboard**]
+.box-inv-6.medium[Dashboards with {flexdashboard}]
 
 .box-6.small.sp-after[Slightly more complicated]
 
 
 ---
 
-# Dashboards with **flexdashboard**
+# Dashboards with {flexdashboard}
 
 .box-inv-6[Use basic R Markdown to build a dashboard!]
 
@@ -243,7 +243,7 @@ htmlwidgets::saveWidget(interactive_plot, "fancy_plot.html")
 
 ---
 
-# Dashboards with **flexdashboard**
+# Dashboards with {flexdashboard}
 
 .box-inv-6[Make any kind of block arrangement]
 
@@ -255,7 +255,7 @@ htmlwidgets::saveWidget(interactive_plot, "fancy_plot.html")
 
 ---
 
-# Dashboards with **flexdashboard**
+# Dashboards with {flexdashboard}
 
 .box-inv-6[Add other elements like text and gauges]
 
@@ -306,7 +306,7 @@ htmlwidgets::saveWidget(interactive_plot, "fancy_plot.html")
 
 # Outstanding documentation
 
-.box-inv-6[The [documentation](https://rmarkdown.rstudio.com/flexdashboard/index.html) for **flexdashboard** is<br>full of examples and details of everything you can do]
+.box-inv-6[The [documentation](https://rmarkdown.rstudio.com/flexdashboard/index.html) for {flexdashboard} is<br>full of examples and details of everything you can do]
 
 .box-inv-6[Rely on that ↑ + Google to make<br>really fancy (and easy!) dashboards!]
 
@@ -315,17 +315,17 @@ htmlwidgets::saveWidget(interactive_plot, "fancy_plot.html")
 
 # Three general methods
 
-.box-inv-6.medium[Single plots with **plotly**]
+.box-inv-6.medium[Single plots with {plotly}]
 
 .box-6.small.sp-after[Easy!]
 
-.box-inv-6.medium[Dashboards with **flexdashboard**]
+.box-inv-6.medium[Dashboards with {flexdashboard}]
 
 .box-6.small.sp-after[Slightly more complicated]
 
 --
 
-.box-inv-6.medium[Complete interactive apps with **Shiny**]
+.box-inv-6.medium[Complete interactive apps with Shiny]
 
 .box-6.small[Super complicated!]
 

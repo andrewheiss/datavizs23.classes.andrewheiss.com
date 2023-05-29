@@ -6,7 +6,7 @@ title: Using R Markdown
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
-[R Markdown](https://rmarkdown.rstudio.com/) is [regular Markdown](/reference/markdown/) with R code and output sprinkled in. You can do everything you can with [regular Markdown](/reference/markdown/), but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even [interactive dashboards](https://rmarkdown.rstudio.com/flexdashboard/index.html) with R Markdown. This whole course website is created with R Markdown (and [a package named **blogdown**](https://bookdown.org/yihui/blogdown/)).
+[R Markdown](https://rmarkdown.rstudio.com/) is [regular Markdown](/reference/markdown/) with R code and output sprinkled in. You can do everything you can with [regular Markdown](/reference/markdown/), but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even [interactive dashboards](https://rmarkdown.rstudio.com/flexdashboard/index.html) with R Markdown. This whole course website is created with a fancier version of R Markdown named [Quarto](https://quarto.org/).
 
 The [documentation for R Markdown](https://rmarkdown.rstudio.com/) is extremely comprehensive, and their [tutorials](https://rmarkdown.rstudio.com/lesson-1.html) and [cheatsheets](https://rmarkdown.rstudio.com/lesson-15.html) are excellent—rely on those.
 
@@ -67,7 +67,7 @@ To add a name, include it immediately after the `{r` in the first line of the ch
 
 ## Chunk options
 
-There are a bunch of different options you can set for each chunk. You can see a complete list in the [RMarkdown Reference Guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) or at [**knitr**'s website](https://yihui.org/knitr/options/).
+There are a bunch of different options you can set for each chunk. You can see a complete list in the [RMarkdown Reference Guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) or at [{knitr}'s website](https://yihui.org/knitr/options/).
 
 Options go inside the `{r}` section of the chunk:
 

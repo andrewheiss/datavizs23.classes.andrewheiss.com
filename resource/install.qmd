@@ -82,7 +82,7 @@ R packages are easy to install with RStudio. Select the packages panel, click on
 include_graphics("/files/img/install/install-r-package-panel.png", error = FALSE)
 ```
 
-This can sometimes be tedious when you're installing lots of packages, though. [The tidyverse](https://www.tidyverse.org/), for instance, consists of dozens of packages (including **ggplot2**) that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.
+This can sometimes be tedious when you're installing lots of packages, though. [The tidyverse](https://www.tidyverse.org/), for instance, consists of dozens of packages (including {ggplot2}) that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.
 
 Go to the packages panel in RStudio, click on "Install," type "tidyverse", and press enter. You'll see a bunch of output in the RStudio console as all the tidyverse packages are installed.
 
@@ -97,11 +97,11 @@ Notice also that RStudio will generate a line of code for you and run it: `insta
 
 When you knit to PDF, R uses a special scientific typesetting program named LaTeX (pronounced "lay-tek" or "lah-tex"; for goofy nerdy reasons, the x is technically the "ch" sound in "Bach", but most people just say it as "k"—saying "layteks" is frowned on for whatever reason).
 
-LaTeX is neat and makes pretty documents, but it's a huge program—[the macOS version, for instance, is nearly 4 GB](https://tug.org/mactex/mactex-download.html)! To make life easier, there's [an R package named **tinytex**](https://yihui.org/tinytex/) that installs a minimal LaTeX program and that automatically deals with differences between macOS and Windows.
+LaTeX is neat and makes pretty documents, but it's a huge program—[the macOS version, for instance, is nearly 4 GB](https://tug.org/mactex/mactex-download.html)! To make life easier, there's [an R package named {tinytex}](https://yihui.org/tinytex/) that installs a minimal LaTeX program and that automatically deals with differences between macOS and Windows.
 
-Here's how to install **tinytex** so you can knit to pretty PDFs:
+Here's how to install {tinytex} so you can knit to pretty PDFs:
 
-1. Use the Packages in panel in RStudio to install **tinytex** like you did above with **tidyverse**. Alternatively, run `install.packages("tinytex")` in the console.
+1. Use the Packages in panel in RStudio to install {tinytex} like you did above with {tidyverse}. Alternatively, run `install.packages("tinytex")` in the console.
 2. Run `tinytex::install_tinytex()` in the console.
 3. Wait for a bit while R downloads and installs everything you need.
 4. The end! You should now be able to knit to PDF.

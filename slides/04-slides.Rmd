@@ -744,7 +744,7 @@ ggplot(df_pie2, aes(x = "", y = count, fill = group)) +
 
 .pull-left[
 
-.box-inv-5[Treemaps with the [**treemapify**](https://cran.r-project.org/web/packages/treemapify/vignettes/introduction-to-treemapify.html) package]
+.box-inv-5[Treemaps with the [{treemapify}](https://cran.r-project.org/web/packages/treemapify/vignettes/introduction-to-treemapify.html) package]
 
 <figure>
   <img src="img/04/treemap.png" alt="Treemap" title="Treemap" width="100%">
@@ -754,7 +754,7 @@ ggplot(df_pie2, aes(x = "", y = count, fill = group)) +
 
 .pull-right[
 
-.box-inv-5[Mosaic plots with the [**ggmosaic**](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html) package]
+.box-inv-5[Mosaic plots with the [{ggmosaic}](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html) package]
 
 <figure>
   <img src="img/04/mosaic.png" alt="Mosaic" title="Mosaic" width="100%">
@@ -781,7 +781,7 @@ ggplot(df_pie2, aes(x = "", y = count, fill = group)) +
 
 # Parliament plots
 
-.box-inv-5[Parliament plots with the [**ggparliament**](https://github.com/RobWHickman/ggparliament) package]
+.box-inv-5[Parliament plots with the [{ggparliament}](https://github.com/RobWHickman/ggparliament) package]
 
 .pull-left[
 <figure>

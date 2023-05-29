@@ -70,7 +70,7 @@ class: title title-inv-7
 
 --
 
-.box-5.medium.sp-after[GIS in R with **sf**]
+.box-5.medium.sp-after[GIS in R with {sf}]
 
 ---
 
@@ -607,7 +607,7 @@ layout: false
 name: gis-sf
 class: center middle section-title section-title-5 animated fadeIn
 
-# GIS in R with **sf**
+# GIS in R with {sf}
 
 ---
 
@@ -860,7 +860,7 @@ other_data %>%
 
 ---
 
-# **sf** is for all GIS stuff
+# {sf} is for all GIS stuff
 
 --
 
@@ -886,12 +886,12 @@ other_data %>%
 
 # `geom_sf()` is today’s standard
 
-.box-inv-5[You'll sometimes find older tutorials and StackOverflow answers about using `geom_map()` or **ggmap** or other things]
+.box-inv-5[You'll sometimes find older tutorials and StackOverflow answers about using `geom_map()` or {ggmap} or other things]
 
 --
 
-.box-inv-5.sp-after[Those still work, but they don't use the same magical **sf** system with easy-to-convert projections and other GIS stuff]
+.box-inv-5.sp-after[Those still work, but they don't use the same magical {sf} system with easy-to-convert projections and other GIS stuff]
 
 --
 
-.box-5.medium[Stick with **sf** and `geom_sf()`<br>and your life will be easy]
+.box-5.medium[Stick with {sf} and `geom_sf()`<br>and your life will be easy]
