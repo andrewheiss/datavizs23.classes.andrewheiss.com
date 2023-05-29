@@ -10,7 +10,7 @@ date_end: "2022-07-30"
 
 The easiest way to get a knitted R Markdown onto the internet is to use [RPubs](https://rpubs.com/). We talked about this in [session 10](/slides/10-slides.html#sharing-content), and you used it to turn in [exercise 10](/assignment/10-exercise/). After knitting an HTML document in RStudio, click on the "Publish" button in the top right corner to upload the document to the RPubs server and get a URL that you can share with others:
 
-```{r knit-button, echo=FALSE, out.width="30%"}
+```{r knit-button, echo=FALSE, out.width="30%", fig.align="center"}
 knitr::include_graphics("/slides/img/10/publish-document.png", error = FALSE)
 ```
 
