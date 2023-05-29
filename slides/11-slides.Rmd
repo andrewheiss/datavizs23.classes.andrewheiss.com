@@ -47,7 +47,7 @@ measles <- read_csv("data/cdc-measles.csv") %>%
 ```
 
 ```{r xaringanExtra, echo=FALSE}
-xaringanExtra::use_xaringan_extra(c("tile_view"))
+xaringanExtra::use_xaringan_extra(c("tile_view", "share_again"))
 ```
 
 class: center middle main-title section-title-4

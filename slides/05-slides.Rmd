@@ -30,7 +30,7 @@ library(hrbrthemes)
 ```
 
 ```{r xaringanExtra, echo=FALSE}
-xaringanExtra::use_xaringan_extra(c("tile_view"))
+xaringanExtra::use_xaringan_extra(c("tile_view", "share_again"))
 ```
 
 class: center middle main-title section-title-4
@@ -127,7 +127,7 @@ library(hrbrthemes)
 ggplot(mpg, aes(x = displ, y = hwy, 
                 color = drv)) +
   geom_point(size = 2) +
-  theme_ipsum_ps()
+  theme_ipsum()
 ```
 ]
 

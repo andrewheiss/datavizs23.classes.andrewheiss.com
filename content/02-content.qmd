@@ -44,7 +44,13 @@ The slides for today's lesson are available online as an HTML file. Use the butt
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
 slide_buttons("/slides/02-slides")
-slide_tabs(slide_details, "/slides/02-slides.html")
+
+xaringanExtra::embed_xaringan(
+  "/slides/02-slides.html",
+  ratio = "16:9",
+  border = "none",
+  margin = "0 auto"
+)
 ```
 
 :::{.callout-tip}
