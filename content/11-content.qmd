@@ -21,7 +21,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- {{< fa book >}} Chapter 8 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- {{< fa book >}} Chapter 8 in *The Truthful Art* [@Cairo:2016]
 - {{< fa video >}} [The Nuclear Threat—The Shadow Peace, part 1](http://www.fallen.io/shadow-peace/1/)
 - {{< fa arrow-up-right-from-square >}} [11 Ways to Visualize Changes Over Time – A Guide](https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/)
 - A bunch of (really) short blog posts:

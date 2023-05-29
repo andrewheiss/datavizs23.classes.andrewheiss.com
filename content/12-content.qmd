@@ -21,8 +21,8 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- {{< fa book >}} Chapter 10 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
-- {{< fa book >}} [Chapter 7](http://socviz.co/maps.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+- {{< fa book >}} Chapter 10 in *The Truthful Art* [@Cairo:2016]
+- {{< fa book >}} [Chapter 7](http://socviz.co/maps.html) in *Data Visualization* [@Healy:2018]
 
 It looks like this is a lot of reading, but lots of these are short videos or tweets or interactive websites, so don't worry!
 

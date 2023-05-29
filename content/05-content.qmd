@@ -20,7 +20,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- {{< fa book >}} [Chapter 22](https://clauswilke.com/dataviz/figure-titles-captions.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- {{< fa book >}} [Chapter 22](https://clauswilke.com/dataviz/figure-titles-captions.html) in *Fundamentals of Data Visualization* [@Wilke:2018]
 - {{< fa arrow-up-right-from-square >}} [Naomi Robbins, "Are Grid Lines Useful or Chartjunk?"](https://www.forbes.com/sites/naomirobbins/2012/02/22/are-grid-lines-useful-or-chartjunk/#3b49a4044283)
 - {{< fa arrow-up-right-from-square >}} [Stephen Few, "Grid Lines in Graphs are Rarely Useful"](http://www.perceptualedge.com/articles/dmreview/grid_lines.pdf)
 - {{< fa arrow-up-right-from-square >}} [Henry Wang, "ggplot2 Theme Elements Demonstration"](https://henrywang.nl/ggplot2-theme-elements-demonstration/)

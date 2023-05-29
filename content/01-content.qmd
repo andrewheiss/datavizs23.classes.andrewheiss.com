@@ -24,8 +24,8 @@ slide_details <- tibble::tribble(
 
 - The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
 - {{< fa podcast >}} Tim Harford, ["Florence Nightingale: Data Viz Pioneer,"](https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/) *99% Invisible*, episode 433, March 2, 2021 (*this is a podcast; listen to it in your browser or use an app like [Overcast](https://overcast.fm/) or [Spotify](https://spotify.com/)*)
-- {{< fa book >}} [Chapter 1](http://socviz.co/lookatdata.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
-- {{< fa book >}} Chapters 2 and 3 in Alberto Cairo, *The Truthful Art* [@Cairo:2016] (*skim the introduction and chapter 1*)
+- {{< fa book >}} [Chapter 1](http://socviz.co/lookatdata.html) in *Data Visualization* [@Healy:2018]
+- {{< fa book >}} Chapters 2 and 3 in *The Truthful Art* [@Cairo:2016] (*skim the introduction and chapter 1*)
 - {{< fa arrow-up-right-from-square >}} [Study: Charts change hearts and minds better than words do](https://www.washingtonpost.com/news/wonk/wp/2018/06/15/study-charts-change-hearts-and-minds-better-than-words-do/?utm_term=.4474599c0d5e)
 
 

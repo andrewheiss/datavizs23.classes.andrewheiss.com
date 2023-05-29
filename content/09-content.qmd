@@ -21,8 +21,8 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- {{< fa book >}} [Chapter 17](https://clauswilke.com/dataviz/redundant-coding.html), [Chapter 18](https://clauswilke.com/dataviz/multi-panel-figures.html), [Chapter 19](https://clauswilke.com/dataviz/figure-titles-captions.html), and [Chapter 21](https://clauswilke.com/dataviz/small-axis-labels.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
-- {{< fa book >}} [Chapter 5](http://socviz.co/workgeoms.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+- {{< fa book >}} [Chapter 17](https://clauswilke.com/dataviz/redundant-coding.html), [Chapter 18](https://clauswilke.com/dataviz/multi-panel-figures.html), [Chapter 19](https://clauswilke.com/dataviz/figure-titles-captions.html), and [Chapter 21](https://clauswilke.com/dataviz/small-axis-labels.html) in *Fundamentals of Data Visualization* [@Wilke:2018]
+- {{< fa book >}} [Chapter 5](http://socviz.co/workgeoms.html) in *Data Visualization* [@Healy:2018]
 - {{< fa arrow-up-right-from-square >}} Cara Thompson, ["Level Up Your Labels: Tips and Tricks for Annotating Plots"](https://www.cararthompson.com/talks/user2022)
 
 

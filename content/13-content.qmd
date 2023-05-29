@@ -20,7 +20,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- {{< fa book >}} Look through some of the chapters in Julia Silge and David Robinson, [*Tidy Text Mining*](https://www.tidytextmining.com/) [@SilgeRobinson:2017] (but *definitely* don't read them all! You just need to get a taste of what modern text analysis looks like.)
+- {{< fa book >}} Look through some of the chapters in [*Tidy Text Mining*](https://www.tidytextmining.com/) [@SilgeRobinson:2017] (but *definitely* don't read them all! You just need to get a taste of what modern text analysis looks like.)
 - A bunch of (really) short things:
     - {{< fa arrow-up-right-from-square >}} Evangeline Reynolds, ["Federalist Papers"](https://evangelinereynolds.netlify.app/post/federalist-papers/)
     - {{< fa arrow-up-right-from-square >}} Julia Silge, ["She Giggles, He Gallops"](https://pudding.cool/2017/08/screen-direction/)

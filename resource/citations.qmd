@@ -2,8 +2,11 @@
 title: Citations and bibliography
 ---
 
-You can [download a BibTeX file](/bib/references.bib) of all the non-web-based readings in the course:
+You can access [a shared group Zotero library of all the non-web-based class reading references](https://www.zotero.org/groups/datavizs23) and link it to your Zotero account to easily cite the course materials. 
 
-- [{{< fa book >}} `references.bib`](/bib/references.bib)
+Alternatively, you can download a BibTeX file of all the references. You can open it in [BibDesk on macOS](http://bibdesk.sourceforge.net/), [JabRef on Windows](http://www.jabref.org/), or [Zotero](https://www.zotero.org/) on macOS, Windows, and online.
 
-You can open the file in [BibDesk on macOS](http://bibdesk.sourceforge.net/), [JabRef on Windows](http://www.jabref.org/), or [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/) online.
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/groups/datavizs23">{{< ai zotero color=white >}}&emsp;&emsp;Zotero group library</a> &ensp;
+<a class="btn btn-danger" target="_blank" href="/files/bib/readings.bib" role="button">{{< fa book >}}&emsp;&emsp;BibTeX file</a>
+</p>
