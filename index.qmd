@@ -10,7 +10,7 @@ format:
   html:
     template-partials:
       - html/home/title-block.html
-course-logo: /files/img/eval-hires.png
+course-logo: /files/course-icon.png
 ---
 
 ::: {.home}
