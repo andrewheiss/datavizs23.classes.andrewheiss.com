@@ -136,24 +136,46 @@ website:
         - section: "Overview"
           contents:
             - assignment/index.qmd
-        - section: "Problem sets"
+        - section: "Projects"
           contents:
-            - assignment/01-problem-set.qmd
-            - assignment/02-problem-set.qmd
-            - assignment/03-problem-set.qmd
-            - assignment/04-problem-set.qmd
-            - assignment/05-problem-set.qmd
-            - assignment/06-problem-set.qmd
-            - assignment/07-problem-set.qmd
-        - section: "Weekly check-ins"
+            - text: "Mini project 1"
+              file: assignment/01-mini-project.qmd
+            - text: "Mini project 2"
+              file: assignment/02-mini-project.qmd
+            - text: "Final project"
+              file: assignment/final-project.qmd
+        - section: "Exercises"
           contents:
-            - assignment/01-weekly-check-in.qmd
-            - assignment/02-weekly-check-in.qmd
-            - assignment/03-weekly-check-in.qmd
-            - assignment/04-weekly-check-in.qmd
-            - assignment/05-weekly-check-in.qmd
-            - assignment/06-weekly-check-in.qmd
-            - assignment/07-weekly-check-in.qmd
+            - text: "1: Introduction to R and the tidyverse"
+              file: assignment/01-exercise.qmd
+            - text: "2: Graphic design"
+              file: assignment/02-exercise.qmd
+            - text: "3: Mapping data to graphics"
+              file: assignment/03-exercise.qmd
+            - text: "4: Amounts and proportions"
+              file: assignment/04-exercise.qmd
+            - text: "5: Themes"
+              file: assignment/05-exercise.qmd
+            - text: "6: Uncertainty"
+              file: assignment/06-exercise.qmd
+            - text: "7: Relationships"
+              file: assignment/07-exercise.qmd
+            - text: "8: Comparisons"
+              file: assignment/08-exercise.qmd
+            - text: "9: Annotations"
+              file: assignment/09-exercise.qmd
+            - text: "10: Interactivity"
+              file: assignment/10-exercise.qmd
+            - text: "11: Time"
+              file: assignment/11-exercise.qmd
+            - text: "12: Space"
+              file: assignment/12-exercise.qmd
+            - text: "13: Text"
+              file: assignment/13-exercise.qmd
+            - text: "14: Enhancing graphics"
+              file: assignment/14-exercise.qmd
+            - text: "15: Truth, beauty, and data revisited"
+              file: assignment/15-exercise.qmd
     
     - title: "Resources"
       contents:
