@@ -54,6 +54,7 @@ $h6-font-size: $font-size-base * 0.8;
 $toc-font-size: 0.95rem;
 $sidebar-font-size: 1.1rem;
 $sidebar-font-size-section: 0.95rem;
+$footer-font-size: 0.95rem;
 
 $link-color: $red;
 $link-hover-color: $yellow;
@@ -161,6 +162,15 @@ div.sidebar-item-container .sidebar-link>code{
 
 .nav-footer-right {
   text-align: right;
+}
+
+// Temporarily hide the middle div since it has unmodifiable GitHub links as of Quarto 1.3.something: https://github.com/quarto-dev/quarto-cli/issues/5283
+.nav-footer-center {
+  display: none;
+}
+
+.nav-footer-left {
+  flex-grow: 3;
 }
 
 
