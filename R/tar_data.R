@@ -327,6 +327,14 @@ tag_little_women <- function(raw_text) {
     text_name = "text", 
     doc_name = "chapter_number")
   
+  # Use spaCy
+  # In theory it should be possible to install spacy and cleannlp in a
+  # virtualenv through reticulate and then run it from here in R/Quarto, but
+  # cnlp_init_spacy() can't see it for some reason, either because there's a bug
+  # in it (not likely) or because I have something configured wrong, like in the
+  # RETICULATE_PYTHON environment variable (super likely). So for now, we have
+  # to manually install things with `pip3 install cleannlp` and all the other
+  # pip things necessary for spaCy
   cnlp_init_spacy("en_core_web_sm")
   spacy <- cnlp_annotate(little_women_to_tag, 
     text_name = "text", 
