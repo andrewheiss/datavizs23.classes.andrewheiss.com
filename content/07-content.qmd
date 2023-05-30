@@ -32,9 +32,13 @@ slide_details <- tibble::tribble(
 
 - {{< fa file-pdf >}} ["A Study on Dual-Scale Data Charts"](https://www.lri.fr/~isenberg/publications/papers/Isenberg_2011_ASO.pdf) [@IsenbergBezerianosDragicevic:2011]
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - How can you correctly and honestly communicate relationships between variables? How can you communicate the uncertainty in those relationships?
 - What are the dangers of visualizing two variables?

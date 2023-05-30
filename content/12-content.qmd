@@ -38,9 +38,13 @@ It looks like this is a lot of reading, but lots of these are short videos or tw
 - {{< fa arrow-up-right-from-square >}} ["The next great fake news threat? Bot-designed maps"](https://www.fastcompany.com/90230916/the-next-great-fake-news-threat-bot-designed-maps)
 - {{< fa arrow-up-right-from-square >}} ["New World Map That Accurately Shows Earth in 2D Created by Scientists"](https://www.newsweek.com/equal-earth-map-continents-accurate-2d-1102404)
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - How can you know if a map projection is truthful or misleading?
 - What's wrong (or not wrong) with using points on maps? Choropleths? Lines?

@@ -36,9 +36,13 @@ Making a good reprex is tricky, but it's a very valuable skill to know (regardle
 - {{< fa arrow-up-right-from-square >}} [So you've been asked to make a reprex](https://www.jessemaegan.com/post/so-you-ve-been-asked-to-make-a-reprex/)
 - {{< fa brands r-project >}} [The reprex package](https://reprex.tidyverse.org/index.html)
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - These readings all show a ton of new ways to present comparisons. Which ones are your favorite? Which ones didn't quite click with you? In what situations are some more appropriate than others?
 

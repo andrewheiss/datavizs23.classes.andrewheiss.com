@@ -26,9 +26,13 @@ slide_details <- tibble::tribble(
 - {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["Quick and easy ways to deal with long labels in ggplot2"](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/)
 - {{< fa arrow-up-right-from-square >}} Glance through the documentation for ggplot's [complete themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) and [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html), especially the examples near the bottom
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - How do the principles of CRAP apply to graph design and other theme elements?
 

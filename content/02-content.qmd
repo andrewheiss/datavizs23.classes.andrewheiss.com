@@ -30,9 +30,13 @@ slide_details <- tibble::tribble(
 - {{< fa arrow-up-right-from-square >}} ["What's the Difference Between JPG, PNG, and GIF?"](https://gizmodo.com/5656669/whats-the-difference-between-jpg-png-and-gif)
 - {{< fa arrow-up-right-from-square >}} ["File formats explained"](https://www.theglowstudio.com/file-formats-explained/)
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - Why does graphic design matter when conveying truth?
 - What makes something well designed (vs. poorly designed)?

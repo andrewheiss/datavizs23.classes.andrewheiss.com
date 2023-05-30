@@ -33,9 +33,13 @@ slide_details <- tibble::tribble(
     - {{< fa arrow-up-right-from-square >}} [Every time Ford and Kavanaugh dodged a question, in one chart](https://www.vox.com/policy-and-politics/2018/9/28/17914308/kavanaugh-ford-question-dodge-hearing-chart)
     - {{< fa brands twitter >}} [Tweet by \@s_soroka](https://twitter.com/s_soroka/status/907941270735278085)
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - Why is qualitative data difficult to visualize?
 - Why are word clouds so problematic? When is (not) okay to use them? 

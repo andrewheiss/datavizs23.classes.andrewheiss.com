@@ -40,9 +40,13 @@ slide_details <- tibble::tribble(
 - {{< fa arrow-up-right-from-square >}} [How To Fix a Toilet (And Other Things We Couldn't Do Without Search)](http://how-to-fix-a-toilet.com/)
 
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - When is it okay (or not) to truncate the y-axis?
 - It is remarkably easy to mislead people with many of these chart types. Why? How can you avoid the same mistakes?

@@ -26,9 +26,13 @@ slide_details <- tibble::tribble(
 - {{< fa book >}} [Chapter 2](https://clauswilke.com/dataviz/aesthetic-mapping.html) in *Fundamentals of Data Visualization* [@Wilke:2018]
 - {{< fa book >}} [Chapter 3](http://socviz.co/makeplot.html) in *Data Visualization* [@Healy:2018]
 
-### Questions to reflect on
+### Possible questions to reflect on
 
-*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+::: {.callout-warning}
+#### This is not a required list!
+
+Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking. **Write about whatever you want.**
+:::
 
 - Why is it important to visualize variables and data?
 - What does it mean to map data to graph aesthetics?
