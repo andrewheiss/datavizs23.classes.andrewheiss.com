@@ -6,7 +6,33 @@ title: Syllabus
 library(dplyr)
 library(tibble)
 library(pander)
+
+knitr::opts_chunk$set(fig.align = "center")
 ```
+
+:::: {.grid .course-details .course-details-smaller}
+
+::: {.g-col-6}
+### Instructor
+
+- {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
+- {{< fa university >}} &nbsp; {{< var instructor.office >}}
+- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
+- {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}})
+:::
+
+::: {.g-col-6}
+### Course details
+
+- {{< fa calendar >}} &nbsp; {{< var course.days >}}
+- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
+- {{< fa clock >}} &nbsp; {{< var course.time >}}
+- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
+- {{< fa brands slack >}} &nbsp; [Slack]({{< var course.slack >}})
+:::
+
+::::
 
 ## Course objectives
 
@@ -51,17 +77,13 @@ All of the readings and software in this class are **free**. There are free onli
 
 We'll rely heavily on these books, which are all available online (**for free!**). I recommend getting the printed versions of these books if you are interested, but it is not required.
 
-- Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).
+- Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016). \$20 used, \$50 new at [Amazon](https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075). 
 
-    > <span>$27</span> used, <span>$32</span> new at [Amazon](https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075). A **free** eBook version is available through GSU's library through O'Reilly's Higher Education database. The easiest way to access it is to visit a special URL (<http://go.oreilly.com/georgia-state-university>), log in with your GSU account, and then search for "The Truthful Art".
+  A **free** eBook version is available through GSU's library through O'Reilly's Higher Education database. The easiest way to access it is to visit a special URL (<http://go.oreilly.com/georgia-state-university>), log in with your GSU account, and then search for "The Truthful Art".
 
-- Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>.
+- Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>. [**FREE** online](http://socviz.co/); \$20 used, \$40 new at [Amazon](https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624/).
 
-    > [**FREE** online](http://socviz.co/); <span>$30</span> used, <span>$36</span> new at [Amazon](https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624/).
-
-- Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
-
-    > [**FREE** online](https://clauswilke.com/dataviz/); <span>$32</span> new at [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089). An eBook version is also available through [the O'Reilly database](http://go.oreilly.com/georgia-state-university), but you can just use [the online version](https://clauswilke.com/dataviz/).
+- Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>. [**FREE** online](https://clauswilke.com/dataviz/); \$36 used, $50 new at [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089). An eBook version is also available through [the O'Reilly database](http://go.oreilly.com/georgia-state-university), but you can just use [the online version](https://clauswilke.com/dataviz/).
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
@@ -75,7 +97,7 @@ R is free, but it can sometimes be a pain to install and configure. To make life
 
 Posit.cloud is convenient, but it can be slow and it is not designed to be able to handle larger datasets or more complicated analysis and graphics. You also can't use your own custom fonts with Posit.cloud. Over the course of the semester, you'll probably want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of Posit.cloud. This isn't 100% necessary, but it's helpful.
 
-You can [find instructions for installing R, RStudio, and all the tidyverse packages here.](/resource/install/)
+You can [find instructions for installing R, RStudio, and all the tidyverse packages here.](/resource/install.qmd)
 
 ### Online help
 
@@ -85,9 +107,11 @@ Fortunately there are tons of online resources to help you with this. Two of the
 
 If you use Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful.
 
+[ChatGPT](https://chat.openai.com/) is generally relatively okay with R questions, but it will often hallucinate responses—it really likes to imagine packages that don't exist and then give you answers with them. Think of it as glorified autocomplete.
+
 Searching for help with R on Google can sometimes be tricky because the program name is, um, a single letter. Google is generally smart enough to figure out what you mean when you search for "r scatterplot", but if it does struggle, try searching for "rstats" instead (e.g. "rstats scatterplot"). Also, since most of your R work will deal with {ggplot2}, it's often easier to just search for that instead of the letter "r" (e.g. "ggplot scatterplot"). 
 
-Additionally, we have a class chatroom at [Slack](https://gsudatavizs20.slack.com) where anyone in the class can ask questions and anyone can answer. **I will monitor Slack regularly and will respond quickly.** (It's one of the rare Slack workspaces where I actually have notifications enabled!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+Additionally, we have a class chatroom at [Slack](https://gsudatavizs23.slack.com) where anyone in the class can ask questions and anyone can answer. **I will monitor Slack regularly and will respond quickly.** (It's one of the rare Slack workspaces where I actually have notifications enabled!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
 
 
 ## Course schedule
@@ -100,8 +124,8 @@ Each session has (1) a set of readings and an accompanying lecture, (2) a lesson
 
 I recommend following this general process for each session:
 
-- Do everything on the content ({{< fa book-open-reader >}}) page
-- Work through the lesson ({{< fa chalkboard-teacher >}}) page
+- Do everything on the content page ({{< fa book-open-reader >}})
+- Work through the lesson page ({{< fa chalkboard-teacher >}})
 - Complete the assignment ({{< fa pen-ruler >}}) while referencing the example ({{< fa laptop-code >}})
 
 
@@ -115,9 +139,13 @@ This syllabus reflects a plan for the semester. Deviations may become necessary 
 
 ### Student hours
 
-Please watch this video:
+Please watch this video: <small>(*this is not me, btw—this is a different Andrew*)</small>
 
-<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+<div class="ratio ratio-16x9">
+<iframe src="https://player.vimeo.com/video/270014784" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+</div>
+
+\ 
 
 Student hours are set times dedicated to all of you (most professors call these "office hours"; I don't^[There's fairly widespread misunderstanding about what office hours actually are! [Many students often think that they are the times I *shouldn't* be disturbed](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/), which is the exact opposite of what they're for!]). This means that I will be ~~in my office~~ at home (wistfully) waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
 
@@ -127,7 +155,7 @@ Because of the pandemic, we cannot meet in person. I can meet you online via Web
 
 Life absolutely sucks right now. None of us is really okay. **We're all just pretending.**
 
-You most likely know people who have lost their jobs, have tested positive for COVID-19, have been hospitalized, or perhaps have even died. You all have increased (or possibly decreased) work responsibilities and increased family care responsibilities—you might be caring for extra people (young and/or old!) right now, and you are likely facing uncertain job prospects (or have been laid off!).
+You most likely know people who have lost their jobs, have gotten COVID-19, have been hospitalized, or perhaps have even died. You all have increased (or possibly decreased) work responsibilities and increased family care responsibilities—you might be caring for extra people (young and/or old!) right now, and you are likely facing uncertain job prospects (or have been laid off!).
 
 **I'm fully committed to making sure that you learn everything you were hoping to learn from this class!** I will make whatever accommodations I can to help you finish your exercises, do well on your projects, and learn and understand the class material. Under ordinary conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges. Under pandemic conditions, that flexibility and leniency is intensified.
 
@@ -203,8 +231,6 @@ grading <- tribble(
 )
 ```
 
-<div class="centered-table">
-
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments_total <- tibble(Assignment = "Total",
                             Points = sum(assignments$Points),
@@ -214,17 +240,12 @@ bind_rows(assignments, assignments_total) %>%
   select(Assignment, Points, Percent) %>% 
   pandoc.table(justify = "lcc", missing = "—")
 ```
-</div>
-
-<div class="centered-table">
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
   pandoc.table(justify = "lclc", 
                col.names = c("Grade", "Range", "Grade", "Range"))
 ```
-
-<div>
 
 
 ## Star Wars

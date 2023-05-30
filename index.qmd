@@ -24,7 +24,7 @@ withr::with_dir(here::here(), {
 
 ::: {.home}
 
-::: {.grid .course-details}
+:::: {.grid .course-details}
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
 ### Instructor
@@ -52,7 +52,7 @@ withr::with_dir(here::here(), {
 {{< var instructor.contact_policy >}}
 :::
 
-:::
+::::
 
 ```{r echo=FALSE}
 knitr::include_graphics(here::here("files", "img", "dataviz-flowchart.png"), error = FALSE)
