@@ -21,9 +21,9 @@ slide_details <- tibble::tribble(
 ## Readings
 
 - {{< fa book >}} [Chapter 22](https://clauswilke.com/dataviz/figure-titles-captions.html) in *Fundamentals of Data Visualization* [@Wilke:2018]
-- {{< fa arrow-up-right-from-square >}} [Naomi Robbins, "Are Grid Lines Useful or Chartjunk?"](https://www.forbes.com/sites/naomirobbins/2012/02/22/are-grid-lines-useful-or-chartjunk/#3b49a4044283)
-- {{< fa arrow-up-right-from-square >}} [Stephen Few, "Grid Lines in Graphs are Rarely Useful"](http://www.perceptualedge.com/articles/dmreview/grid_lines.pdf)
-- {{< fa arrow-up-right-from-square >}} [Henry Wang, "ggplot2 Theme Elements Demonstration"](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+- {{< fa arrow-up-right-from-square >}} Clara Granell, ["ggplot2 Theme System Cheatsheet"](Andrew Heiss)
+- {{< fa arrow-up-right-from-square >}} Henry Wang, ["ggplot2 Theme Elements Demonstration"](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+- {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["Quick and easy ways to deal with long labels in ggplot2"](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/)
 - {{< fa arrow-up-right-from-square >}} Glance through the documentation for ggplot's [complete themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) and [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html), especially the examples near the bottom
 
 ### Questions to reflect on
@@ -31,7 +31,6 @@ slide_details <- tibble::tribble(
 *(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
 
 - How do the principles of CRAP apply to graph design and other theme elements?
-- Should plots use gridlines? Naomi Robbins says yes; Stephen Few says no—what do you say?
 
 
 ## Slides

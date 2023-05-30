@@ -23,6 +23,7 @@ slide_details <- tibble::tribble(
 
 - {{< fa book >}} Chapter 10 in *The Truthful Art* [@Cairo:2016]
 - {{< fa book >}} [Chapter 7](http://socviz.co/maps.html) in *Data Visualization* [@Healy:2018]
+- {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["Making Middle Earth maps with R"](https://www.andrewheiss.com/blog/2023/04/26/middle-earth-mapping-sf-r-gis/)
 
 It looks like this is a lot of reading, but lots of these are short videos or tweets or interactive websites, so don't worry!
 
