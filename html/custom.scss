@@ -241,14 +241,6 @@ div.sidebar-item-container .sidebar-link>code{
   background-color: $pink;
 }
 
-.fake-date-block {
-  margin-bottom: 1em;
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
 // Slightly larger buttons
 p a.btn, .buttons span.btn {
   font-size: 1.1rem;
@@ -274,6 +266,16 @@ main {
   ul p + ol {
     margin-bottom: 1em;
   }
+}
+
+
+// In Quarto 1.3.357 (and probably before), when column: XX is used on a page, 
+// the <main> element gets assigned the .page-columns class, and for whatever 
+// reason, <h1>s in that class get their bottom margin removed, so we have to 
+// add it back here
+main.page-columns > header > h1.title, 
+main.page-columns > header > .title.h1 {
+  margin-bottom: 1rem;
 }
 
 
