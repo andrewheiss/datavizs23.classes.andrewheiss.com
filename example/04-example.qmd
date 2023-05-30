@@ -19,8 +19,6 @@ If you want to follow along with this example, you can download the data directl
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -33,7 +31,7 @@ set.seed(1234)
 options(dplyr.summarise.inform = FALSE)
 ```
 
-### Load data
+## Load data
 
 There are two CSV files:
 
@@ -76,7 +74,7 @@ births_2000_2014 <- read_csv(here::here(
 births_combined <- bind_rows(births_1994_1999, births_2000_2014)
 ```
 
-### Wrangle data
+## Wrangle data
 
 Let's look at the first few rows of the data to see what we're working with:
 
@@ -111,7 +109,7 @@ If you look at the data now, you can see the columns are changed and have differ
 
 Our `births` data is now clean and ready to go!
 
-### Bar plot
+## Bar plot
 
 First we can look at a bar chart showing the total number of births each day. We need to make a smaller summarized dataset and then we'll plot it:
 
@@ -156,7 +154,7 @@ ggplot(data = total_births_weekday,
        x = NULL, y = "Total births")
 ```
 
-### Lollipop chart
+## Lollipop chart
 
 Since the ends of the bars are often the most important part of the graph, we can use a lollipop chart to emphasize them. We'll keep all the same code from our bar chart and make a few changes:
 
@@ -181,7 +179,7 @@ ggplot(data = total_births_weekday,
 ```
 
 
-### Strip plot
+## Strip plot
 
 However, we want to \#barbarplots! (Though they're arguably okay here, since they show totals and not averages). Let's show all the data with points. We'll use the full dataset now, map x to weekday, y to births, and change `geom_col()` to `geom_point()`. We'll tell `geom_point()` to jitter the points randomly.
 
@@ -195,7 +193,7 @@ ggplot(data = births,
 
 There are some interesting points in the low ends, likely because of holidays like Labor Day and Memorial Day (for the Mondays) and Thanksgiving (for the Thursday). If we had a column that indicated whether a day was a holiday, we could color by that and it would probably explain most of those low numbers. Unfortunately we don't have that column, and it'd be hard to make. Some holidays are constant (Halloween is always October 31), but some aren't (Thanksgiving is the fourth Thursday in November, so we'd need to find out which November 20-somethingth each year is the fourth Thursday, and good luck doing that at scale).
 
-### Beeswarm plot
+## Beeswarm plot
 
 We can add some structure to these points if we use the [{ggbeeswarm} package](https://github.com/eclarke/ggbeeswarm), with either `geom_beeswarm()` or `geom_quasirandom()`. `geom_quasirandom()` actually works better here since there are so many points—`geom_beeswarm()` makes the clusters of points way too wide.
 
@@ -210,7 +208,7 @@ ggplot(data = births,
   guides(color = "none")
 ```
 
-### Heatmap
+## Heatmap
 
 Finally, let's use something non-traditional to show the average births by day in a somewhat proportional way. We can calculate the average number of births every day and then make a heatmap that fills each square by that average, thus showing the relative differences in births per day.
 

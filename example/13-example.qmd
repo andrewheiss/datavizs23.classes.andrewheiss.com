@@ -34,8 +34,6 @@ If you want to see other examples of text visualizations with the {tidytext} pac
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Big differences from the video
 
@@ -49,7 +47,7 @@ options("digits" = 2, "width" = 150)
 options(dplyr.summarise.inform = FALSE)
 ```
 
-### Get data
+## Get data
 
 First, as always, we'll load the libraries we'll be using:
 
@@ -113,7 +111,7 @@ books_raw <- read_csv("data/books_raw.csv")
 
 ````
 
-### Clean data
+## Clean data
 
 The data you get from Project Gutenberg comes in a tidy format, with a column for the book id, a column for the title, and a column for text. Sometimes this text column will be divided by lines in the book; sometimes it might be an entire page or paragraph or chapter. It all depends on how the book is formatted at Project Gutenberg.
 
@@ -164,9 +162,9 @@ We could also figure out a systematic way to indicate acts and scenes, but that'
 Now that we have tidy text data, let's do stuff with it!
 
 
-### Tokens and word counts
+## Tokens and word counts
 
-#### Single words
+### Single words
 
 One way we can visualize text is to look at word frequencies and find the most common words. This is even more important when looking across documents. 
 
@@ -222,7 +220,7 @@ These results aren't terribly surprising. "lear" is the most common word in *Kin
 
 (Sharp-eyed readers will notice that the words aren't actually in perfect order! That's because some common words are repeated across the plays, like "lord" and "sir". However, each category in a factor can only have one possible position in the orer, so because "lord" is the second most common word in *Hamlet* it also appears as #2 in *Macbeth* and *King Lear*. You can fix this with the `reorder_within()` function in {tidytext}—see [Julia Silge's tutorial here](https://juliasilge.com/blog/reorder-within/) for how to use it.)
 
-#### Bigrams
+### Bigrams
 
 We can also look at pairs of words instead of single words. To do this, we need to change a couple arguments in `unnest_tokens()`, but otherwise everything else stays the same. In order to remove stopwords, we need to split the bigram column into two columns (`word1` and `word2`) with `separate()`, filter each of those columns, and then combine the word columns back together as `bigram` with `unite()`
 
@@ -264,7 +262,7 @@ ggplot(top_bigrams, aes(y = fct_rev(bigram), x = n, fill = title)) +
 
 There are some neat trends here. "Lord Hamlet" is the most common pair of words in *Hamlet* (not surprisingly), but in Macbeth the repeated "knock knock" (the first non-name repeated pair) is a well-known plot point and reoccurring symbolic theme throughout the play.
 
-### Bigrams and probability
+## Bigrams and probability
 
 We can replicate the ["She Giggles, He Gallops"](https://pudding.cool/2017/08/screen-direction/) idea by counting the bigrams that match "he X" and "she X". 
 
@@ -339,7 +337,7 @@ ggplot(plot_word_ratios, aes(y = word, x = logratio, color = logratio < 0)) +
 Shakespeare doesn't use a lot of fancy verbs in his plays, so we're left with incredibly common verbs like "should" and "comes" and "was". Oh well.
 
 
-### Term frequency-inverse document frequency (tf-idf)
+## Term frequency-inverse document frequency (tf-idf)
 
 We can determine which words are the most unique for each book/document in our corpus using by calculating the tf-idf (term frequency-inverse document frequency) score for each term. The tf-idf is the product of the term frequency and the inverse document frequency:
 
@@ -390,7 +388,7 @@ ggplot(tragedy_tf_idf_plot,
 Not surprisingly, the most unique words for each play happen to be the names of the characters in those plays.
 
 
-### Sentiment analysis
+## Sentiment analysis
 
 In the video, I plotted the sentiment of *Little Women* across the book, but it wasn't a very interesting plot. We'll try with Shakespeare here instead. 
 
@@ -459,11 +457,11 @@ ggplot(tragedies_split_into_lines,
 Neat. They're all really sad and negative, except for the beginning of Romeo and Juliet where the two lovers meet and fall in love. Then everyone dies later.
 
 
-### Neat extra stuff
+## Neat extra stuff
 
 None of this stuff was in the video, but it's useful to know and see how to do it. It all generally comes from the [*Tidy Text Mining* book](https://www.tidytextmining.com/) by Julia Silge and David Robinson
 
-#### Part of speech tagging
+### Part of speech tagging
 
 R has no way of knowing if words are nouns, verbs, or adjectives. You can algorithmically predict what part of speech each word is using a part-of-speech tagger, like [spaCy](https://spacy.io/) or [Stanford's Natural Langauge Processing (NLP) library](https://nlp.stanford.edu/). 
 
@@ -588,11 +586,11 @@ ggplot(main_characters_by_chapter, aes(x = prop, y = "1", fill = fct_rev(name)))
 ```
 
 
-#### Topic modeling and fingerprinting
+### Topic modeling and fingerprinting
 
 If you want to see some examples of topic modeling with Latent Dirichlet Allocation (LDA) or text fingerprinting based on sentence length and counts of hapax legomena ([based on this article](https://kops.uni-konstanz.de/bitstream/handle/123456789/5492/Literature_Fingerprinting.pdf)), see these examples from a previous version of this class: [topic modeling](https://datavizf18.classes.andrewheiss.com/class/11-class/#topic-modeling) and [fingerprinting](https://datavizf18.classes.andrewheiss.com/class/11-class/#fingerprinting).
 
 
-#### Text features
+### Text features
 
 Finally, you can use [the {textfeatures} package](https://github.com/mkearney/textfeatures) to find all sorts of interesting numeric statistics about text, like the number of exclamation points, commas, digits, characters per word, uppercase letters, lowercase letters, and more!

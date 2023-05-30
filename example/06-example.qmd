@@ -18,8 +18,6 @@ If you want to follow along with this example, you can download the data below (
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -31,7 +29,7 @@ knitr::opts_chunk$set(fig.width = 6, fig.height = 3.6, fig.align = "center", col
 set.seed(1234)
 ```
 
-### Load and clean data
+## Load and clean data
 
 First, we load the libraries we'll be using:
 
@@ -61,7 +59,7 @@ weather_atl <- weather_atl_raw %>%
 
 Now we're ready to go!
 
-### Histograms
+## Histograms
 
 We can first make a histogram of wind speed. We'll use a bin width of 1 and color the edges of the bars white:
 
@@ -98,7 +96,7 @@ ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
 
 Neat! January, March, and April appear to have the most variation in windy days, with a few wind-less days and a few very-windy days, while August was very wind-less.
 
-### Density plots
+## Density plots
 
 The code to create a density plot is nearly identical to what we used for the histogram—the only thing we change is the `geom` layer:
 
@@ -195,7 +193,7 @@ ggplot(weather_atl_long, aes(x = temp, y = fct_rev(Month),
 Super neat! We can see much wider temperature disparities during the summer, with large gaps between high and low, and relatively equal high/low temperatures during the winter.
 
 
-### Box, violin, and rain cloud plots
+## Box, violin, and rain cloud plots
 
 Finally, we can look at the distribution of variables with box plots, violin plots, and other similar graphs. First, we'll make a box plot of windspeed, filled by the `Day` variable we made indicating weekday:
 

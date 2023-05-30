@@ -63,7 +63,7 @@ Alternatively, instead of using these index numbers, you can use any of the name
 
 I use a lot of different shapefiles in this example. To save you from having to go find and download each individual one, you can download this zip file:
 
-- [{{< fa file-archive >}} `shapefiles.zip`](https://datavizm20.s3.amazonaws.com/shapefiles.zip)
+- [{{< fa file-archive >}} `shapefiles.zip`](/files/data/external_data/shapefiles.zip)
 
 Unzip this and put all the contained folders in a folder named `data` if you want to follow along. **You don't need to follow along!**
 
@@ -106,8 +106,6 @@ These shapefiles all came from these sources:
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -120,7 +118,7 @@ set.seed(1234)
 options("digits" = 2, "width" = 150)
 ```
 
-### Load and look at data
+## Load and look at data
 
 First we'll load the libraries we're going to use:
 
@@ -199,7 +197,7 @@ ga_schools <- read_sf(here::here("files", "data", "external_data", "maps",
 geocoded_addresses <- read_csv(here::here(geocoded_path))
 ```
 
-### Basic plotting
+## Basic plotting
 
 If you look at the `world_map` dataset in RStudio, you'll see it's just a standard data frame with `r nrow(world_map)` rows and `r ncol(world_map)` columns. The last column is the magical `geometry` column with the latitude/longitude details for the borders for every country. RStudio only shows you 50 columns at a time in the RStudio viewer, so you'll need to move to the next page of columns with the » button in the top left corner.
 
@@ -240,7 +238,7 @@ ggplot() +
   theme_void()
 ```
 
-### World map with different projections
+## World map with different projections
 
 Changing projections is trivial: add a `coord_sf()` layer where you specify the CRS you want to use.
 
@@ -278,7 +276,7 @@ ggplot() +
   theme_void()
 ```
 
-### US map with different projections
+## US map with different projections
 
 This same process works for any shapefile. The map of the US can also be projected differently—two common projections are NAD83 and Albers. We'll take the `us_states` dataset, remove Alaska, Hawaii, and Puerto Rico (they're so far from the rest of the lower 48 states that they make an unusable map—see the next section for a way to include them), and plot it.
 
@@ -299,7 +297,7 @@ ggplot() +
   theme_void()
 ```
 
-### US map with non-continguous parts
+## US map with non-continguous parts
 
 Plotting places like Alaska, Hawaii, and Puerto Rico gets a little tricky since they're far away from the contiguous 48 states. There's an easy way to handle it though!
 
@@ -335,7 +333,7 @@ ggplot() +
 ```
 
 
-### Individual states
+## Individual states
 
 Again, because these shapefiles are really just fancy data frames, we can filter them with normal dplyr functions. Let's plot just Georgia:
 
@@ -372,7 +370,7 @@ ggplot() +
 Perfect.
 
 
-### Plotting multiple shapefile layers
+## Plotting multiple shapefile layers
 
 The state shapefiles from the Census Bureau only include state boundaries. If we want to see counties in Georgia, we need to download and load the Census's county shapefiles (which we did above). We can then add a second `geom_sf()` layer for the counties.
 
@@ -412,7 +410,7 @@ ggplot() +
   theme_void()
 ```
 
-### Plotting multiple shapefile layers when some are bigger than the parent shape
+## Plotting multiple shapefile layers when some are bigger than the parent shape
 
 So far we've been able to filter out states and counties that we don't want to plot using `filter()`, which works because the shapefiles have geometry data for each state or county. But what if you're plotting stuff that doesn't follow state or county boundaries, like freeways, roads, rivers, or lakes? 
 
@@ -494,7 +492,7 @@ ggplot() +
 Heck yeah. That's a great map. This is basically what [Kieran Healy did here](https://kieranhealy.org/prints/rivers/), but he used [even more detailed shapefiles from the US Geological Survey](https://www.usgs.gov/core-science-systems/ngp/national-hydrography).
 
 
-### Plotting schools in Georgia
+## Plotting schools in Georgia
 
 Shapefiles are not limited to just lines and areas—they can also contain points. I made a free account at the Georgia GIS Clearinghouse, searched for "schools" and found a shapefile of all the K–12 schools in 2009. [This is the direct link to the page](https://data.georgiaspatial.org/index.asp?body=preview&dataId=41516), but it only works if you're logged in to their system. [This is the official metadata for the shapefile](https://data.georgiaspatial.org/data/statewide/other/schools_2009.html), which you can see if you're not logged in, but you can't download anything. It's a dumb system and other states are a lot better at offering their GIS data (like, [here's a shapefile of all of Utah's schools and libraries](https://gis.utah.gov/data/society/schools-libraries/) as of 2017, publicly accessible without an account).
 
@@ -561,7 +559,7 @@ ga_schools_fixed %>%
 ```
 
 
-### Making your own geoencoded data
+## Making your own geoencoded data
 
 So, plotting shapefiles with `geom_sf()` is magical because {sf} deals with all of the projection issues for us automatically and it figures out how to plot all the latitude and longitude data for us automatically. But lots of data *doesn't* some as shapefiles. The [rats data from mini project 1](/assignment/01-mini-project.qmd), for instance, has two columns indicating the latitude and longitude of each rat sighting, but those are stored as just numbers. If we try to use `geom_sf()` with the rat data, it won't work. We need that magical `geometry` column.
 
@@ -609,7 +607,7 @@ ggplot() +
   theme_void()
 ```
 
-### Automatic geoencoding by address
+## Automatic geoencoding by address
 
 Using `st_as_sf()` is neat when you have latitude and longitude data already, but what if you have a list of addresses or cities instead, with no fancy geographic information? It's easy enough to right click on Google Maps, but you don't really want to do that hundreds of times for large-scale data.
 
@@ -687,7 +685,7 @@ ggplot() +
   theme_void()
 ```
 
-### Plotting other data on maps
+## Plotting other data on maps
 
 So far we've just plotted whatever data the shapefile creators decided to include and publish in their data. But what if you want to visualize some other variable on a map? We can do this by combining our shapefile data with any other kind of data, as long as the two have a shared column. For instance, we can make a choropleth map of life expectancy with data from the World Bank.
 

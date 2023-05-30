@@ -24,8 +24,6 @@ If you want to skip the data downloading, you can download the data below (you'l
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -39,7 +37,7 @@ options("digits" = 2, "width" = 150)
 ```
 
 
-### Load data
+## Load data
 
 First, we load the libraries we'll be using:
 
@@ -70,7 +68,7 @@ wdi_clean <- wdi_co2_raw %>%
   filter(region != "Aggregates")
 ```
 
-### Clean and reshape data
+## Clean and reshape data
 
 Next we'll do some substantial filtering and reshaping so that we can end up with the rankings of CO~2~ emissions in 1995 and 2014. I annotate as much as possible below so you can see what's happening in each step.
 
@@ -133,7 +131,7 @@ And here's what it looks like now:
 head(co2_rankings)
 ```
 
-### Plot the data and annotate
+## Plot the data and annotate
 
 I use IBM Plex Sans in this plot. You can [download it from Google Fonts](https://fonts.google.com/specimen/IBM+Plex+Sans).
 

@@ -17,8 +17,6 @@ If you want to follow along with this example, you can download the data below (
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -31,7 +29,7 @@ set.seed(1234)
 options("digits" = 2, "width" = 150)
 ```
 
-### Load and clean data
+## Load and clean data
 
 First, we load the libraries we'll be using:
 
@@ -52,7 +50,7 @@ weather_atl <- read_csv("data/atl-weather-2019.csv")
 weather_atl <- read_csv(here::here("files", "data", "external_data", "atl-weather-2019.csv"))
 ```
 
-### Legal dual y-axes
+## Legal dual y-axes
 
 It is fine (and often helpful!) to use two y-axes if the two different scales measure the same thing, like counts and percentages, Fahrenheit and Celsius, pounds and kilograms, inches and centimeters, etc.
 
@@ -96,7 +94,7 @@ ggplot(weather_atl, aes(x = time, y = temperatureHigh)) +
   theme_minimal()
 ```
 
-### Combining plots
+## Combining plots
 
 A good alternative to using two y-axes is to use two plots instead. The [{patchwork} package](https://github.com/thomasp85/patchwork) makes this *really* easy to do with R. There are other similar packages that do this, like {cowplot} and {gridExtra}, but I've found that {patchwork} is the easiest to use *and* it actually aligns the different plot elements like axis lines and legends (yay alignment in CRAP!). The [documentation for {patchwork}](https://patchwork.data-imaginist.com/articles/guides/assembly.html) is really great and full of examples—you should check it out to see all the things you can do with it!
 
@@ -146,7 +144,7 @@ temp_plot + humidity_plot +
   plot_layout(ncol = 1, heights = c(0.7, 0.3))
 ```
 
-### Scatterplot matrices
+## Scatterplot matrices
 
 We can visualize the correlations between pairs of variables with the `ggpairs()` function in the {GGally} package. For instance, how correlated are high and low temperatures, humidity, wind speed, and the chance of precipitation? We first make a smaller dataset with just those columns, and then we feed that dataset into `ggpairs()` to see all the correlation information:
 
@@ -170,7 +168,7 @@ ggpairs(weather_correlations) +
 ```
 
 
-### Correlograms
+## Correlograms
 
 Scatterplot matrices typically include way too much information to be used in actual publications. I use them when doing my own analysis just to see how different variables are related, but I rarely polish them up for public consumption. In the readings for today, Claus Wilke showed a type of plot called a [*correlogram*](https://clauswilke.com/dataviz/visualizing-associations.html#associations-correlograms) which *is* more appropriate for publication. 
 
@@ -255,7 +253,7 @@ ggplot(things_to_correlate_long,
 ```
 
 
-### Simple regression
+## Simple regression
 
 We can also visualize the relationships between variables using regression. Simple regression is easy to visualize, since you're only working with an X and a Y. For instance, what's the relationship between humidity and high temperatures during the summer?
 
@@ -295,7 +293,7 @@ ggplot(weather_atl_summer,
 
 And indeed, as humidity increases, temperatures decrease.
 
-### Coefficient plots
+## Coefficient plots
 
 But if we use multiple variables in the model, it gets really hard to visualize the results since we're working with multiple dimensions. Instead, we can use coefficient plots to see the individual coefficients in the model.
 
@@ -334,7 +332,7 @@ ggplot(model_tidied,
 
 Neat! Now we can see how big these different coefficients are and how close they are to zero. Wind speed has a big significant effect on temperature. The others are all very close to zero.
 
-### Marginal effects plots
+## Marginal effects plots
 
 ::: {.callout-tip}
 ### 2023 update!
@@ -455,7 +453,7 @@ ggplot(predicted_values_fancy, aes(x = windSpeed, y = .fitted)) +
 That's so neat! Temperatures go down slightly as cloud cover increases. If we wanted to improve the model, we'd add an interaction term between cloud cover and windspeed so that each line would have a different slope in addition to a different intercept, but that's beyond the scope of this class.
 
 
-### Predicted values and marginal effects in 2023
+## Predicted values and marginal effects in 2023
 
 Instead of using `expand_grid()` and `augment()` to create and plug in a mini dataset of variables to move up and down, we can use [the {marginaleffects} package](https://vincentarelbundock.github.io/marginaleffects/) to simplify life!
 

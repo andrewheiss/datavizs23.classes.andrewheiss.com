@@ -24,8 +24,6 @@ If you want to skip the data downloading, you can download the data below (you'l
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -38,7 +36,7 @@ set.seed(1234)
 options("digits" = 2, "width" = 150)
 ```
 
-### Get data
+## Get data
 
 First, we load the libraries we'll be using:
 
@@ -98,7 +96,7 @@ fred_raw <- read_csv("data/fred_raw.csv")
 fred_raw <- read_csv(here::here(fred_path))
 ```
 
-### Look at and clean data
+## Look at and clean data
 
 The data we get from FRED is in a slightly different format than we're used to with `WDI()`, but with good reason. With World Bank data, you get data for every country and every year, so there are rows for Afghanistan 2000, Afghanistan 2001, etc. You then get a column for each of the variables you want (population, life expectancy, GDP/capita, etc.)
 
@@ -158,7 +156,7 @@ All better.
 We can make as many subsets of the long, tidy, raw data as we want.
 
 
-### Plotting time
+## Plotting time
 
 Let's plot some of these and see what the trends look like. We'll just use `geom_line()`. 
 
@@ -199,7 +197,7 @@ Yikes COVID-19.
 There, we visualized time. `r emoji::emoji("check")`
 
 
-### Improving graphics
+## Improving graphics
 
 These were simple graphs and they're kind of helpful, but they're not incredibly informative. We can clean these up a little. First we can change the labels and themes and colors:
 
@@ -323,7 +321,7 @@ ggplot(unemployment_claims_only, aes(x = date, y = price)) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-### Decomposition
+## Decomposition
 
 The mechanics of decomposing and forecasting time series goes beyond the scope of this class, but there are lots of resources you can use to learn more, including [this phenomenal free textbook](https://otexts.com/fpp3/).
 

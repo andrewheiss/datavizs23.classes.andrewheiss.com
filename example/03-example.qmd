@@ -28,8 +28,6 @@ And I *promise* future examples will not be this long!
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -44,7 +42,7 @@ set.seed(1234)
 options(dplyr.summarise.inform = FALSE)
 ```
 
-### Load and clean data
+## Load and clean data
 
 First, we need to load a few libraries: {tidyverse} (as always) and {readxl} for reading Excel files:
 
@@ -95,7 +93,7 @@ bbc <- bbc_raw %>%
   mutate(grant_year_category = factor(grant_year))
 ```
 
-### Histograms
+## Histograms
 
 First let's look at the distribution of grant amounts with a histogram. Map `grant_amount` to the x-axis and don't map anything to the y-axis, since `geom_histogram()` will calculate the y-axis values for us:
 
@@ -142,7 +140,7 @@ ggplot(bbc, aes(x = grant_amount, fill = grant_year_category)) +
 
 Neat!
 
-### Points
+## Points
 
 Next let's look at the data using points, mapping year to the x-axis and grant amount to the y-axis:
 
@@ -181,7 +179,7 @@ ggplot(bbc, aes(x = grant_year_category, y = grant_amount, color = grant_program
 
 It does! We appear to have two different distributions of grants: small grants have a limit of £30,000, while regular grants have a much higher average amount.
 
-### Boxplots
+## Boxplots
 
 We can add summary information to the plot by only changing the `geom` we're using. Switch from `geom_point()` to `geom_boxplot()`:
 
@@ -190,7 +188,7 @@ ggplot(bbc, aes(x = grant_year_category, y = grant_amount, color = grant_program
   geom_boxplot()
 ```
 
-### Summaries
+## Summaries
 
 We can also make smaller summarized datasets with {dplyr} functions like `group_by()` and `summarize()` and plot those. First let's look at grant totals, averages, and counts over time:
 

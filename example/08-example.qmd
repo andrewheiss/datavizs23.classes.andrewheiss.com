@@ -24,8 +24,6 @@ If you want to skip the data downloading, you can download the data below (you'l
 </div>
 
 
-## Complete code
-
 ::: {.callout-important}
 ### Slight differences from the video
 
@@ -38,7 +36,7 @@ set.seed(1234)
 options("digits" = 2, "width" = 150)
 ```
 
-### Load and clean data
+## Load and clean data
 
 First, we load the libraries we'll be using:
 
@@ -106,7 +104,7 @@ wdi_clean <- wdi_raw %>%
 head(wdi_clean)
 ```
 
-### Small multiples
+## Small multiples
 
 First we can make some small multiples plots and show life expectancy over time for a handful of countries. We'll make a list of some countries chosen at random while I scrolled through the data, and then filter our data to include only those rows. We then plot life expectancy, faceting by country.
 
@@ -167,7 +165,7 @@ ggplot(life_expectancy_eu, aes(x = year, y = life_expectancy)) +
 
 Neat!
 
-### Sparklines
+## Sparklines
 
 Sparklines are just line charts (or bar charts) that are really really small.
 
@@ -206,7 +204,7 @@ You can then use those saved tiny plots in your text.
 > Both India <img class="img-inline" src="/example/08-example_files/figure-html/india-spark-1.png" width = "100"/> and China <img class="img-inline" src="/example/08-example_files/figure-html/china-spark-1.png" width = "100"/> have seen increased CO<sub>2</sub> emissions over the past 20 years.
 
 
-### Slopegraphs
+## Slopegraphs
 
 We can make a slopegraph to show changes in GDP per capita between two time periods. We need to first filter our WDI to include only the start and end years (here 1995 and 2015). Then, to make sure that we're using complete data, we'll get rid of any country that has missing data for either 1995 or 2015. The `group_by(...) %>% filter(...) %>% ungroup()` pipeline does this, with the `!any(is.na(gdp_per_cap))` test keeping any rows where any of the `gdp_per_cap` values are not missing for the whole country.
 
@@ -289,7 +287,7 @@ ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = c
 ```
 
 
-### Bump charts
+## Bump charts
 
 Finally, we can make a bump chart that shows changes in rankings over time. We'll look at CO<sub>2</sub> emissions in South Asia. First we need to calculate a new variable that shows the rank of each country within each year. We can do this if we group by year and then use the `rank()` function to rank countries by the `co2_emissions` column.
 
