@@ -22,7 +22,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- The [syllabus](/syllabus.qmd), [content](/content/index.qmd), [lessons](/lesson/index.qmd), [examples](/example/index.qmd), and [assignments](/assigment/index.qmd) pages for this class
+- The [syllabus](/syllabus.qmd), [content](/content/index.qmd), [lessons](/lesson/index.qmd), [examples](/example/index.qmd), and [assignments](/assignment/index.qmd) pages for this class
 - {{< fa podcast >}} Tim Harford, ["Florence Nightingale: Data Viz Pioneer,"](https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/) *99% Invisible*, episode 433, March 2, 2021 (*this is a podcast; listen to it in your browser or use an app like [Overcast](https://overcast.fm/) or [Spotify](https://spotify.com/)*)
 - {{< fa book >}} [Chapter 1](http://socviz.co/lookatdata.html) in *Data Visualization* [@Healy:2018]
 - {{< fa book >}} Chapters 2 and 3 in *The Truthful Art* [@Cairo:2016] (*skim the introduction and chapter 1*)
