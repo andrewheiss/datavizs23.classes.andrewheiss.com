@@ -1,0 +1,33 @@
+---
+title: "Welcome to class!"
+date: "2023-05-30T14:56"
+categories: [getting started]
+---
+
+Hello everyone!
+
+I’m Andrew Heiss, your professor for PMAP 8101 (Data visualization with R) this summer, and I’m so excited for the class! Out of all the different classes I teach, this is probably my favorite. It's so satisfying to run a few lines of code and see beautiful data-based graphics.
+
+I have a few important announcements before class:
+
+- Before class, I’d love to get to know each you a little first, so I’ve created a quick survey to fill out. I’ve sent you a link to it via e-mail. Please take it at your earliest convenience.
+
+- The entire course is available at a special class website at <https://datavizs23.classes.andrewheiss.com/>. Bookmark this site—it'll be your best friend for the next couple months. I only use iCollege for collecting your assignments and posting answer keys (since it's password protected). This website is the official source of dates and all other class information. Because it's not part of iCollege, you'll be able to reference it even after you graduate and lose access to GSU resources. You can even share it with others—it's just a website!
+
+- **Please read the main explanatory pages at your earliest convenience.** The instructions and expectations for the class are divided across different pages, all accessible from the menu bar at the top of the site. Please read the main pages for the [syllabus](/syllabus.qmd), [content](/content/index.qmd), [lessons](/lesson/index.qmd), [examples](/example/index.qmd), and [assignments](/assignment/index.qmd).
+
+- As you'll see on the syllabus and schedule pages, the class is divided into 15 sessions (corresponding to a typical 15-week semester). Since this is a summer class, we're covering two sessions a week. You'll follow this general process for each session:
+
+	1. Go to the content page, read the readings, and watch the slides/lectures
+	2. Go to the lesson page and do the lessons
+	3. Do the assignment, referring to the example page as you go
+
+- [If you look at the syllabus page](/syllabus.qmd#course-materials), you'll notice that there are *no physical textbooks* for the class. Everything is free. Neat.
+
+Quick background about me: I'm an assistant professor here at the Andrew Young School, where I've been teaching MPA/MPP microeconomics, program evaluation, and data visualization. I moved here from Utah in Fall 2019, where I was a visiting professor of public management at the Marriott School of Business at Brigham Young University (BYU). While at BYU, I taught microeconomics, statistics, and data visualization (basically the same stuff I’m teaching now). I finished my PhD in public policy and political science from Duke in 2017, and before then I finished my MPA in nonprofit management from BYU in 2012. When I'm not teaching, I research international nonprofits and human rights.
+
+I'm also a graphic designer (mostly print; sometimes web). I minored in design as an undergrad and worked remotely for an academic press at BYU throughout my PhD (yay side hustles), where I typeset a couple dozen academic books and dozens of articles. I still do design work now (though not as much) and am the main typesetter for a small nonprofit press named BCC Press. The fun thing about my design background is that it spills over into my research, statistical work, and teaching—it's in part why I created this class!
+
+When I’m not teaching or researching, I’m normally chilling at home with my 6 kids (see <https://www.heissatopia.com> for photos and hilarious stories).
+
+Again, I’m really excited to get started next week. This summer should be a blast!

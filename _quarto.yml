@@ -59,6 +59,14 @@ website:
         file: assignment/index.qmd
       - text: "Resources"
         file: resource/index.qmd
+      - text: "News"
+        file: news/index.qmd
+      - icon: slack
+        href: "https://gsudatavizs2023.slack.com"
+        aria-label: Slack
+      - icon: cloud-fill
+        href: "https://posit.cloud"
+        aria-label: Posit.cloud
 
   sidebar:
     - title: "Classes and readings"
