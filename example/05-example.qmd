@@ -9,9 +9,9 @@ knitr::opts_chunk$set(fig.width = 8, fig.height = 4.8, fig.align = "center", col
 set.seed(1234)
 ```
 
-The [lesson for today's session](/lesson/05-lesson/) is a fairly comprehensive introduction to using the `theme()` function in ggplot, and [this page by Henry Wang](https://henrywang.nl/ggplot2-theme-elements-demonstration/) is a good cheat sheet for remembering which theme elements are which on a plot.
+The [lesson for today's session](/lesson/05-lesson.qmd) is a fairly comprehensive introduction to using the `theme()` function in ggplot, and [this page by Henry Wang](https://henrywang.nl/ggplot2-theme-elements-demonstration/) is a good cheat sheet for remembering which theme elements are which on a plot—and I like [this PDF cheatsheet by Clara Granell](https://github.com/claragranell/ggplot2/blob/main/ggplot_theme_system_cheatsheet.pdf) even better.
 
-For [your exercise](/assignment/05-exercise/), you're going to create the world's ugliest plot. For this example, we'll use the principles of CRAP to make a great theme. 
+For [your exercise](/assignment/05-exercise.qmd), you're going to create the world's ugliest plot. For this example, we'll use the principles of CRAP to make a great theme. 
 
 I'm going to build the theme semi-incrementally here. Instead of showing how the plot updates with each change in setting, I do most of the updates all at once, with tons of comments explaining what each line does. **Importantly**, I did *not* write this all at once. When you're tinkering with themes, you generally start with something like `theme_minimal()` or `theme_bw()` and then gradually add new things to `theme()`, like modifying `plot.title`, then `plot.subtitle`, etc. It's a very iterative process with lots of tinkering. Because of this, **there is no live-coding video for this example**—it would be incredibly long and boring. Instead, look through each of the lines and see what they're doing.
 

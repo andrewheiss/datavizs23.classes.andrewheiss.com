@@ -31,7 +31,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `11-exercise.zip`](/projects/11-exercise.zip)
 
-The [example from today's session](/example/11-example/) shows how to get data from FRED, and the examples from sessions [8](/example/08-example/) and [9](/example/09-example/) show. You can also use gapminder, or any other dataset that includes a time-related column (so not `mpg`). 
+The [example from today's session](/example/11-example.qmd) shows how to get data from FRED, and the examples from sessions [8](/example/08-example.qmd) and [9](/example/09-example.qmd) show. You can also use gapminder, or any other dataset that includes a time-related column (so not `mpg`). 
 
 There's no specific way you should visualize time. Show it as a line, or as bars, or with a heatmap, or with ridgeplots, or with whatever is most appropriate for the story you're telling. You do not have to recreate the example from today. You're free to do whatever you want! 
 
@@ -61,7 +61,7 @@ Do the following:
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

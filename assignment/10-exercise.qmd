@@ -12,7 +12,7 @@ This exercise is a little different from past ones because you will not knit to 
 
 ## Getting started
 
-For this exercise, you'll use whatever data you want to create an interactive HTML plot and a dashboard. Use a dataset from a past exercise, use one of the built-in datasets like `mpg` or `gapminder` from the {gapminder} package, download stuff from the World Bank using the {WDI} package, or use something from [this list of datasets](/resource/data/).
+For this exercise, you'll use whatever data you want to create an interactive HTML plot and a dashboard. Use a dataset from a past exercise, use one of the built-in datasets like `mpg` or `gapminder` from the {gapminder} package, download stuff from the World Bank using the {WDI} package, or use something from [this list of datasets](/resource/data.qmd).
 
 You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
@@ -34,7 +34,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `10-exercise.zip`](/projects/10-exercise.zip)
 
-[The example for today's session](/example/10-example/) will be helpful as you tinker with `ggplotly()`, and [the resources listed at the bottom of the example](/example/10-example/#making-a-dashboard-with-flexdashboard) will be helpful for making a dashboard.
+[The example for today's session](/example/10-example.qmd) will be helpful as you tinker with `ggplotly()`, and [the resources listed at the bottom of the example](/example/10-example.qmd#making-a-dashboard-with-flexdashboard) will be helpful for making a dashboard.
 
 You'll need to insert your own code chunks where needed. Rather than typing them by hand (that's tedious and you might miscount the number of backticks!), use the "Insert" button at the top of the editing window, or type <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>i</kbd> on macOS.
 

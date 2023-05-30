@@ -121,13 +121,11 @@ Here's what you need to do:
       ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)
       ```
 
-You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
+You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/projects/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
 
-- [{{< fa file-pdf >}} `mini-project-1-rubric.pdf`](/files/mini-project-1-rubric.pdf)
+- [{{< fa file-pdf >}} `mini-project-1-rubric.pdf`](/files/projects/mini-project-1-rubric.pdf)
 
 For this assignment, I am less concerned with detailed graphic design principles—select appropriate colors, change fonts if you're brave, and choose a nice ggplot theme and make some adjustments like moving the legend around (`theme(legend.position = "bottom")`).
-
-**The assignment is due by 11:59 PM on Tuesday, July 5**.
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 

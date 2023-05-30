@@ -27,7 +27,7 @@ Here's what you need to do:
 
 2. **Download** the Department of Homeland Security's annual count of people granted refugee status between 2006-2015:
 
-   [{{< fa file-csv >}} DHS refugees, 2006-2015](/data/refugee_status.csv)
+   [{{< fa file-csv >}} DHS refugees, 2006-2015](/files/data/external_data/refugee_status.csv)
     
    Place this in the `data` subfolder you created in step 1. You might need to right click on this link and choose "Save link as…", since your browser may try to display it as text. This data was originally [uploaded by the Department of Homeland Security to Kaggle](https://www.kaggle.com/dhs/refugee-report), and is provided with a public domain license.
 
@@ -73,13 +73,11 @@ Here's what you need to do:
     2. A standalone PNG version of your graphic. You'll export this from Illustrator or Inkscape.
     3. A standalone PDF version of your graphic. You'll export this from Illustrator or Inkscape.
 
-You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/mini-project-2-rubric.pdf) to make comments and provide you with a simulated grade.
+You will be graded based on completion using the standard ✓ system, but I'll provide comments on how you use R and {ggplot2}, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you're telling. I will use [this rubric](/files/projects/mini-project-2-rubric.pdf) to make comments and provide you with a simulated grade.
 
-- [{{< fa file-pdf >}} `mini-project-2-rubric.pdf`](/files/mini-project-2-rubric.pdf)
+- [{{< fa file-pdf >}} `mini-project-2-rubric.pdf`](/files/projects/mini-project-2-rubric.pdf)
 
-For this assignment, I am less concerned with the code (that's why I gave most of it to you), and more concerned with the *design*. Choose good colors based on palettes. Choose good, clean fonts. Use the heck out of `theme()`. Add informative design elements in Illustrator/Inkscape/Gravit Designer. Make it look beautiful and CRAPpy. Refer to [the design resources here](/resource/design/).
-
-**The assignment is due by 11:59 PM on Monday, July 18**.
+For this assignment, I am less concerned with the code (that's why I gave most of it to you), and more concerned with the *design*. Choose good colors based on palettes. Choose good, clean fonts. Use the heck out of `theme()`. Add informative design elements in Illustrator/Inkscape/Gravit Designer. Make it look beautiful and CRAPpy. Refer to [the design resources here](/resource/design.qmd).
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 

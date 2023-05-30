@@ -33,7 +33,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `07-exercise.zip`](/projects/07-exercise.zip)
 
-[The example for today's session](/example/07-example/) will be ***incredibly*** helpful for this exercise. Reference it.
+[The example for today's session](/example/07-example.qmd) will be ***incredibly*** helpful for this exercise. Reference it.
 
 Again, you don't need to make your plots super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing colors or modifying themes and theme elements.
 
@@ -72,7 +72,7 @@ You should also get rid of the intercept (`filter(term != "(Intercept)")`).
 
 ### Predicted values
 
-Show what happens to `percent_dem` as one (or more) of your model's variables changes. To make life easy, refer to the ["Predicted values and marginal effects in 2023"](/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section in this session's example and use `predictions()` from the {marginaleffects} package rather than creating your own `newdata` data set by hand ([see this for reference too](https://vincentarelbundock.github.io/marginaleffects/articles/predictions.html)). You'll do something like this (assuming you're manipulating `per_capita_income`; try using a different variable when you do the assignment, though):
+Show what happens to `percent_dem` as one (or more) of your model's variables changes. To make life easy, refer to the ["Predicted values and marginal effects in 2023"](/example/07-example.qmd#predicted-values-and-marginal-effects-in-2023) section in this session's example and use `predictions()` from the {marginaleffects} package rather than creating your own `newdata` data set by hand ([see this for reference too](https://vincentarelbundock.github.io/marginaleffects/articles/predictions.html)). You'll do something like this (assuming you're manipulating `per_capita_income`; try using a different variable when you do the assignment, though):
 
 ```{r example-predictions, eval=FALSE}
 library(marginaleffects)
@@ -96,12 +96,12 @@ For extra fun times, if you feel like it, create a correlogram heatmap, either w
 
 **This is also entirely optional but will be super useful if you use regression for anything in your own work.**
 
-For extra super bonus fun times, create a more complex model that predicts `percent_dem` that uses polynomial terms (e.g. age squared) and/or interaction terms (e.g. age × state). Plot predictions from the model, use `marginaleffects()` to find the slopes of those predictions at different values, and plot the slopes in a marginal effects plot. (The ["Predicted values and marginal effects in 2023"](/example/07-example.html/#predicted-values-and-marginal-effects-in-2023) section from the example will be indispensable here.)
+For extra super bonus fun times, create a more complex model that predicts `percent_dem` that uses polynomial terms (e.g. age squared) and/or interaction terms (e.g. age × state). Plot predictions from the model, use `marginaleffects()` to find the slopes of those predictions at different values, and plot the slopes in a marginal effects plot. (The ["Predicted values and marginal effects in 2023"](/example/07-example.qmd#predicted-values-and-marginal-effects-in-2023) section from the example will be indispensable here.)
 
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

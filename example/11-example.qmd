@@ -50,7 +50,7 @@ library(scales)     # For nicer labels
 
 The US Federal Reserve provides thousands of economic datasets at [FRED](https://fred.stlouisfed.org/). We can use the [{tidyquant} R package](https://business-science.github.io/tidyquant/) to access their servers and download the data directly into R.
 
-Like we did with the [WDI indicators in session 8](/example/08-example/), we need to find the special internal code for the variables we want to get. We need to pay close attention to the details of each variable, since the same measure can be offered with different combinations of real (adjusted for inflation) or nominal (not adjusted for inflation); monthly, quarterly, or annually; and seasonally adjusted or not seasonally adjusted. For instance, if you want to see US GDP, here are some possibilities (all the possible GDP measures are [listed here](https://fred.stlouisfed.org/categories/106)):
+Like we did with the [WDI indicators in session 8](/example/08-example.qmd), we need to find the special internal code for the variables we want to get. We need to pay close attention to the details of each variable, since the same measure can be offered with different combinations of real (adjusted for inflation) or nominal (not adjusted for inflation); monthly, quarterly, or annually; and seasonally adjusted or not seasonally adjusted. For instance, if you want to see US GDP, here are some possibilities (all the possible GDP measures are [listed here](https://fred.stlouisfed.org/categories/106)):
 
 - [`GDPC1`: Real (2012 dollars), quarterly, seasonally adjusted](https://fred.stlouisfed.org/series/GDPC1)
 - [`ND000334Q`: Real (2012 dollars), quarterly, not seasonally adjusted](https://fred.stlouisfed.org/series/ND000334Q)

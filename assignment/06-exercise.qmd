@@ -43,7 +43,7 @@ Make the following plots and briefly explain what they show:
 
 - Make a histogram of *logged* GDP per capita for 1997 only, across all five continents
 
-- Make a ridge plot of global life expectancy over time, from 1952 to 2007. You'll need to use the full gapminder data, not the 1997-only data. Each ridge should show the distribution of the world's life expectancy for each given year (similar to the [temperature ridge plot in the example](/example/06-example/#density-plots)). 
+- Make a ridge plot of global life expectancy over time, from 1952 to 2007. You'll need to use the full gapminder data, not the 1997-only data. Each ridge should show the distribution of the world's life expectancy for each given year (similar to the [temperature ridge plot in the example](/example/06-example.qmd#density-plots)). 
 
   ::: {.callout-tip}
   ### Categorical year
@@ -53,7 +53,7 @@ Make the following plots and briefly explain what they show:
 
 - Make a filtered dataset that selects data from only 2007 *and* removes Oceania. Show the distribution of *logged* GDP per capita across the *four* continents using some combination of boxplots and/or violin plots and/or strip plots, either overlaid on top of each other, or using their `geom_half_*()` counterparts from {gghalves}.
 
-[The example for today's session](/example/06-example/) will be *incredibly* helpful for this exercise. Reference it.
+[The example for today's session](/example/06-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
 
 You don't need to make these super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing colors or modifying themes and theme elements.
 
@@ -66,7 +66,7 @@ knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error 
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

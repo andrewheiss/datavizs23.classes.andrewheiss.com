@@ -13,8 +13,8 @@ For this exercise, you'll visualize the proportion of the world that uses the in
 
 Download these two data files:
 
-- [{{< fa table >}} `share-of-individuals-using-the-internet-1990-2015.csv`](/data/share-of-individuals-using-the-internet-1990-2015.csv)
-- [{{< fa file-archive >}} `ne_110m_admin_0_countries.zip`](/data/ne_110m_admin_0_countries.zip). This is the ["110m Admin 0—Countries"](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/) shapefile from Natural Earth. It will download as a .zip file. Unzip the file and move the entire `ne_110m_admin_0_countries` directory into your data folder.
+- [{{< fa table >}} `share-of-individuals-using-the-internet-1990-2015.csv`](/files/data/external_data/share-of-individuals-using-the-internet-1990-2015.csv)
+- [{{< fa file-archive >}} `ne_110m_admin_0_countries.zip`](/files/data/external_data/maps/ne_110m_admin_0_countries.zip). This is the ["110m Admin 0—Countries"](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/) shapefile from Natural Earth. It will download as a .zip file. Unzip the file and move the entire `ne_110m_admin_0_countries` directory into your data folder.
 
 You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
 
@@ -40,7 +40,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `12-exercise.zip`](/projects/12-exercise.zip)
 
-The [example from today's session](/example/12-example/) shows how to load and plot shapefiles and will be incredibly helpful as you do this exercise.
+The [example from today's session](/example/12-example.qmd) shows how to load and plot shapefiles and will be incredibly helpful as you do this exercise.
 
 This can be as simple or as complex as you want. You don't need to make your plot super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
 
@@ -61,7 +61,7 @@ Make a map showing the proportion of individuals in each country that had access
 
 - I've provided some starter code in the R Markdown file.
 - You'll want to fill each country by the `users` column.
-- Make sure you choose a good projection. See the ["Projections and coordinate reference systems" section](/example/12-example/#projections-and-coordinate-reference-systems) from the example.
+- Make sure you choose a good projection. See the ["Projections and coordinate reference systems" section](/example/12-example.qmd#projections-and-coordinate-reference-systems) from the example.
 
 *Bonus optional extra fun*: Use your comparison/time skills to show the change in internet access between 2000 and 2015, perhaps with facetting some years, or [calculating ratios or proportions or percent changes](https://observablehq.com/@mbostock/methods-of-comparison-compared)
 
@@ -75,13 +75,13 @@ The only requirement is that you find an appropriate shapefile (states, counties
 ::: {.callout-tip}
 ### Hint
 
-Basically follow [the code from the example in the section named "Making your own geoencoded data"](/example/12-example/#making-your-own-geoencoded-data)
+Basically follow [the code from the example in the section named "Making your own geoencoded data"](/example.qmd12-example/#making-your-own-geoencoded-data)
 :::
 
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

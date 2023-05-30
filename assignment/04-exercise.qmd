@@ -53,7 +53,7 @@ Make the following plots and briefly explain what they show:
 
 - Show the proportion of approved projects by borough and category simultaneously using a heatmap
 
-[The example for today's session](/example/04-example/) will be *incredibly* helpful for this exercise. Reference it.
+[The example for today's session](/example/04-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
 
 You don't need to make these super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing fill colors with `scale_fill_manual()` or with viridis palettes. 
 
@@ -66,7 +66,7 @@ knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error 
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

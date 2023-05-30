@@ -15,7 +15,7 @@ Accordingly, you have some choice in what data you can use for this project. I'v
 
 ## Data from the internet
 
-[Go to this list of data sources](/resource/data/) and find something interesting! The things in the "Data is Plural" newsletter are often especially interesting and fun. Here are some different high-quality datasets that students have worked with before:
+[Go to this list of data sources](/resource/data.qmd) and find something interesting! The things in the "Data is Plural" newsletter are often especially interesting and fun. Here are some different high-quality datasets that students have worked with before:
 
 ### Nonprofit management
 
@@ -50,7 +50,7 @@ Here's what you'll need to do:
 
 5. **Export** the final graphic from Illustrator as a PDF and a PNG.
 
-6. **Write** a memo using R Markdown to introduce, frame, and describe your story and figure. [Use this template to get started](/files/your_name_finalproject.Rmd). You should include the following in the memo:
+6. **Write** a memo using R Markdown to introduce, frame, and describe your story and figure. [Use this template to get started](/files/projects/your_name_finalproject.Rmd). You should include the following in the memo:
 
    - Executive summary
    - Background information and summary of the data
@@ -73,9 +73,9 @@ Upload the following files to iCollege:
 
 **No late work will be accepted for this project since it's the last project and it counts as your final.**
 
-I will use [this rubric](/files/final-project-rubric.xlsx) to grade the final product:
+I will use [this rubric](/files/projects/final-project-rubric.xlsx) to grade the final product:
 
-- [{{< fa file-excel >}} `final-project-rubric.xlsx`](/files/final-project-rubric.xlsx)
+- [{{< fa file-excel >}} `final-project-rubric.xlsx`](/files/projects/final-project-rubric.xlsx)
 
 I am happy to give feedback and help along the way—please don't hesitate to get help! My goal is for you to have a beautiful graphic in the end that you'll want to show off to all your friends, family, neighbors, employers, and strangers on the street—I'm not trying to trip you up or give you trick questions!
 

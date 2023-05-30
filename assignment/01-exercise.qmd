@@ -9,7 +9,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 ## Task 1: Make an RStudio Project
 
-1. Use either Posit.cloud or RStudio on your computer (preferably RStudio on your computer! [Follow these instructions to get started!](/resource/install/)) to create a new RStudio Project.
+1. Use either Posit.cloud or RStudio on your computer (preferably RStudio on your computer! [Follow these instructions to get started!](/resource/install.qmd)) to create a new RStudio Project.
 
 2. Create a folder named "data" in the project folder you just made.
 
@@ -64,7 +64,7 @@ knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error 
 
 3. Use `ggplot()` to create a scatterplot using the `cars` dataset. Use whatever variables you want. Type the code to create the plot in the new empty chunk.
 
-4. Knit your document as a Word file (or PDF if you're brave and [installed LaTeX](/resource/install/#install-tinytex)). Use the "Knit" menu:
+4. Knit your document as a Word file (or PDF if you're brave and [installed LaTeX](/resource/install.qmd#install-tinytex)). Use the "Knit" menu:
 
 ```{r knit-button, echo=FALSE, out.width="30%", indent="   "}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

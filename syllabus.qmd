@@ -96,7 +96,7 @@ We have no regularly scheduled meeting times.
 
 Instead, 100% of the class content is asynchronous. You can do the readings and watch the videos on your own schedule at whatever time works best for you. Many of you work full time and you have childcare and parental care responsibilities, leaving you with only evenings for coursework. I've designed this asynchronous system with *you specifically* in mind. I also can only really do teaching work at night when my kids are in bed—I recorded all these videos between like 10 PM and 2 AM. We're all in similar pandemic boats.
 
-Each session has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The [schedule page](/schedule/) provides an overview of all these moving parts.
+Each session has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The [schedule page](/schedule.qmd) provides an overview of all these moving parts.
 
 I recommend following this general process for each session:
 
@@ -178,7 +178,7 @@ Students with special needs should then make an appointment with me during the f
 
 ## Assignments and grades
 
-You can find descriptions for all the assignments on the [assignments page](/assignment/).
+You can find descriptions for all the assignments on the [assignments page](/assignment/index.qmd).
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
@@ -229,8 +229,4 @@ grading %>%
 
 ## Star Wars
 
-Once you have read this entire syllabus and [the assignments page](/assignment/), please [click here](mailto:aheiss@gsu.edu) and e-mail me a picture of a *cute* Star Wars character.^[Baby Yoda, Babu Frik, porgs, etc. are all super fair game.] Brownie points if it's animated. 
-
-```{r} 
-# blogdown::shortcode("figure", src = "https://media.giphy.com/media/j4q4h9uWKWwnYT1k3Z/giphy.gif", alt = "Baby Yoda with IG-11", lightbox = "false")
-```
+Once you have read this entire syllabus and [the assignments page](/assignment/index.qmd), please [click here](mailto:aheiss@gsu.edu) and e-mail me a picture of a *cute* Star Wars character.^[Baby Yoda, Babu Frik, porgs, etc. are all super fair game.] Brownie points if it's animated. 

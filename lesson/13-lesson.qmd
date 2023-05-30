@@ -6,4 +6,4 @@ date_end: "2023-07-21"
 
 There's no lesson for this session. In your exercise today you'll visualize text data using [{tidytext}](https://www.tidytextmining.com/), and the best way to figure that out is to just play with data.
 
-So head over to [the example](/example/13-example/) to see how it's done, or [the exercise](/assignment/13-exercise/) to get started!
+So head over to [the example](/example/13-example.qmd) to see how it's done, or [the exercise](/assignment/13-exercise.qmd) to get started!

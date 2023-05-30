@@ -29,7 +29,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `13-exercise.zip`](/projects/13-exercise.zip)
 
-The [example from today's session](/example/13-example/) will be incredibly helpful for this exercise.
+The [example from today's session](/example/13-example.qmd) will be incredibly helpful for this exercise.
 
 This can be as simple or as complex as you want. You don't need to make your plots super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
 
@@ -47,7 +47,7 @@ Write your reflection for the day's readings.
 
 ## Task 2: Word frequencies
 
-Use the {gutenbergr} package to download 4+ books by some author on [Project Gutenberg](http://www.gutenberg.org/). Jane Austen, Victor Hugo, Emily Brontë, Lucy Maud Montgomery, Arthur Conan Doyle, Mark Twain, Henry David Thoreau, Fyodor Dostoyevsky, Leo Tolstoy. Anyone. Just make sure it's all from the same author. [The example page](/example/13-example/) shows how to do that.
+Use the {gutenbergr} package to download 4+ books by some author on [Project Gutenberg](http://www.gutenberg.org/). Jane Austen, Victor Hugo, Emily Brontë, Lucy Maud Montgomery, Arthur Conan Doyle, Mark Twain, Henry David Thoreau, Fyodor Dostoyevsky, Leo Tolstoy. Anyone. Just make sure it's all from the same author. [The example page](/example/13-example.qmd) shows how to do that.
 
 Alternatively, you can try using text from a source other than Project Gutenberg. Check out, for instance, [{harrypotter}](https://github.com/bradleyboehmke/harrypotter) (the full text of all 7 Harry Potter books), [{quRan}](https://github.com/andrewheiss/quRan) (the full text of the Qur'an; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)), or [{scriptuRs}](https://github.com/andrewheiss/scriptuRs) (the full text of the King James Version of the Bible; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)).
 
@@ -64,7 +64,7 @@ If you want, do some other things with the text you've downloaded. Make a "he ve
 
 ## Turning everything in
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install/#install-tinytex)) of your document. Upload that file to iCollege.
+When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
 
 ```{r knit-button, echo=FALSE, out.width="30%"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)

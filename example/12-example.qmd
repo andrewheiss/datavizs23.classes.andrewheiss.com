@@ -563,7 +563,7 @@ ga_schools_fixed %>%
 
 ### Making your own geoencoded data
 
-So, plotting shapefiles with `geom_sf()` is magical because {sf} deals with all of the projection issues for us automatically and it figures out how to plot all the latitude and longitude data for us automatically. But lots of data *doesn't* some as shapefiles. The [rats data from mini project 1](/assignment/01-mini-project/), for instance, has two columns indicating the latitude and longitude of each rat sighting, but those are stored as just numbers. If we try to use `geom_sf()` with the rat data, it won't work. We need that magical `geometry` column.
+So, plotting shapefiles with `geom_sf()` is magical because {sf} deals with all of the projection issues for us automatically and it figures out how to plot all the latitude and longitude data for us automatically. But lots of data *doesn't* some as shapefiles. The [rats data from mini project 1](/assignment/01-mini-project.qmd), for instance, has two columns indicating the latitude and longitude of each rat sighting, but those are stored as just numbers. If we try to use `geom_sf()` with the rat data, it won't work. We need that magical `geometry` column.
 
 Fortunately, if we have latitude and longitude information, we can make our own `geometry` column. 
 

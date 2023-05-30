@@ -106,7 +106,7 @@ state_regions
 
 ## Combining datasets vertically
 
-Recall from the [Lord of the Rings data in exercise 3](/assignment/03-exercise/) that you had to combine three different CSV files into dataset. You used `bind_rows()` to stack each of these on top of each other. 
+Recall from the [Lord of the Rings data in exercise 3](/assignment/03-exercise.qmd) that you had to combine three different CSV files into dataset. You used `bind_rows()` to stack each of these on top of each other. 
 
 ```{r eval=FALSE}
 lotr <- bind_rows(fellowship, tt, rotk)

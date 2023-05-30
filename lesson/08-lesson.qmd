@@ -6,4 +6,4 @@ date_end: "2023-06-30"
 
 Like the previous session, there isn't really a lesson today. You're not learning how to use any new functions—you're learning how to apply the geoms you already know in cool and exciting ways. But don't worry! You'll have a lesson for session 9!
 
-For the lesson, [read through the code examples in the example](/example/08-example/) to see how to make small multiples, sparklines, geofacets, and slopegraphs.
+For the lesson, [read through the code examples in the example](/example/08-example.qmd) to see how to make small multiples, sparklines, geofacets, and slopegraphs.

@@ -96,7 +96,7 @@ little_women_raw <- gutenberg_download(514, meta_fields = "title",
 ```
 :::
 
-If you won't want to redownload the books every time you knit (you don't), you can do the same trick we've used for [WDI](/example/08-example/) and [FRED data](/example/11-example/). Put the actual code for getting the books in a chunk with `eval=FALSE` on it and run it manually in RStudio when you want to get the data. Then you can write the downloaded data as a CSV file, and then load it invisibly from the CSV file when you knit:
+If you won't want to redownload the books every time you knit (you don't), you can do the same trick we've used for [WDI](/example/08-example.qmd) and [FRED data](/example/11-example.qmd). Put the actual code for getting the books in a chunk with `eval=FALSE` on it and run it manually in RStudio when you want to get the data. Then you can write the downloaded data as a CSV file, and then load it invisibly from the CSV file when you knit:
 
 ````
 I first download data from Project Gutenberg:
