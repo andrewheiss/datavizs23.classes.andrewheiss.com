@@ -38,6 +38,11 @@ website:
     image: "/files/social-image-s23.png"
     locale: en_US
 
+  repo-url: "https://github.com/andrewheiss/datavizs23.classes.andrewheiss.com"
+  repo-actions: [edit, issue]
+  
+  page-navigation: true
+
   navbar:
     pinned: true
     background: "#E16462"
