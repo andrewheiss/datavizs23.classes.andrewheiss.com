@@ -23,7 +23,7 @@ Policy Studies • Georgia State University
     [Quarto](https://quarto.org/) installation embedded in it.
     Otherwise, download and install [Quarto](https://quarto.org/)
     separately.
-2.  Open `compasp23.Rproj` to open an [RStudio
+2.  Open `datavizs23.Rproj` to open an [RStudio
     Project](https://r4ds.had.co.nz/workflow-projects.html).
 3.  If it’s not installed already, R *should* try to install the [{renv}
     package](https://rstudio.github.io/renv/) when you open the RStudio
