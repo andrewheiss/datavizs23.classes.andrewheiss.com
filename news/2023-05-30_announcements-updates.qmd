@@ -18,6 +18,6 @@ I’ll let you know when there’s a new item in the news section in a few diffe
 2. New messages should post automatically to the #general channel in Slack
 3. If you use an RSS feed reader (RIP Google Reader), you can subscribe to an RSS feed of the news section. There’s a link at the bottom of [the news page](/news/index.qmd).
 
-Phew. That should be it from me for a while. Remember to read the syllabus and the rest of the course website, answer the welcome survey, sign up for Slack, and join the RStudio.cloud workspace. Also, remember to take care of yourselves! I mean *every word* in [the "Learning during a pandemic" section of the syllabus](/syllabus.qmd#learning-during-a-pandemic). This all sucks so much, and I will try my hardest to accommodate your needs throughout the summer
+Phew. That should be it from me for a while. Remember to read the syllabus and the rest of the course website, answer the welcome survey, sign up for Slack, and join the Posit.cloud workspace. Also, remember to take care of yourselves! I mean *every word* in [the "Learning during a pandemic" section of the syllabus](/syllabus.qmd#learning-during-a-pandemic). This all sucks so much, and I will try my hardest to accommodate your needs throughout the summer
 
 Thanks!
