@@ -23,6 +23,7 @@ slide_details <- tibble::tribble(
 
 - {{< fa book >}} Chapter 10 in *The Truthful Art* [@Cairo:2016]
 - {{< fa book >}} [Chapter 7](http://socviz.co/maps.html) in *Data Visualization* [@Healy:2018]
+- {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["How to make fancy road trip maps with R and OpenStreetMap"](https://www.andrewheiss.com/blog/2023/06/01/geocoding-routing-openstreetmap-r/)
 - {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["Making Middle Earth maps with R"](https://www.andrewheiss.com/blog/2023/04/26/middle-earth-mapping-sf-r-gis/)
 
 It looks like this is a lot of reading, but lots of these are short videos or tweets or interactive websites, so don't worry!
@@ -50,6 +51,8 @@ Remember, you don't need to answer all of these—or even any of them! These are
 - What's wrong (or not wrong) with using points on maps? Choropleths? Lines?
 
 ## Other resources
+
+If you want to understand how the magic `geometry` column actually works, check out [this fantastic post](https://www.jessesadler.com/post/simple-feature-objects/).
 
 Check out [this post where someone used {ggplot2} and {sf} to create fancy city map-based art that she printed for a friend](https://www.katiejolly.io/blog/2019-01-21/map-cutouts). You can do similar things after this session!
 

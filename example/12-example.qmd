@@ -559,7 +559,7 @@ ga_schools_fixed %>%
 ```
 
 
-## Making your own geoencoded data
+## Making your own geocoded data
 
 So, plotting shapefiles with `geom_sf()` is magical because {sf} deals with all of the projection issues for us automatically and it figures out how to plot all the latitude and longitude data for us automatically. But lots of data *doesn't* some as shapefiles. The [rats data from mini project 1](/assignment/01-mini-project.qmd), for instance, has two columns indicating the latitude and longitude of each rat sighting, but those are stored as just numbers. If we try to use `geom_sf()` with the rat data, it won't work. We need that magical `geometry` column.
 
@@ -607,11 +607,11 @@ ggplot() +
   theme_void()
 ```
 
-## Automatic geoencoding by address
+## Automatic geocoding by address
 
 Using `st_as_sf()` is neat when you have latitude and longitude data already, but what if you have a list of addresses or cities instead, with no fancy geographic information? It's easy enough to right click on Google Maps, but you don't really want to do that hundreds of times for large-scale data.
 
-Fortunately there are a bunch of different online geoencoding services that return GIS data for addresses and locations that you feed them, like magic. 
+Fortunately there are a bunch of different online geocoding services that return GIS data for addresses and locations that you feed them, like magic. 
 
 The easiest way to use any of these services is to use the [{tidygeocoder}](https://jessecambon.github.io/tidygeocoder/) package, which connects with all these different free and paid services (run `?geo` in R for complete details):
 
