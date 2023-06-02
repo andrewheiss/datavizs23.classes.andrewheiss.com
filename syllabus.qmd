@@ -107,7 +107,7 @@ Fortunately there are tons of online resources to help you with this. Two of the
 
 If you use Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful.
 
-[ChatGPT](https://chat.openai.com/) is generally relatively okay with R questions, but it will often hallucinate responses—it really likes to imagine packages that don't exist and then give you answers with them. Think of it as glorified autocomplete.
+[ChatGPT](https://chat.openai.com/) is generally relatively okay with R questions, but it will often hallucinate responses—it really likes to imagine packages that don't exist and then give you answers with them. Think of it as glorified autocomplete. [I'd encourage you to read the first few paragraphs here](https://www.infoworld.com/article/3694611/8-chatgpt-tools-for-r-programming.html) about a few important things to keep in mind when using ChatGPT, though.
 
 Searching for help with R on Google can sometimes be tricky because the program name is, um, a single letter. Google is generally smart enough to figure out what you mean when you search for "r scatterplot", but if it does struggle, try searching for "rstats" instead (e.g. "rstats scatterplot"). Also, since most of your R work will deal with {ggplot2}, it's often easier to just search for that instead of the letter "r" (e.g. "ggplot scatterplot"). 
 
