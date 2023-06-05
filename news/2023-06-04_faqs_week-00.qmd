@@ -1,0 +1,43 @@
+---
+title: "Pre-class FAQs"
+date: "2023-06-05T00:53"
+categories: [FAQs]
+---
+
+Thanks to everyone who has filled out the pre-class welcome survey (see the link in your e-mail)! I’m excited to get to know you all more over the summer!
+
+Lots of you had similar questions and concerns, so I’ve consolidated the common ones here in a list of FAQs. 
+
+### Will we cover {X}? 
+
+- **Geospatial data and visualizations?** [Absolutely!](/content/12-content.qmd) Maps are one of my favorite kinds of visualization and [we have a whole session on them](/example/12-example.qmd).
+- **Interactive visualizations?** [Yep!](/content/10-content.qmd)
+- **Animated visualizations?** Not directly, but we’ll briefly mention [the {gganimate} package](https://gganimate.com/), which is surprisingly easy to use—it’s just regular ggplot code with a few extra lines to animate it
+
+### Will you have regular office hours?
+
+I don’t have a set time every week for student hours ([see here for why I don’t call them office hours](/syllabus.qmd#student-hours)). Instead, I use an appointment system. If you want to meet with me online, visit [my Calendly page](https://calendly.com/andrewheiss/) and sign up for a slot. There’s also a link to it on the [homepage](/) and [syllabus page](/syllabus.qmd) of the class website.
+
+I’ll also occasionally be on campus starting the last week of June (I’m currently not in Atlanta—I’m in Utah visiting family, but will still be responding to all e-mails and providing support and answering questions via e-mail and Slack), so if you want to meet in person after June 26, we can arrange that too.
+
+### I don’t have a background in anything related to PMAP (public management and policy)—will I be lost?
+
+That’s 1000% fine! I’ve designed this class to be accessible and useful for people working with any kind of data. Lots of the examples we’ll play with will often be related to political science-y things, but not always. And the kind of data doesn’t actually matter. When learning new statistical programming and visualization tools and techniques, the industry standard is to work with toy datasets. For instance, in your first exercise you’ll make a plot of car mileage. I know *nothing* about cars at all, but I (along with everyone else in the R world) use that dataset all the time for quick little tests of plots or models or code or whatever, since it’s built into R. I also often use [data about penguins](https://allisonhorst.github.io/palmerpenguins/) and lots of  other domains in assignments and examples.
+
+Don’t worry about the precise nature of the data. [In your final project](/assignment/final-project.qmd), you’ll make visualizations with whatever data you want. For all the other assignments and exercises and mini-projects, just go with the data I’ve provided. It’s all actual real world data (refugee inflows, unemployment, election results, texts of books from the 19th century, counts and locations of rat sightings in NYC, etc.). If it’s not related to your field (hello you handful of epidemiology students!), don’t worry—the principles of code and data visualization and graphic design still apply.
+
+### Can I reach out if I have questions?
+
+***ABSOLUTELY***. DO NOT ATTEMPT TO DO THIS CLASS WITHOUT EVER ASKING A SINGLE QUESTION.
+
+Throughout the pandemic year I've been studying the research on online teaching to see how to make my online classes as successful as possible. One almost universal key to success I've found is that learning requires social interaction to be successful [@Glazier:2016]. In fact, **one of the greatest predictors of success is whether students build relationships with their classmates and their professor.**
+
+This is true for **both** online classes and face-to-face classes! It's entirely possible to take a face-to-face class and have almost no social interaction. The worst, most useless class I ever took as an undergraduate was a required Intro to US History class that met twice a week for 2 hours in a massive auditorium with 900 (!!!) other students. It was awful and I learned nothing.
+
+So, interact with me and your classmates! Don't lurk in silence in the shadows. (Don't overshare either and spam the #general channel in Slack, but in my experience there's little risk of that). *Do* reach out and talk to your classmates (and me!). We're an eclectic group. Even though this is officially an Andrew Young School class, most of you are not public policy or public administration grad students. We have PhD students in political science and epidemiology and masters students in criminal justice administration, public policy, and economics. Get to know each other!
+
+To that end, one of the best ways to get to know each other is to help each other. Ask questions on Slack. If you see someone's question there and you know how to help, answer! 
+
+You can also work on exercises and projects in groups if you want. Use Webex or Zoom to share screens with each other during calls so you can see what you're doing. In the real programming world, a common technique for working on code is [pair programming](https://en.wikipedia.org/wiki/Pair_programming), where two people work on the same script. If we were meeting in class, we'd do this face-to-face, working during class in groups of 2–3 with me walking around and helping. **Feel free to replicate that experience** and work with others. It's not cheating! (As long as you don't turn in identical work)
+
+Help make this semester fantastic by talking, reaching out, and otherwise socially interacting!

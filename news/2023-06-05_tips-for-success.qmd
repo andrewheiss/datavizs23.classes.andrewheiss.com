@@ -1,0 +1,43 @@
+---
+title: "Tips for success"
+date: "2023-06-05T01:23"
+categories: [FAQs, advice]
+---
+
+The most common question from the pre-class survey was some variation of this:
+
+> I have no background in programming or in R—will I be able to learn things and succeed in this class?
+
+Absolutely.
+
+I’ve designed this class to be accessible by people with any level of R experience. If you’ve never used R—awesome! If you’ve been using R for years—awesome! You’ll all learn new skills.
+
+Learning programming is a little different from learning other skills or materials. In other classes you’ve taken, you read articles or textbooks, take notes on them, talk about the readings in class, maybe complete problem sets or exercises about the materials, and then you take a test. 
+
+With programming, though, the approach is typically different. You read things, you copy code, you paste that code into a file on your computer, and you tinker with the code to see how it works and what changes as you change things.
+
+The R community in particular has embraced this approach to learning how to code. Posit, the company that develops RStudio, [has a whole team of professional educators](https://education.rstudio.com/) dedicated to improving R pedagogy, and they use this approach in all their teaching materials. The [Software Carpentry project](https://software-carpentry.org/) (a group dedicated to teaching data and programming skills) does too. I’m a fan of it as well. [As one of the textbooks I teach from in another class states](https://moderndive.com/1-getting-started.html#tips-code):
+
+> **Take the “copy, paste, and tweak” approach**: Especially when you learn your first programming language or you need to understand particularly complicated code, it is often much easier to take existing code that you know works and modify it to suit your ends. This is as opposed to trying to type out the code from scratch. We call this the “*copy, paste, and tweak”* approach. So early on, we suggest not trying to write code from memory, but rather take existing examples we have provided you, then copy, paste, and tweak them to suit your goals. After you start feeling more confident, you can slowly move away from this approach and write code from scratch. Think of the “copy, paste, and tweak” approach as training wheels for a child learning to ride a bike. After getting comfortable, they won’t need them anymore.
+
+To make your copying/pasting life easier, each session has an [extensive example page](/example/index.qmd) and an accompanying video showing how to create the different visualizations. Copy/paste/tweak liberally from the example pages!
+
+Every chunk of code on the course website has a neat little {{< fa clipboard >}} clipboard icon that you can use to copy the whole chunk:
+
+```{r collapse=TRUE}
+# Click on the clipboard icon in the top right corner here to copy this code
+x <- 1:5
+x + 5
+```
+
+Use that button!
+
+Inevitably in the classes where I teach R, I have students say things like “I’m trying to do this without looking at any documentation!” or “I can't do this without googling—I'm a failure!”. While the effort to be fully independent and perfect with code is noble, it’s *totally unnecessary*. Everyone looks stuff up all the time—being able to do something without looking stuff up shouldn’t be your end goal. 
+
+Eventually you’ll be able to whip out basic `ggplot(..., aes(...)) + geom_point() + geom_smooth() + labs()` kinds of things without copying and pasting—that comes naturally over time, and you see me do that in the videos. But as soon as I have to start changing axis breaks or do anything beyond the standard stuff, I immediately start googling and looking at the documentation. Everyone does it. The authors of these packages do it. That's why documentation exists. So don’t feel bad if you do it too. It’s the dirty little secret of all programming everywhere—it’s impossible to write code without referring to documentation or other people’s code (or your past code). 
+
+This is why I have you do stuff in R Markdown. Everything in your problem sets is completely reproducible. The document tells you exactly what you ran to get the data and results and figures that you made. Copy and paste from your past assignments liberally. Copy and paste from the examples liberally.
+
+Do **not** be super noble and force yourself to write everything from scratch!
+
+Finally, if you ever get frustrated when running code or making a plot because it goes wild and vomits geoms all over the page, don’t worry! It happens to everyone! There’s actually a whole hashtag on Twitter for #accidentalaRt (and a corresponding [\@accidental__aRt](https://twitter.com/accidental__aRt) Twitter account that collects these plots) where people post their plotting disasters. Scroll through the feed and see the marvelous accidental art people make. It’s fantastic.
