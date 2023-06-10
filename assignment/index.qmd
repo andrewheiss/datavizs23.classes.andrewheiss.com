@@ -12,7 +12,7 @@ Each type of assignment in this class helps with one of these strategies.
 
 ## Reflections
 
-To encourage engagement with the course content, you'll need to write a ≈150 word reflection about the readings and lectures for the day. That's fairly short: there are ≈250 words on a typical double-spaced page in Microsoft Word (500 when single-spaced). 
+To encourage engagement with the course content, you'll need to write a ≈150 word reflection about the readings and lectures for the session That's fairly short: there are ≈250 words on a typical double-spaced page in Microsoft Word (500 when single-spaced). 
 
 You can do a lot of different things with this memo: discuss something you learned from the course content, write about the best or worst data visualization you saw recently, connect the course content to your own work, etc. These reflections let you explore and answer some of the key questions of this course, including:
 
@@ -22,7 +22,7 @@ You can do a lot of different things with this memo: discuss something you learn
 - How do you choose which kind of visualization to use?
 - What is the role of stories in presenting analysis?
 
-The course content for each day will also include a set of questions specific to that topic. *You do not have to answer all (or any) of these questions*. That would be impossible. They exist to guide your thinking, that's all.
+The course content for each session will also include a set of questions specific to that topic. *You do not have to answer all (or any) of these questions*. That would be impossible. They exist to guide your thinking, that's all.
 
 I will grade these memos using a check system:
 
@@ -39,7 +39,7 @@ You will turn these reflections in via iCollege. You will write them using R Mar
 
 Each class session has [interactive lessons](/lesson/index.qmd) and [fully annotated examples](/example/index.qmd) of code that teach and demonstrate how to do specific tasks in R. However, without practicing these principles and making graphics on your own, you won't remember what you learn! 
 
-To practice working with {ggplot2} and making data-based graphics, you will complete a brief set of exercises for each class session. These exercises will have 1–3 short tasks that are directly related to the topic for the day. You need to show that you made a good faith effort to work each question. The problem sets will also be graded using a check system:
+To practice working with {ggplot2} and making data-based graphics, you will complete a brief set of exercises for each class session. These exercises will have 1–3 short tasks that are directly related to the topic for the session. You need to show that you made a good faith effort to work each question. The problem sets will also be graded using a check system:
 
 - ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document is clean and easy to follow. Work is exceptional. I will not assign these often.
 - ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct. This is the expected level of performance.
