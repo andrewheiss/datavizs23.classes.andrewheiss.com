@@ -58,6 +58,8 @@ The best way to deal with working directories with RStudio is to use RStudio Pro
 
 [Read this super short chapter on RStudio projects.](https://r4ds.had.co.nz/workflow-projects.html)
 
+In general, you can create a new project by going to File > New Project > New Directory > Empty Project, which will create a new folder on your computer that is empty except for a single `.Rproj` file. Double click on that file to open an RStudio instance that is pointed at the correct folder.
+
 
 ## Part 4: Getting familiar with R Markdown
 
