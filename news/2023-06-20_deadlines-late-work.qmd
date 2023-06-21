@@ -1,0 +1,13 @@
+---
+title: "Deadlines, late work, and student hours"
+date: "2023-06-20T18:28"
+categories: [advice, course details]
+---
+
+Hi everyone!
+
+One quick reminder about my late work policy, since I've been getting a lot of Slack messages and e-mails about it. 
+
+[Recall from the syllabus](/syllabus.qmd#late-work) that with the exception of the mini projects and final project, there are no actual hard and fast deadlines in this class. If you need to turn an exercise in late, cool. I might not be able to get you feedback if stuff comes in too late, but you'll still get full credit. **There's no penalty for late work.**
+
+Also, remember from the syllabus that [I have really open student hours](/syllabus.qmd#student-hours). If you want to meet with me for help or for whatever reason, [sign up for a time at my Calendly page](https://calendly.com/andrewheiss/). You can also access that link at the [home page of the course website](/) and [at the top of the syllabus page](/syllabus.qmd)

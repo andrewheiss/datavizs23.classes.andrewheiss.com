@@ -1,0 +1,15 @@
+---
+title: "Session 2 tips and FAQs"
+date: "2023-06-19T11:48"
+categories: [FAQs]
+---
+
+Hi everyone!
+
+Since exercise 2 involved no code, I don’t have much in the way of code tips or anything :)
+
+In the comments for exercise 2, I went through the CRAP acronym and pointed out little things that can be changed or improved for each of your designs. **You don’t have to redo your posters.** I gave that feedback to show what the CRAP design tinkering process looks like in real life. For instance, a few of you had had text and graphics that were only a couple pixels misaligned—just tweaking that to make everything perfectly inline does a lot to make designs feel more put together.
+
+As I mentioned in the lecture, once you know about CRAP, you’ll start using it everywhere—every billboard, poster, book, website, etc. you see, you’ll try to identify what the designed tried to align each element with, which fonts they used, why they used the colors they did, why they grouped the text and images the way they did, and so on. Or when you come across something that you intuitively feel is ugly and poorly designed, you’ll be able to say why.
+
+If you want to know more about basic design skills like this, I’d highly recommend getting [*The Non-Designer’s Design and Type Book*](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151). It’s a fantastic resource and goes way more in depth into CRAP and basic typography.

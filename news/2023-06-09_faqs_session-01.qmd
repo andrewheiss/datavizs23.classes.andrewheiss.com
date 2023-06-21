@@ -1,5 +1,5 @@
 ---
-title: "Seesion 1 tips and FAQs"
+title: "Session 1 tips and FAQs"
 date: "2023-06-09T22:44"
 categories: [FAQs]
 ---
