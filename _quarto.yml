@@ -276,7 +276,7 @@ website:
 format:
   html:
     theme:
-      - litera
-      - html/custom.scss
+      light: [litera, html/custom.scss]
+      dark: darkly
     toc: true
     highlight-style: monokai
