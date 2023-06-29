@@ -1,0 +1,108 @@
+---
+title: "A few quick general R tips"
+date: "2023-06-26T11:23"
+categories: [FAQs]
+toc-depth: 4
+---
+
+Hi everyone!
+
+As I've been looking through your exercises, I've noticed a few little R issues that might sometimes be tripping you up. They're super minor, but can make life easier:
+
+
+### Talking about packages and functions
+
+You've probably noticed that on the course website here, I put package names in `{}`s, like {ggplot2} or {gghalves}. This is a normal convention in the R world—people generally either put package names in braces or in bold.
+
+When writing about functions, I typically format them as code, followed by empty open and closed parentheses, like `geom_point()`. That signals that it's actual runnable code and not the name of a package. Remember that you can format things like inline code by using single backticks.
+
+For instance, this:
+
+  ```default
+  You can use `geom_point()` from {ggplot2} to make scatterplots.
+  ```
+
+will knit into this:
+
+- You can use `geom_point()` from {ggplot2} to make scatterplots.
+
+
+### Nicer {ggplot2} documentation
+
+The ggplot documentation within R (i.e. in the help panel) is good, but I find that it's nicer to [use the documentation website](https://ggplot2.tidyverse.org/reference/index.html). It's the same exact content, but the website version shows plots for each of the examples. Scroll down to the [examples section for `geom_point()`, for instance](https://ggplot2.tidyverse.org/reference/geom_point.html#ref-examples).
+
+
+### Installing vs. using packages
+
+Make sure you don't include code to install packages in your Rmd files. Like, don't include `install.packages("gapminder")` or whatever. If you do, R will reinstall that package every time you knit your document, which is excessive. All you need to do is load the package with `library()`. 
+
+::: {.callout-important}
+### Installing and using packages
+
+You **install** packages *once* on your computer. You can do this either with `install.packages()` or by clicking on "Install package" in the "Packages" panel in RStudio:
+
+```r
+# Only do this once on your computer! Don't include this line of code in a document
+install.packages("gapminder")
+```
+
+You **load** packages *every time* you want to use functions or data from that package in your R session.:
+
+```r
+# This loads the gapminder package and lets you use it
+library(gapminder)
+```
+
+:::
+
+
+### The tidyverse package shortcut
+
+When you run `library(tidyverse)`, R shows a message that says it has loaded 9 packages: 
+
+```default
+── Attaching core tidyverse packages ────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+```
+
+The tidyverse package developers have found that those 9 are some of the most common packages that people use, so they created `library(tidyverse)` as a shortcut for loading them all at the same time. Alternatively, you could start your documents like this:
+
+```r
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(stringr)
+library(forcats)
+# etc.
+```
+
+But that's a *lot* of typing. It's easier to just do `library(tidyverse)`
+
+If you load the tidyverse package, you don't need to load those 9 individual packages. Doing this is entirely redundant:
+
+```r
+library(tidyverse)
+library(ggplot2)  # This is alreaady loaded bc tidyverse
+library(dplyr)  # This is also already loaded bc tidyverse
+```
+
+I've tried to point out in your exercises if/when you do this
+
+
+### Chunk labels
+
+[Labeling your R chunks is a good thing to do](/resource/rmarkdown.qmd#chunk-names), since it helps with document navigation and is generally good practice. If you're using chunk labels **make sure you don't use spaces** in them. R will still knit a document with spaceful names, but it converts the spaces to underscores before doing it. So instead of naming chunks like `{r My Neat Chunk, message=FALSE}`, use something like `{r my-neat-chunk}` or `{r my_neat_chunk}`.
+
+
+### Code style
+
+Unlike other programming languages (grumbles at Python), R is fairly forgiving with the style of the code you write. You can have extra spaces, you can omit spaces, you can indent things however you want, etc.
+
+But if you want to write readable code (you do!) and write code that others can work with (you do!), you should follow some basic style guidelines. [I’ve summarized a few of the most important ones here](/resource/style.qmd).
+
+I’m never going to grade you on any of this, by the way! These are just a set of best practices that you should get into the habit of using.

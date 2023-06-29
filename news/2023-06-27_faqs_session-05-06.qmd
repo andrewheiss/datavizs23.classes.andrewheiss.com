@@ -1,0 +1,436 @@
+---
+title: "Sessions 5 and 6 tips and FAQs"
+date: "2023-06-27T19:01"
+categories: [FAQs]
+toc-depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 6 * 0.618, 
+  fig.align = "center", 
+  out.width = "90%",
+  collapse = TRUE
+)
+
+library(tidyverse)
+```
+
+Hi everyone!
+
+I'm really happy with how you all did with exercises 5 and 6 (you made some legitimately hideous plots!).
+
+I got a lot of similar questions and I saw some common issues in the assignments, so like normal, I've compiled them all here. Enjoy!
+
+
+### My axis labels are overlapping and ugly. How can I fix that?
+
+Sometimes you'll have text that is too long to fit comfortably as axis labels and the labels will overlap and be gross:
+
+![Overlapping axis labels](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/index_files/figure-html/plot-the-problem-1.png){width=70%}
+
+[Check out this blog post](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/) for a bunch of different ways to fix this and make nicer labels, like this:
+
+![Non-overlapping axis labels](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/index_files/figure-html/plot-auto-1.png){width=70%}
+
+
+### Why isn't the example code using `data = whatever` and `mapping = aes()` in `ggplot()` anymore? Do we not have to use argument names?
+
+In the first few sessions, you wrote code that looked like this:
+
+```{r example-with-args, eval=FALSE}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+  geom_point()
+```
+
+In R, you feed functions arguments like `data` and `mapping` and I was having you explicitly name the arguments, like `data = mpg` and `mapping = aes(...)`. 
+
+In general it's a good idea to use named arguments, since it's clearer what you mean. 
+
+However, with really common functions like `ggplot()`, you can actually skip the names. If you look at the documentation for `ggplot()` (i.e. run `?ggplot` in your R console or search for "ggplot" in the Help panel in RStudio), you'll see that the first expected argument is `data` and the second is `mapping`. 
+
+![The documentation for the ggplot() function](img/ggplot-help-arguments.png){width=90%}
+
+If you don't name the arguments, like this…
+
+```{r example-without-args, eval=FALSE}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point()
+```
+
+…`ggplot()` will assume that the first argument (`mpg`) really means `data = mpg` and that the second really means `mapping = aes(...)`.
+
+If you don't name the arguments, **the order matters**. This won't work because ggplot will think that the `aes(...)` stuff is really `data = aes(...)`:
+
+```{r example-without-args-bad-order, eval=FALSE}
+ggplot(aes(x = displ, y = hwy), mpg) +
+  geom_point()
+```
+
+If you do name the arguments, **the order *doesn't* matter**. This will work because it's clear that `data = mpg` (even though this feels backwards and wrong):
+
+```{r example-with-args-weird-order, eval=FALSE}
+ggplot(mapping = aes(x = displ, y = hwy), data = mpg) +
+  geom_point()
+```
+
+This works with all R functions. You can either name the arguments and put them in whatever order you want, or you can not name them and use them in the order that's listed in the documentation. 
+
+**In general, you should name your arguments for the sake of clarity.** For instance, with `aes()`, the first argument is `x` and the second is `y`, so you can technically do this:
+
+```{r example-without-args-aes, eval=FALSE}
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point()
+```
+
+That's nice and short, but you have to remember that `displ` is on the x-axis and `hwy` is on the y-axis. And it gets extra confusing once you start mapping other columns:
+
+```{r example-without-args-aes-bad, eval=FALSE}
+ggplot(mpg, aes(displ, hwy, color = drv, size = hwy)) +
+  geom_point()
+```
+
+All the other aesthetics like color and size are named, but x and y aren't, which just feels… off.
+
+So use argument names except for super common things like `ggplot()` and the {dplyr} verbs like `mutate()`, `group_by()`, `filter()`, etc.
+
+
+### In chapter 22, Wilke talks about tables—is there a way to make pretty tables with R?
+
+Absolutely! We don't have time in this class to cover tables, but there's a whole world of packages for making beautiful tables with R. Three of the more common ones are [{gt}](https://gt.rstudio.com/), [{kableExtra}](https://haozhu233.github.io/kableExtra/), and [{flextable}](https://ardata-fr.github.io/flextable-book/):
+
+```{r table-summary, echo=FALSE}
+library(gt)
+
+tribble(
+  ~`Package`, ~HTML, ~PDF, ~Word, ~` `, ~Notes,
+  "[**{gt}**](https://gt.rstudio.com/)", "**Great**", "Okay", "Okay", "[Examples](https://gt.rstudio.com/articles/case-study-gtcars.html)", 'Has the goal of becoming the "grammar of tables" (hence "gt"). It is supported by developers at Posit and gets updated and improved regularly. It\'ll likely become the main table-making package for R.',
+  "[**{kableExtra}**](https://haozhu233.github.io/kableExtra/)", "**Great**", "**Great**", "Okay", "[Examples](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)", "Works really well for HTML output and has the best support for PDF output, but development has stalled for the past couple years and it seems to maybe be abandonded, which is sad.",
+  "[**{flextable}**](https://ardata-fr.github.io/flextable-book/)", "**Great**", "Okay", "**Great**", "[Examples](https://ardata-fr.github.io/flextable-book/index.html#walkthrough-simple-example)", "Works really well for HTML output and has the best support for Word output. It's not abandonded and gets regular updates."
+) %>% 
+  gt() %>% 
+  fmt_markdown(
+    columns = everything()
+  ) %>% 
+  tab_spanner(
+    label = "Output support",
+    columns = c(HTML, PDF, Word)
+  ) %>% 
+  opt_table_font(font = "Barlow") %>% 
+  tab_options(column_labels.font.weight = "bold",
+              row_group.font.weight = "bold") %>% 
+  tab_style(
+    style = "vertical-align: top;",
+    locations = cells_body()
+  )
+```
+
+Here's a quick illustration of these three packages. All three are incredibly powerful and let you do all sorts of really neat formatting things ([{gt} even makes interactive HTML tables!](https://gt.rstudio.com/reference/opt_interactive.html)), so make sure you check out the documentation and examples. I personally use all three, depending on which output I'm working with. When knitting to HTML, I use {gt}; when knitting to PDF I use {gt} or {kableExtra}; when knitting to Word I use {flextable}.
+
+::: {.panel-tabset}
+### Dataset to table-ify
+
+```{r create-table-data, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+cars_summary <- mpg %>% 
+  group_by(year, drv) %>%
+  summarize(
+    n = n(),
+    avg_mpg = mean(hwy),
+    median_mpg = median(hwy),
+    min_mpg = min(hwy),
+    max_mpg = max(hwy)
+  )
+```
+
+### {gt}
+
+```{r gt-example}
+library(gt)
+
+cars_summary %>% 
+  gt() %>% 
+  cols_label(
+    drv = "Drive",
+    n = "N",
+    avg_mpg = "Average",
+    median_mpg = "Median",
+    min_mpg = "Minimum",
+    max_mpg = "Maximum"
+  ) %>% 
+  tab_spanner(
+    label = "Highway MPG",
+    columns = c(avg_mpg, median_mpg, min_mpg, max_mpg)
+  ) %>% 
+  fmt_number(
+    columns = avg_mpg,
+    decimals = 2
+  ) %>% 
+  tab_options(
+    row_group.as_column = TRUE
+  )
+```
+
+### {kableExtra}
+
+```{r kableExtra-example, warning=FALSE, message=FALSE}
+library(kableExtra)
+
+cars_summary %>% 
+  ungroup() %>% 
+  select(-year) %>% 
+  kbl(
+    col.names = c("Drive", "N", "Average", "Median", "Minimum", "Maximum"),
+    digits = 2
+  ) %>% 
+  kable_styling() %>% 
+  pack_rows("1999", 1, 3) %>% 
+  pack_rows("2008", 4, 6) %>% 
+  add_header_above(c(" " = 2, "Highway MPG" = 4))
+```
+
+
+### {flextable}
+
+```{r flextable-example, message=FALSE}
+#| tbl-cap: Flextable example
+library(flextable)
+
+cars_summary %>% 
+  rename(
+    "Year" = year,
+    "Drive" = drv,
+    "N" = n,
+    "Average" = avg_mpg,
+    "Median" = median_mpg,
+    "Minimum" = min_mpg,
+    "Maximum" = max_mpg
+    ) %>% 
+  mutate(Year = as.character(Year)) %>% 
+  flextable() %>% 
+  colformat_double(j = "Average", digits = 2) %>%
+  add_header_row(values = c(" ", "Highway MPG"), colwidths = c(3, 4)) %>% 
+  align(i = 1, part = "header", align = "center") %>% 
+  merge_v(j = ~ Year) %>% 
+  valign(j = 1, valign = "top")
+```
+
+:::
+
+You can also create more specialized tables for specific situations, like side-by-side regression results tables with [{modelsummary}](https://vincentarelbundock.github.io/modelsummary/) (which uses {gt}, {kableExtra}, or {flextable} behind the scenes)
+
+```{r modelsummary-example}
+library(modelsummary)
+
+model1 <- lm(hwy ~ displ, data = mpg)
+model2 <- lm(hwy ~ displ + drv, data = mpg)
+
+modelsummary(
+  list(model1, model2),
+  stars = TRUE,
+  # Rename the coefficients
+  coef_rename = c(
+    "(Intercept)" = "Intercept",
+    "displ" = "Displacement",
+    "drvf" = "Drive (front)",
+    "drvr" = "Drive (rear)"),
+  # Get rid of some of the extra goodness-of-fit statistics
+  gof_omit = "IC|RMSE|F|Log",
+  # Use {gt}
+  output = "gt"
+)
+```
+
+
+### Double encoding and excessive legends
+
+As you've read, double encoding aesthetics can be helpful for accessibility and printing reasons—for instance, if points have colors and shapes, they're still readable by people who are colorblind or if the image is printed in black and white:
+
+```{r double-encoding-example}
+ggplot(mpg, aes(x = displ, y = hwy, color = drv, shape = drv)) +
+  geom_point()
+```
+
+Sometimes the double encoding can be excessive though, and you can safely remove legends. For example, in exercises 3 and 4, you made bar charts showing counts of different things (words spoken in *The Lord of the Rings*; pandemic-era construction projects in New York City), and lots of you colored the bars, which is great!
+
+```{r car-example-legend}
+car_counts <- mpg %>% 
+  group_by(drv) %>% 
+  summarize(n = n())
+
+ggplot(car_counts, aes(x = drv, y = n, fill = drv)) +
+  geom_col()
+```
+
+Car drive here is double encoded: it's on the x-axis and it's the fill. That's great, but having the legend here is actually a little excessive. Both the x-axis and the legend tell us what the different colors of drives are (four-, front-, and rear-wheeled drives), so we can safely remove the legend and get a little more space in the plot area:
+
+```{r car-example-no-legend}
+ggplot(car_counts, aes(x = drv, y = n, fill = drv)) +
+  geom_col() +
+  guides(fill = "none")
+```
+
+
+### I have numbers like 20000 and want them formatted with commas like 20,000. Can I do that automatically?
+
+Yes you can! There's an incredible package called [{scales}](https://scales.r-lib.org/). It lets you format numbers and axes and all sorts of things in magical ways. If you [look at the documentation](https://scales.r-lib.org/reference/index.html), you'll see a ton of `label_SOMETHING()` functions, like `label_comma()`, `label_dollar()`, and `label_percent()`.
+
+You can use these different labeling functions inside `scale_AESTHETIC_WHATEVER()` layers in ggplot. 
+
+`label_comma()` adds commas:
+
+```{r gapminder-comma, message=FALSE}
+library(scales)
+library(gapminder)
+
+gapminder_2007 <- gapminder %>% 
+  filter(year == 2007)
+
+ggplot(gapminder_2007, aes(x = gdpPercap)) +
+  geom_histogram(binwidth = 1000) +
+  scale_x_continuous(labels = label_comma())
+```
+
+`label_dollar()` adds commas and includes a "$" prefix:
+
+```{r gapminder-dollar}
+ggplot(gapminder_2007, aes(x = gdpPercap)) +
+  geom_histogram(binwidth = 1000) +
+  scale_x_continuous(labels = label_dollar())
+```
+
+`label_percent()` multiplies values by 100 and formats them as percents:
+
+```{r gapminder-percent}
+gapminder_percents <- gapminder_2007 %>% 
+  group_by(continent) %>% 
+  summarize(n = n()) %>% 
+  mutate(prop = n / sum(n))
+
+ggplot(gapminder_percents, aes(x = continent, y = prop)) +
+  geom_col() +
+  scale_y_continuous(labels = label_percent())
+```
+
+You can also change a ton of the settings for these different labeling functions. Want to format something as Euros and use periods as the number separators instead of commas, like Europeans? Change the appropriate arguments! You can check the documentation for each of the `label_WHATEVER()` functions to see what you can adjust ([like `label_dollar()` here](https://scales.r-lib.org/reference/label_dollar.html))
+
+```{r gapminder-euro, warning=FALSE}
+ggplot(gapminder_2007, aes(x = gdpPercap)) +
+  geom_histogram(binwidth = 1000) +
+  scale_x_continuous(labels = label_dollar(prefix = "€", big.mark = "."))
+```
+
+All the `label_WHATEVER()` functions actually create copies of themselves, so if you're using lots of custom settings, you can create your own label function, like `label_euro()` here:
+
+```{r gapminder-euro-custom, warning=FALSE}
+# Make a custom labeling function
+label_euro <- label_dollar(prefix = "€", big.mark = ".")
+
+# Use it on the x-axis
+ggplot(gapminder_2007, aes(x = gdpPercap)) +
+  geom_histogram(binwidth = 1000) +
+  scale_x_continuous(labels = label_euro)
+```
+
+These labeling functions also work with other aesthetics, like fill and color and size. Use them in `scale_AESTHETIC_WHATEVER()`:
+
+```{r gapminder-scales-legends}
+ggplot(
+  gapminder_2007, 
+  aes(x = gdpPercap, y = lifeExp, size = pop, color = pop)
+) +
+  geom_point() +
+  scale_x_continuous(labels = label_dollar()) +
+  scale_size_continuous(labels = label_comma()) +
+  scale_color_viridis_c(labels = label_comma())
+```
+
+There are also some really neat and fancy things you can do with scales, like formatting logged values, abbreviating long numbers, and many other things. [Check out this post](https://www.andrewheiss.com/blog/2022/12/08/log10-natural-log-scales-ggplot/) for an example of working with logged values.
+
+```{r gapminder-scatter-fancy}
+ggplot(
+  gapminder_2007, 
+  aes(x = gdpPercap, y = lifeExp, size = pop, color = continent)
+) +
+  geom_point() +
+  scale_x_log10(breaks = 500 * 2^seq(0, 9, by = 1),
+                labels = label_dollar(scale_cut = cut_short_scale())) +
+  scale_size_continuous(labels = label_comma(scale_cut = cut_short_scale()))
+```
+
+
+### Legends are cool, but I've read that directly labeling things can be better. Is there a way to label things without a legend?
+
+Yes! Later in the semester we'll cover [annotations](/content/09-content.qmd), but in the meantime, you can check out a couple packages that let you directly label geoms that have been mapped to aesthetics. 
+
+#### {geomtextpath}
+
+The [{geomtextpath}](https://allancameron.github.io/geomtextpath/) package lets you add labels directly to paths and lines with functions like `geom_textline()` and `geom_labelline()` and `geom_labelsmooth()`.
+
+Like, here's the relationship between penguin bill lengths and penguin weights across three different species:
+
+```{r penguin-textpath, message=FALSE}
+# This isn't on CRAN, so you need to install it by running this:
+# remotes::install_github("AllanCameron/geomtextpath")
+library(geomtextpath)
+library(palmerpenguins)  # Penguin data
+
+# Get rid of the rows that are missing sex
+penguins <- penguins %>% drop_na(sex)
+
+ggplot(
+  penguins, 
+  aes(x = bill_length_mm, y = body_mass_g, color = species)
+) +
+  geom_point(alpha = 0.5) +  # Make the points a little bit transparent
+  geom_labelsmooth(
+    aes(label = species), 
+    # This spreads the letters out a bit
+    text_smoothing = 80
+  ) +
+  # Turn off the legend bc we don't need it now
+  guides(color = "none")
+```
+
+And the average continent-level life expectancy across time: 
+
+```{r gapminder-textpath, message=FALSE}
+gapminder_lifeexp <- gapminder %>% 
+  group_by(continent, year) %>% 
+  summarize(avg_lifeexp = mean(lifeExp))
+
+ggplot(
+  gapminder_lifeexp, 
+  aes(x = year, y = avg_lifeexp, color = continent)
+) +
+  geom_textline(
+    aes(label = continent, hjust = continent),
+    linewidth = 1, size = 4
+  ) +
+  guides(color = "none")
+```
+
+#### {ggdirectlabel}
+
+A new package named [{ggdirectlabel}](https://github.com/MattCowgill/ggdirectlabel) lets you add legends directly to your plot area:
+
+```{r penguins-directlabel, message=FALSE}
+# This also isn't on CRAN, so you need to install it by running this:
+# remotes::install_github("MattCowgill/ggdirectlabel")
+library(ggdirectlabel)
+
+ggplot(
+  penguins, 
+  aes(x = bill_length_mm, y = body_mass_g, color = species)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  geom_richlegend(
+    aes(label = species),  # Use the species as the fake legend labels
+    legend.position = "topleft",  # Put it in the top left
+    hjust = 0  # Make the text left-aligned (horizontal adjustment, or hjust)
+  ) +
+  guides(color = "none")
+```
