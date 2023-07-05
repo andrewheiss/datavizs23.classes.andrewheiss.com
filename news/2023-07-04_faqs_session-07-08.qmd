@@ -1,0 +1,428 @@
+---
+title: "Sessions 7 and 8 tips and FAQs"
+date: "2023-07-04T14:02"
+categories: [FAQs]
+toc-depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 6 * 0.618, 
+  fig.align = "center", 
+  out.width = "90%",
+  collapse = TRUE
+)
+```
+
+Hi everyone!
+
+I just finished grading all your exercises from sessions 7 and 8 and am happy with how you've been doing! I have a few quick tips and tricks and suggestions here based on lots of the feedback I gave. Enjoy!
+
+
+### I knitted my document and nothing happened?
+
+Most of the time this is because R ran into an error when knitting. RStudio shows you knitting errors in the Render panel, but if you've minimized that corner of RStudio, or shrunken it down really small, you won't see it. 
+
+![Missing Render panel](img/knitr-no-render.png)
+
+Expand the area and look at the panel and you'll see what went wrong:
+
+![Render panel with error](img/knitr-render.png)
+
+If nothing is wrong, you might have set RStudio to not automatically preview the knitted document. Click on the little gear icon at the top of the editor panel and make sure one of the "Preview in…" options is checked:
+
+![Preview options for knitted documents](img/knitr-preview.png)
+
+
+### I tried to knit my document and got an error about duplicate chunk labels. Why?
+
+You can ([and should!](https://datavizs23.classes.andrewheiss.com/resource/rmarkdown.html#chunk-names)) name your R code chunks—[see here for more about how and why](/resource/rmarkdown.qmd#chunk-names). All chunk names must be unique, though. 
+
+Often you'll copy and paste a chunk from earlier in your document to later, like to make a second plot based on the first. That's fine—just make sure that you change the chunk name.
+
+If there are chunks with repeated names, R will yell at you:
+
+![Duplicated chunk names](img/knitr-duplicate-chunks.png)
+
+To fix it, change the name of one of the duplicated names to something unique:
+
+![Unique chunk names](img/knitr-different-names.png)
+
+
+### One of my chunks runs just fine in RStudio, but when I knit it doesn't show anything. Why?
+
+There are lots of different options that you can use with your code chunks ([see here for more details](/resource/rmarkdown.qmd#chunk-options)). One of these is `eval`, which controls if the chunk gets run when knitted. By default it's `TRUE`, but you can change it to `FALSE` if you want to include a chunk in your document without actually running it. 
+
+This is useful for illustrating things that can't actually run, like this—there is no function named `geom_whatever()`, and running `ggplot(...)` doesn't do anything, since I use the dots as a placeholder to mean "put stuff in here":
+
+```{r a-chunk-that-doesnt-run, eval=FALSE}
+#| echo: fenced
+ggplot(...) +
+  geom_whatever()
+```
+
+I included a chunk like that in exercise 7:
+
+```{r example-filtering, eval=FALSE}
+#| echo: fenced
+tidy(...) %>%
+  filter(!str_detect(term, "state"))
+```
+
+That code doesn't work by itself because of `tidy(...)`—again, those dots are just a placeholder. If you make a model and then change the code to use it, that's great! This code all works:
+
+```{r example-filtering-real, eval=FALSE}
+#| echo: fenced
+model <- lm(
+  percent_dem ~ median_age + percent_white + per_capita_income + median_rent + state,
+  data = results_2016
+)
+
+tidy(model) %>%
+  filter(!str_detect(term, "state"))
+```
+
+You can even click on the little play button in RStudio and run the chunk. However, when you knit the document, the code for that chunk will appear in the document, but it won't run and nothing will appear.
+
+To fix it, either change it to `eval=TRUE` or just remove that option (it's true by default)
+
+
+### I tried calculating something with `sum()` or `cor()` and R gave me NA instead of a number. Why?
+
+This nearly always happens because of missing values. Let's make a quick little dataset to illustrate what's going on (and how to fix it):
+
+```{r make-example-na-data}
+library(tidyverse)
+
+example <- tibble(
+  x = c(1, 2, 3, 4, 5),
+  y = c(6, 7, NA, 9, 10),
+  z = c(2, 6, 5, 7, 3)
+)
+
+example
+```
+
+The `y` column has a missing value (`NA`), which will mess up any math we do.
+
+Without running any code, what's the average of the `x` column? We can find that with math (add all the numbers up and divide by how many numbers there are):
+
+$$
+\frac{1 + 2 + 3 + 4 + 5}{5} = 3
+$$
+
+Neat. We can confirm with R:
+
+```{r avg-good}
+# With dplyr
+example %>% 
+  summarize(avg = mean(x))
+
+# With base R
+mean(example$x)
+```
+
+What's the average of the `y` column? Math time:
+
+$$
+\frac{6 + 7 + \text{?} + 9 + 10}{5} = \text{Who even knows}
+$$
+
+We have no way of knowing what the average is because of that missing value.
+
+If we try it with R, it gives us NA instead of a number:
+
+```{r avg-na}
+example %>% 
+  summarize(avg = mean(y))
+```
+
+To fix this, we can tell R to remove all the missing values from the column before calculating the average so that it does this:
+
+$$
+\frac{6 + 7 + 9 + 10}{4} = 8
+$$
+
+Include the argument `na.rm = TRUE` to do that:
+
+```{r avg-na-rm}
+example %>% 
+  summarize(avg = mean(y, na.rm = TRUE))
+```
+
+This works for lots of R's calculating functions, like `sum()`, `min()`, `max()`, `sd()`, `median()`, `mean()`, and so on:
+
+```{r summarize-lots}
+example %>% 
+  summarize(
+    total = sum(y, na.rm = TRUE),
+    avg = mean(y, na.rm = TRUE),
+    median = median(y, na.rm = TRUE),
+    min = min(y, na.rm = TRUE),
+    max = max(y, na.rm = TRUE),
+    std_dev = sd(y, na.rm = TRUE)
+  )
+```
+
+This works a little differently with `cor()` because you're working with multiple columns instead of just one. If there are any missing values in any of the columns you're correlating, you'll get NA for the columns that use it. Here, we have a correlation between `x` and `z` because there are no missing values in either of those, but we get NA for the correlation between `x` and `y` and between `z` and `y`:
+
+```{r cor-missing}
+example %>% 
+  cor()
+```
+
+Adding `na.rm` to `cor()` doesn't work because `cor()` doesn't actually have an argument for `na.rm`:
+
+```{r cor-na-rm, error=TRUE}
+example %>%
+  cor(na.rm = TRUE)
+```
+
+Instead, if you look at the documentation for `cor()` (run `?cor` in your R console or search for it in the Help panel in RStudio), you'll see an argument named `use` instead. By default it will use all the rows in the data (`use = "everything"`), but we can change it to `use = "complete.obs"`. This will remove all rows where something is missing before calculating the correlation:
+
+```{r cor-complete, error=TRUE}
+example %>%
+  cor(use = "complete.obs")
+```
+
+
+### I want my bars to be sorted in my plot. How can I control their order?
+
+Sorting categories by different values is important for showing trends in your data. By default, R will plot categorical variables in alphabetical order, but often you'll want these categories to use some sort of numeric order, likely based on a different column. 
+
+There are a few different ways to sort categories. First, let's make a summarized dataset of the total population in each continent in 2007 (using our trusty ol' gapminder data):
+
+```{r make-gapminder-data}
+library(gapminder)
+
+# Find the total population in each continent in 2007
+population_by_continent <- gapminder %>% 
+  filter(year == 2007) %>% 
+  group_by(continent) %>% 
+  summarize(total_population = sum(pop))
+population_by_continent
+```
+
+By default the continents will be in alphabetic order:
+
+```{r plot-gapminder-alphabetic}
+ggplot(
+  population_by_continent,
+  aes(x = continent, y = total_population, fill = continent)
+) +
+  geom_col() +
+  # The legend is redundant because of the x-axis
+  guides(fill = "none")
+```
+
+In this case it's more useful to plot these in order of total population. My favorite approach for this is to (1) sort the data how I want it with `arrange()` and (2) lock the order of the category in place with `fct_inorder()`. Note how the mini dataset is now sorted and Oceania comes first:
+
+```{r make-gapminder-sorted}
+plot_data_sorted <- population_by_continent %>% 
+  # Sort by population
+  arrange(total_population) %>% 
+  # Make continent use the order it's currently in
+  mutate(continent = fct_inorder(continent))
+plot_data_sorted
+```
+
+If we plot it, the continents will be in order:
+
+```{r plot-gapminder-sorted}
+ggplot(
+  plot_data_sorted,
+  aes(x = continent, y = total_population, fill = continent)
+) +
+  geom_col() +
+  guides(fill = "none")
+```
+
+This plots the continents in reverse order, with Oceania on the left. We can reverse this by either arranging the data in descending population order, or by using `fct_rev()` to reverse the continent order:
+
+::: {.panel-tabset}
+### Sort in descending order
+
+```{r plot-gapminder-desc}
+plot_data_sorted <- population_by_continent %>% 
+  # Sort by population in descending order
+  arrange(desc(total_population)) %>% 
+  # Lock in the continent order
+  mutate(continent = fct_inorder(continent))
+
+ggplot(
+  plot_data_sorted,
+  aes(x = continent, y = total_population, fill = continent)
+) +
+  geom_col() +
+  guides(fill = "none")
+```
+
+### Use `fct_rev()`
+
+```{r plot-gapminder-fct-rev}
+plot_data_sorted <- population_by_continent %>% 
+  # Sort by population in ascending order
+  arrange(total_population) %>% 
+  # Lock in the continent order
+  mutate(continent = fct_inorder(continent))
+
+ggplot(
+  plot_data_sorted,
+  # Reverse the continent order with fct_rev()
+  aes(x = fct_rev(continent), y = total_population, fill = fct_rev(continent))
+) +
+  geom_col() +
+  guides(fill = "none")
+```
+:::
+
+An alternative to the two-step `arrange() %>% mutate(blah = fct_inorder(blah))` is to use `fct_reorder()`, which takes two arguments: (1) the column you want to be reordered and (2) the column you want to sort it by:
+
+```{r plot-gapminder-fct-reorder}
+plot_data_sorted <- population_by_continent %>% 
+  # Sort continent by total_population in descending order
+  mutate(continent = fct_reorder(continent, total_population, .desc = TRUE))
+
+ggplot(
+  plot_data_sorted,
+  aes(x = continent, y = total_population, fill = continent)
+) +
+  geom_col() +
+  guides(fill = "none")
+```
+
+That's only one line instead of two, which is nice, but I tend to be fan of the two step approach because it's more explicit and gives me more control over sorting. For instance, here I want all the gapminder countries to be sorted by year (descending), continent, and life expectancy so we can see descending life expectancy within each continent over time. 
+
+I'm sure there's a way to sort by multiple columns in different orders like this with `fct_reorder()`, but I don't know how. Plus, if I run this `super_sorted_data` code up until the end of `arrange()`, I can look at it in RStudio to make sure all the ordering I want is right. That's harder to do with `fct_reorder()`.
+
+```{r gapminder-wild, fig.width=8, fig.height=7}
+super_sorted_data <- gapminder %>% 
+  filter(year >= 1997) %>% 
+  # Get the countries in order of year (descending), continent, and life expectancy
+  arrange(desc(year), continent, lifeExp) %>%
+  # Lock the country name order in place + lock the year in place
+  mutate(
+    country = fct_inorder(country),
+    # year is currently a number, so we need to change it to a factor before
+    # reordering it
+    year = fct_inorder(factor(year))
+  )
+
+ggplot(super_sorted_data, aes(y = country, x = lifeExp, fill = continent)) +
+  geom_col() +
+  facet_wrap(vars(year)) +
+  # Reverse the order legend so that Oceania is at the top, since it's at the
+  # top in the plot
+  guides(fill = guide_legend(reverse = TRUE)) +
+  theme_minimal() +
+  # Remove country names and y-axis gridlines + put legend on the bottom
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    legend.position = "bottom"
+  )
+```
+
+You can also specify any arbitrary category order with `fct_relevel()`
+
+```{r plot-gapminder-arbitrary}
+plot_data_sorted <- population_by_continent %>% 
+  # Use this specific continent order
+  mutate(continent = fct_relevel(
+    continent, 
+    c("Asia", "Oceania", "Europe", "Americas", "Africa"))
+  )
+
+ggplot(
+  plot_data_sorted,
+  aes(x = continent, y = total_population, fill = continent)
+) +
+  geom_col() +
+  guides(fill = "none")
+```
+
+
+### My data has full US state names but I want to use abbreviations (or regions). Is there a way to automatically convert from names to something else?
+
+Yep! R has a few state-related variables built in (run `?state` in your R console to see them all):
+
+```{r state-examples}
+state.name
+state.abb
+state.region
+```
+
+These aren't datasets—they're single vectors—but you can make a little dataset with columns for each of those details, like this:
+
+```{r make-state-details}
+state_details <- tibble(
+  state = state.name,
+  state_abb = state.abb,
+  state_division = state.division,
+  state_region = state.region
+) %>% 
+  # Add DC manually
+  add_row(
+    state = "Washington, DC",
+    state_abb = "DC",
+    state_division = "South Atlantic",
+    state_region = "South"
+  )
+state_details
+```
+
+You can join this dataset to any data you have that has state names or state abbreviations. Joining the data will bring all the columns from `state_details` into your data wherever rows match. You'll [learn a lot more about joining things in sesison 12 too](https://datavizs23.classes.andrewheiss.com/lesson/12-lesson.html).
+
+For instance, imagine you have a dataset that looks like this, similar to the unemployment data from exercise 8:
+
+```{r make-state-data}
+some_state_data <- tribble(
+  ~state, ~something,
+  "Wyoming", 5,
+  "North Carolina", 9,
+  "Nevada", 10,
+  "Georgia", 3,
+  "Rhode Island", 1,
+  "Washington, DC", 6
+)
+some_state_data
+```
+
+We can merge in (or join) the `state_details` data so that we add columns for abbreviation, region, and so on, using `left_join()` (again, [see lesson 12 for more about all this](https://datavizs23.classes.andrewheiss.com/lesson/12-lesson.html)):
+
+```{r join-state-details}
+# Join the state details
+data_with_state_details <- some_state_data %>% 
+  left_join(state_details, by = join_by(state))
+data_with_state_details
+```
+
+Now your `data_with_state_details` data has new columns for abbreviations, divisions, regions, and everything else that was in `state_details`:
+
+```{r plot-state-abbreviations}
+# Use it
+ggplot(
+  data_with_state_details, 
+  aes(x = state_abb, y = something, fill = state_region)
+) +
+  geom_col()
+```
+
+And for fun, we can fix the ordering:
+
+```{r plot-state-abbreviations-ordering}
+# Fix the ordering
+data_with_state_details <- some_state_data %>% 
+  left_join(state_details, by = join_by(state)) %>% 
+  arrange(desc(something)) %>% 
+  mutate(state_abb = fct_inorder(state_abb))
+
+ggplot(
+  data_with_state_details, 
+  aes(x = state_abb, y = something, fill = state_region)
+) +
+  geom_col()
+```

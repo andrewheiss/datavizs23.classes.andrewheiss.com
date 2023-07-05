@@ -106,7 +106,7 @@ Here's what you need to do:
       ::: {.callout-note}
       ### Assignment structure
 
-      You can approach this in a couple different ways—you can write the memo and then include the full figure and code at the end, [similar to this blog post](https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/), or you can write the memo in an incremental way, describing the different steps of creating the figure, ultimately arriving at a clean final figure, [like this blog post](https://rudeboybert.github.io/fivethirtyeight/articles/bechdel.html).
+      You can approach this in a couple different ways—you can write the memo and then include the full figure and code at the end, [similar to this blog post](https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/), or you can write the memo in an incremental way, describing the different steps of creating the figure, ultimately arriving at a clean final figure, [like this blog post](https://fivethirtyeightdata.github.io/fivethirtyeightdata/articles/bechdel.html).
       :::
    
    2. A standalone PNG version of your graphic. Use this:
