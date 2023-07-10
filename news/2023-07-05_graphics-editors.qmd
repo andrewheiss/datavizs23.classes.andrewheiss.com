@@ -1,0 +1,115 @@
+---
+title: "Graphics editors"
+subtitle: "Alternatives to Adobe programs"
+date: "2023-07-05T20:02"
+categories: [course details]
+---
+
+For [exercise 14](/assignment/14-exercise.qmd), [mini-project 2](/assignment/02-mini-project.qmd), and your [final project](/assignment/final-project.qmd), you'll create plots in R, export them as PDFs, and then edit, enhance, and lay out those PDFs using some sort of graphics editor. 
+
+In the past, I've had students use Adobe Illustrator for this, since GSU provided free student access to [Adobe Creative Cloud](https://www.adobe.com/creativecloud.html), which includes Illustrator. The most common Creative Cloud programs people use for data visualization-related work are:
+
+- [Photoshop](https://www.adobe.com/products/photoshop.html): edit photos and other bitmap images
+- [Illustrator](https://www.adobe.com/products/illustrator.html): edit vector images
+- [InDesign](https://www.adobe.com/products/indesign.html): lay out text and images for books, magazines, brochures, posters, and all other printed things
+
+However, *GSU no longer provides off-campus access to Adobe software.* If you're faculty or staff, [you can still access Creative Cloud for free](https://technology.gsu.edu/technology-services/productivity-collaboration/adobe-creative-cloud/); if you're a student [you have to use an on-campus computer lab](https://technology.gsu.edu/technology-services/productivity-collaboration/adobe-creative-cloud/).
+
+This is sad because knowing how to use programs like Illustrator is *incredibly* valuable. Even if you never touch R again after this class, the graphic design programs included in Creative Cloud are industry-standard and used literally everywhere, and knowing how to use them is an important skill!
+
+There are some alternative options though.
+
+### Creative Cloud as a student
+
+You can use the whole Creative Cloud Suite for [$20/month as a student](https://www.adobe.com/creativecloud/buy/students.html), and they have a 14-day free trial. Creative Cloud is a subscription service, so you can subscribe on and off as often as you want.
+
+
+### Affinity Suite
+
+[Affinity](https://affinity.serif.com/en-us/) is a smaller rival to Adobe and they have their own set of three programs for graphic design-related tasks. Unlike Creative Cloud, the programs in the Affinity Suite are not subscription-based. You buy them and then you own them forever.
+
+There are three programs that are general equivalents of the core Adobe programs:
+
+- [Affinity Photo](https://affinity.serif.com/en-us/photo/) = Photoshop
+- [Affinity Designer](https://affinity.serif.com/en-us/designer/) = Illustrator
+- [Affinity Publisher](https://affinity.serif.com/en-us/publisher/) = InDesign
+
+::: {.callout-warning}
+### Caveat!
+
+Big caveat here: I've never actually used any of these Affinity programs. I use Adobe stuff for all my work. But I've heard fantastic things about them and have seen them in action—they're as good as Adobe's stuff.
+:::
+
+
+### Open source alternatives
+
+The open source community has created **free** programs that are rough equivalents of these core Adobe programs too:
+
+- [GIMP](https://www.gimp.org/) = Photoshop
+- [Inkscape](https://inkscape.org/) = Illustrator
+- [Scribus](https://www.scribus.net/) = InDesign
+
+These are all free and they work on macOS and Windows (and Linux if you're into that), but they can be a ~~little~~ lot rough around the edges and tricky to work with. Adobe, Affinity, and other companies have full time developers focused on making good user interfaces and experiences; these open source clones do not. You can make the same kind of output with GIMP, Inkscape, and Scribus that you can with Adobe Creative Cloud and the Affinity Suite, but there's a bit of an extra learning curve (and a lot of bumps along the way). 
+
+But you can't beat free.
+
+
+### Summary
+
+```{r comparison-table, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(gt)
+
+tribble(
+  ~file, ~Adobe, ~Affinity, ~foss,
+  "Bitmaps", "[Photoshop](https://www.adobe.com/products/photoshop.html)", "[Photo](https://affinity.serif.com/en-us/photo/)", "[GIMP](https://www.gimp.org/)",
+  "Vectors", "[Illustrator](https://www.adobe.com/products/illustrator.html)", "[Designer](https://affinity.serif.com/en-us/designer/)", "[Inkscape](https://inkscape.org/)",
+  "Layout", "[InDesign](https://www.adobe.com/products/indesign.html)", "[Publisher](https://affinity.serif.com/en-us/publisher/)", "[Scribus](https://www.scribus.net/)",
+  "Cost", "$$$<br><span class='smaller-note'>Monthly Creative Cloud subscription</span>", "$<br><span class='smaller-note'>One-time purchase</span>", "Free",
+  "Notes", "Industry standard", "", "Free, but rough learning curve"
+) %>% 
+  gt() %>% 
+  cols_label(
+    file = "File type",
+    foss = "Open source"
+  ) %>% 
+  fmt_markdown(columns = everything()) %>% 
+    tab_style(
+    locations = cells_column_labels(),
+    style = list(
+      cell_text(weight = "bold")
+    )
+  ) %>% 
+  cols_align(
+    columns = c(Adobe, Affinity, foss),
+    align = "center"
+  ) %>% 
+  tab_style(
+    style = "vertical-align:top;",
+    locations = cells_body(
+      columns = everything()
+    )
+  ) %>% 
+  tab_style(
+    style = cell_borders(sides = "top", color = "#D3D3D3", weight = px(3)),
+    locations = cells_body(rows = 4)
+  ) %>% 
+  opt_css(
+    css = "
+    .smaller-note {
+      font-size: 0.7em;
+    }"
+  ) %>% 
+  cols_width(
+    file ~ pct(15),
+    Adobe ~ pct(85/3),
+    Affinity ~ pct(85/3),
+    foss ~ pct(85/3)
+  ) %>% 
+  opt_vertical_padding(scale = 1) %>% 
+  opt_table_font(font = "Barlow") %>% 
+  tab_options(
+    table.font.size = px(19)
+  )
+```
+

@@ -20,6 +20,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
+- {{< fa book >}} Rohan Alexander, ["Text as data," chapter 16 in *Telling Stories with Data*](https://tellingstorieswithdata.com/16-text.html)
 - {{< fa book >}} Look through some of the chapters in [*Tidy Text Mining*](https://www.tidytextmining.com/) [@SilgeRobinson:2017] (but *definitely* don't read them all! You just need to get a taste of what modern text analysis looks like.)
 - A bunch of (really) short things:
     - {{< fa arrow-up-right-from-square >}} Evangeline Reynolds, ["Federalist Papers"](https://evangelinereynolds.netlify.app/post/federalist-papers/)
