@@ -92,7 +92,7 @@ To fix it, either change it to `eval=TRUE` or just remove that option (it's true
 
 This nearly always happens because of missing values. Let's make a quick little dataset to illustrate what's going on (and how to fix it):
 
-```{r make-example-na-data}
+```{r make-example-na-data, warning=FALSE, message=FALSE}
 library(tidyverse)
 
 example <- tibble(

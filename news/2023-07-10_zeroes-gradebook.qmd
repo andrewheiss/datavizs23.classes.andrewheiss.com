@@ -1,0 +1,13 @@
+---
+title: "Zeroes in the gradebook"
+date: "2023-07-10T16:30"
+categories: [course details]
+---
+
+Hi everyone!
+
+One quick note about your grades on iCollege. A few of you have noticed that you now have 0s for assignments that you haven’t turned in yet. Don’t worry! I just had iCollege update all the missing grades to 0 for the sake of more accurate grade calculation. Before today, if you checked your grades on iCollege, you’d be failing even if you turned in everything and got 100% on everything. That’s because the denominator was 650 points—the total number of points you can get this semester. But that’s inaccurate—you haven’t even gotten to the second mini project, later exercises, or the final project, so there’s no use including those in the denominator for now.
+
+So now you should be able to see what your current grade is with the correct denominator (i.e. the points for everything from the beginning of the summer up to exercise 8, which is 235 points), meaning the percentages you see are more accurate.
+
+If you have a 0, don’t worry! Once you turn in past exercises the 0 will get replaced with the actual score. **My not-caring-about-late-work policy still stands.** The 0 is just a mathematical quirk to get iCollege to cooperate.

@@ -75,7 +75,7 @@ The only requirement is that you find an appropriate shapefile (states, counties
 ::: {.callout-tip}
 ### Hint
 
-Basically follow [the code from the example in the section named "Making your own geocoded data"](/example.qmd12-example/#making-your-own-geocoded-data)
+Basically follow [the code from the example in the section named "Making your own geocoded data"](/example/12-example.qmd#making-your-own-geocoded-data)
 :::
 
 

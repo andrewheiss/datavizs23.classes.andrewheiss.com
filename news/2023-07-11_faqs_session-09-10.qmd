@@ -1,0 +1,290 @@
+---
+title: "Sessions 9 and 10 tips and FAQs"
+date: "2023-07-11T23:23"
+categories: [FAQs]
+toc-depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 6 * 0.618, 
+  fig.align = "center", 
+  out.width = "90%",
+  collapse = TRUE
+)
+```
+
+Hi everyone!
+
+I just finished grading your mini projects and exercises 9 and 10 and I’m super happy with how you all are doing and how much you’ve learned so far! Keep up the great work!
+
+I have a few FAQs and tips/tricks/suggestions based exercises 9 and 10. I’ll do a separate post with my most common feedback from mini project 1.
+
+### In my coefficient plot, the coefficient for `per_capita_income` didn’t have error bars around it. Why?
+
+(Technically this was from session 7, but I got a lot of questions about it after I posted the FAQs for sessions 7 and 8, so here it is.)
+
+In [exercise 7](/assignment/07-exercise.qmd) you created a coefficient plot for a regression model predicting Democratic vote share in the 2016 presidential election based on a bunch of county-level characteristics:
+
+```{r load-data-fake, eval=FALSE}
+library(tidyverse)
+results_2016 <- read_csv("https://datavizs23.classes.andrewheiss.com/files/data/external_data/results_2016.csv")
+```
+
+```{r load-data-real, include=FALSE, message=FALSE}
+library(tidyverse)
+results_2016 <- read_csv(here::here("files", "data", "external_data", "results_2016.csv"))
+```
+
+```{r model-original}
+library(broom)
+
+model <- lm(percent_dem ~ median_age + percent_white + 
+              per_capita_income + median_rent + state,
+            data = results_2016)
+
+results <- tidy(model, conf.int = TRUE) %>% 
+  filter(!str_detect(term, "state"))
+
+results
+```
+
+The point ranges in the plot show the coefficient and the confidence interval around the coefficient. Median rent and per capita income here are just dots, though. Did something go wrong? Why is there no confidence interval?
+
+```{r plot-model-original}
+ggplot(filter(results, term != "(Intercept)"), 
+       aes(x = estimate, y = term)) +
+  geom_pointrange(aes(xmin = conf.low, xmax = conf.high))
+```
+
+There is a confidence interval, it’s just really tiny! That’s because of how these variables are measured in the data. Each county has a dollar amount recorded for rent and income:
+
+```{r show-big-columns}
+results_2016 %>% 
+  select(state, county, per_capita_income, median_rent)
+```
+
+
+When looking at the regression coefficient, we interpret then using single dollars. We’d say something like “A \$1 increase in per capita income is associated with a 0.00027 percentage point increase in Democratic vote share, on average.”
+
+Talking about \$1 changes, though, is weird because that kind of change in income really isn’t detectable. That’d be like looking at what happens to voting patterns if income in a county goes from \$30,000 to \$30,001 or \$65,000 to \$65,001. Nothing’s going to happen to voting patterns! If the original democratic vote share was 60%, a \$1 increase in income would increase that by 0.00027 percentage points to 60.00027%. 
+
+To make that coefficient more interpretable we can scale down the income column and think of it as hundreds or thousands of dollars instead. We can do that by making a new column in the data…
+
+```{r adjust-big-income}
+results_2016 <- results_2016 %>% 
+  mutate(per_capita_income_1000 = per_capita_income / 1000)
+
+results_2016 %>% 
+  select(state, county, per_capita_income_1000, per_capita_income)
+```
+
+…and then using that new `per_capita_income_1000` in the model instead:
+
+```{r model-new}
+model <- lm(percent_dem ~ median_age + percent_white + 
+              per_capita_income_1000 + median_rent + state,
+            data = results_2016)
+
+results <- tidy(model, conf.int = TRUE) %>% 
+  filter(!str_detect(term, "state"))
+
+results
+```
+
+Now the coefficient is bigger and we have a more visible confidence interval:
+
+```{r plot-model-new}
+ggplot(filter(results, term != "(Intercept)"), 
+       aes(x = estimate, y = term)) +
+  geom_pointrange(aes(xmin = conf.low, xmax = conf.high))
+```
+
+Now we can say something like “A $1,000 increase in per capita income is associated with a 0.27 percentage point increase in Democratic vote share, on average" (or going from something like 60% to 60.27%)
+
+
+### The importance of layer order
+
+So far this semester, most of your plots have involved one or two `geom_*` layers. At one point in some video (I think), I mentioned that layer order doesn’t matter with ggplot. These two chunks of code create identical plots:
+
+```r
+ggplot(...) +
+  geom_point(...) +
+  theme_minimal(...) +
+  scale_fill_viridis_c(...) +
+  facet_wrap(...) +
+  labs(...)
+
+ggplot(...) +
+  geom_point(...) +
+  labs(...) +
+  theme_minimal(...) +
+  facet_wrap(...) +
+  scale_fill_viridis_c(...)
+```
+
+All those functions can happen in whatever order you want, **with one exception**. The order of the geom layers matters. The first geom layer you specify will be plotted first, the second will go on top of it, and so on.
+
+Let’s say you want to have a violin plot with jittered points on top. If you put `geom_point()` first, the points will be hidden by the violins:
+
+```{r plot-violin-top}
+library(palmerpenguins)
+penguins <- penguins %>% drop_na(sex)
+
+ggplot(penguins, aes(x = species, y = body_mass_g)) +
+  geom_point(position = position_jitter(seed = 1234), size = 0.5) +
+  geom_violin(aes(fill = species))
+```
+
+To fix it, make sure `geom_violin()` comes first:
+
+```{r plot-violin-bottom}
+ggplot(penguins, aes(x = species, y = body_mass_g)) +
+  geom_violin(aes(fill = species)) +
+  geom_point(position = position_jitter(seed = 1234), size = 0.5)
+```
+
+You saw this back in exercise 7 too when you plotted the predicted values of your regression model with `geom_line()` and a confidence interval with `geom_ribbon()`. If you put the line first, then the ribbon, the ribbon covers up the line—here that line should be bright red, but the grey of the ribbon makes it darker:
+
+```{r plot-ribbon-top}
+library(marginaleffects)
+
+my_predictions <- predictions(
+  model,
+  newdata = datagrid(median_age = seq(21, 60, by = 1),
+                     state = "Georgia"))
+
+ggplot(my_predictions, aes(x = median_age, y = estimate)) +
+  geom_line(linewidth = 1, color = "red") +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.5)
+```
+
+If you put the ribbon first and then the line, the line is the correct shade of red:
+
+```{r plot-ribbon-bottom}
+ggplot(my_predictions, aes(x = median_age, y = estimate)) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.5) +
+  geom_line(linewidth = 1, color = "red")
+```
+
+This layer order applies to annotation layers too. If you want to highlight an area of the plot (or highlight a recession, like in session 11), adding a rectangle after the geom layers will cover things up, like this ugly yellow rectangle here:
+
+```{r plot-rect-top}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  annotate(geom = "rect", xmin = 40, xmax = 60, ymin = 5000, ymax = 6100,
+           fill = "yellow", alpha = 0.75)
+```
+
+To fix that, put that `annotate()` layer first, then add other geoms on top:
+
+```{r plot-rect-bottom}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  annotate(geom = "rect", xmin = 40, xmax = 60, ymin = 5000, ymax = 6100,
+           fill = "yellow", alpha = 0.75) +
+  geom_point()
+```
+
+This doesn’t mean *all* `annotate()` layers should come first—if you want an extra label on top of a geom, make sure it comes after:
+
+```{r plot-rect-bottom-label-top}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  # Yellow rectangle behind everything
+  annotate(geom = "rect", xmin = 40, xmax = 60, ymin = 5000, ymax = 6100,
+           fill = "yellow", alpha = 0.75) +
+  # Points
+  geom_point() +
+  # Label on top of the points and the rectangle
+  annotate(geom = "label", x = 50, y = 5500, label = "chonky birds")
+```
+
+::: {.callout-tip}
+### My personal preferred general layer order
+
+When I make my plots, I try to keep my layers in logical groups. I'll do my geoms and annotations first, then scale adjustments, then guide adjustments, then labels, then facets (if any), and end with theme adjustments, like this:
+
+```{r example-ordering, warning=FALSE, message=FALSE}
+library(scales)
+
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  # Annotations and geoms
+  annotate(geom = "rect", xmin = 40, xmax = 60, ymin = 5000, ymax = 6100,
+           fill = "yellow", alpha = 0.75) +
+  geom_point() +
+  annotate(geom = "label", x = 50, y = 5500, label = "chonky birds") +
+  # Scale adjustments
+  scale_x_continuous(labels = label_comma(scale_cut = cut_si("mm"))) +
+  scale_y_continuous(labels = label_comma(scale_cut = cut_si("g"))) +
+  scale_color_viridis_d(option = "plasma", end = 0.6) +
+  # Guide adjustments
+  guides(color = guide_legend(title.position = "left")) +
+  # Labels
+  labs(x = "Bill length", y = "Body mass", color = "Species:",
+       title = "Some title", subtitle = "Penguins!", caption = "Blah") +
+  # Facets
+  facet_wrap(vars(sex)) +
+  # Theme stuff
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = rel(1.4)),
+        plot.caption = element_text(color = "grey50", hjust = 0),
+        axis.title.x = element_text(hjust = 0),
+        axis.title.y = element_text(hjust = 1),
+        strip.text = element_text(hjust = 0, face = "bold"),
+        legend.position = "bottom",
+        legend.justification = c(-0.04, 0),
+        legend.title = element_text(size = rel(0.9)))
+```
+
+This is totally arbitrary though! All that really matters is that the geoms and annotations are in the right order and that any theme adjustments you make with `theme()` come after a more general theme like `theme_grey()` or `theme_minimal()`, etc.. I'd recommend you figure out your own preferred style and try to stay consistent—it'll make your life easier and more predictable.
+:::
+
+
+### My plot didn’t translate perfectly to ggplotly—why?
+
+In session 10 you used `ggplotly()` to convert a ggplot object into an interactive plot, which I think is magical:
+
+```{r basic-plotly, warning=FALSE, message=FALSE}
+library(plotly)
+
+basic_plot <- ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point()
+
+ggplotly(basic_plot)
+```
+
+\ 
+
+However, lots of you discovered that Plotly does not translate everything perfectly. Plotly is a separate Javascript library and it doesn’t support every option ggplot does. `ggplotly()` tries its best to translate between R and Javascript, but it can’t get everything. For instance, subtitles, captions, and labels disappear:
+
+```{r fancy-plotly-stuff-missing, warning=FALSE}
+fancy_plot <- ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  annotate(geom = "label", x = 50, y = 5500, label = "chonky birds") +
+  labs(title = "Penguin bill length and weight",
+       subtitle = "Neato", 
+       caption = "Here's a caption")
+
+ggplotly(fancy_plot)
+```
+
+\ 
+
+That’s just a limitation with ggplot and plotly. If you want a perfect translation, you’ll need to hack into the guts of the translated Javascript and HTML and edit it manually to add those things.
+
+Alternatively, you can check out other interactive plot packages. [{ggiraph}](https://davidgohel.github.io/ggiraph/) makes really great and customizable interactive plots (and it supports things liek subtitles and captions and labels and other annotations ggplotly can't), but with slightly different syntax:
+
+```{r ggiraph-thing}
+library(ggiraph)
+
+plot_thing <- ggplot(data = penguins) +
+  geom_point_interactive(aes(x = bill_length_mm, y = body_mass_g, color = species,
+                             tooltip = species, data_id = species)) +
+  annotate(geom = "label", x = 50, y = 5500, label = "chonky birds") +
+  labs(title = "Penguin bill length and weight",
+       subtitle = "Neato", 
+       caption = "Here's a caption")
+
+girafe(ggobj = plot_thing)
+```
+
