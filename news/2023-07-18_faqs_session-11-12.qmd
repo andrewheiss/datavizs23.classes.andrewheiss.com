@@ -1,0 +1,310 @@
+---
+title: "Sessions 11 and 12 tips and FAQs"
+date: "2023-07-18T10:55"
+categories: [FAQs]
+toc-depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 6 * 0.618, 
+  fig.align = "center", 
+  out.width = "90%",
+  collapse = TRUE
+)
+```
+
+Hi everyone!
+
+Just a few quick tips from the past couple sessions:
+
+
+### Can I use `geom_label_repel()` with maps?
+
+You learned about the {ggrepel} package in [session 9](/example/09-example.qmd), with its `geom_text_repel()` and `geom_label_repel()` functions that make sure none of your labels overlap:
+
+```{r libraries-data, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(sf)
+library(ggrepel)
+
+small_mpg <- mpg %>% 
+  # Only use the first 10 rows
+  slice(1:10) %>% 
+  # Make a label column
+  mutate(fancy_label = paste0(manufacturer, " ", model, " (", year, ")"))
+
+ggplot(small_mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  geom_label_repel(aes(label = fancy_label), seed = 1234)
+```
+
+In [session 12](/example/12-example.html), you learned about `geom_sf_text()` and `geom_sf_label()` for adding text and labels to maps. 
+But what if your map labels overlap, like this?
+
+```{r counties-fake, eval=FALSE}
+# Download cb_2022_us_county_5m.zip under "County" from
+# https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html
+ga_counties <- read_sf("data/cb_2022_us_county_5m/cb_2022_us_county_5m.shp") %>% 
+  filter(STATEFP == 13)
+```
+
+```{r counties-real, include=FALSE}
+ga_counties <- read_sf(here::here("files", "data", "external_data", "maps",
+                                  "cb_2022_us_county_5m",
+                                  "cb_2022_us_county_5m.shp")) %>% 
+  filter(STATEFP == 13)
+```
+
+```{r ga-places-label-overlap, warning=FALSE}
+ga_places <- tribble(
+  ~city, ~lat, ~long,
+  "Atlanta", 33.748955, -84.388099,
+  "Alpharetta", 34.075318, -84.294105,
+  "Duluth", 34.002262, -84.143614
+) %>% 
+  st_as_sf(coords = c("long", "lat"), crs = st_crs("EPSG:4326"))
+
+ggplot() +
+  geom_sf(data = ga_counties, linewidth = 0.1) +
+  geom_sf(data = ga_places) +
+  geom_sf_label(data = ga_places, aes(label = city)) +
+  theme_void()
+```
+
+Unfortunately there's no such thing as `geom_sf_label_repel()`. BUT there's still a way to use `geom_label_repel()` and `geom_text_repel()` with maps, with a couple little tweaks:
+
+1. You have to map the `geometry` column in the data to the `geometry` aesthetic in `geom_text/label_repel()`
+2. You have to tell `geom_text/label_repel()` to use the "sf_coordinates" stat so that it uses the latitude and longitude coordinates for x/y
+
+```{r ga-places-label-fixed, warning=FALSE}
+ggplot() +
+  geom_sf(data = ga_counties, linewidth = 0.1) +
+  geom_sf(data = ga_places) +
+  geom_label_repel(
+    data = ga_places,
+    aes(label = city, geometry = geometry),
+    stat = "sf_coordinates", seed = 1234
+  ) +
+  theme_void()
+```
+
+
+### I tried to make a map and countries are missing—why?
+
+Many of you were brave and made a map of refugee counts for mini project 2. That's fantastic!
+
+If you did, you likely ran into an issue with plotting the countries and getting an incomplete map. Here's an example with our beloved gapminder data.
+
+```{r load-gapminder-map-data-fake, eval=FALSE}
+library(countrycode)  # For dealing with country names, abbreviations, and codes
+library(gapminder)    # Global health and wealth
+
+# Add an ISO country code column to gapminder for joining
+gapminder_clean <- gapminder %>% 
+  mutate(ISO_A3 = countrycode(country, "country.name", "iso3c"))
+
+# Load the world map data from exercise 12
+# Download "Admin 0 – Countries" from
+# https://www.naturalearthdata.com/downloads/110m-cultural-vectors/
+world_map <- read_sf("data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp") %>% 
+  filter(ISO_A3 != "ATA") %>%  # Bye penguins
+  mutate(ISO3 = ADM0_A3)  # Use ADM0_A3 as the main country code column
+```
+
+```{r load-gapminder-map-real, include=FALSE}
+library(countrycode)
+library(gapminder)
+
+gapminder_clean <- gapminder %>% 
+  mutate(ISO3 = countrycode(country, "country.name", "iso3c"))
+
+world_map <- read_sf(here::here("files", "data", "external_data", "maps",
+                                "ne_110m_admin_0_countries", 
+                                "ne_110m_admin_0_countries.shp")) %>% 
+  filter(ISO_A3 != "ATA") %>% 
+  mutate(ISO3 = ADM0_A3)
+```
+
+Let's take just 2007 from gapminder and map life expectancy. To do this we'll need to combine or join the two datasets. One logical way to do this would be to take gapminder, join the world map data to it, and then plot it:
+
+```{r gapminder-2007-error, error=TRUE}
+gapminder_with_map <- gapminder_clean %>% 
+  filter(year == 2007) %>% 
+  left_join(world_map, by = join_by(ISO3))
+
+ggplot() +
+  geom_sf(data = gapminder_with_map, aes(fill = lifeExp))
+```
+
+oh no there's an error! When we joined the map data, the special attributes of the `geometry` column in `world_map` got lost. The column is still there, but it won't automatically plot with `geom_sf()`. We can fix that by specifying that the column named "geometry" does indeed contain all the geographic data with `st_set_geometry()`:
+
+```{r gapminder-2007-missing}
+gapminder_with_map <- gapminder_clean %>% 
+  filter(year == 2007) %>% 
+  left_join(world_map, by = join_by(ISO3)) %>% 
+  # Fix the geometry column
+  st_set_geometry("geometry")
+
+ggplot() +
+  geom_sf(data = gapminder_with_map, aes(fill = lifeExp)) +
+  theme_void()
+```
+
+We have a… map? It's missing a bunch of countries (Russia is the most glaringly obvious hole!). That's because those countries aren't in gapminder, so their corresponding maps didn't come over when using `left_join()`. We can confirm by counting rows. The original map data has maps for 176 countries. Gapminder has 142 countries in 2007. The combined `gapminder_with_map` dataset only has 142 rows—we're not plotting 34 countries, since they're not in gapminder.
+
+```{r count-rows}
+nrow(world_map)
+nrow(gapminder_clean %>% filter(year == 2007))
+nrow(gapminder_with_map)
+```
+
+One quick and easy way to fix this is to use two `geom_sf()` layers: one with the whole world and one with the partial gapminder-only map:
+
+```{r two-geom-sf-layers}
+ggplot() +
+  geom_sf(data = world_map) +
+  geom_sf(data = gapminder_with_map, aes(fill = lifeExp)) +
+  theme_void()
+```
+
+The *better* way to fix this is to join the two datasets in a different order—start with the full map data and then add gapminder to it. This maintains the specialness of the geometry column and keeps all the original rows in `world_map`. For countries that are in the map data but not in gapminder, they'll still be in the final `map_with_gapminder` data, but they'll have NA for life expectancy:
+
+```{r gapminder-2007-good}
+map_with_gapminder <- world_map %>% 
+  left_join(filter(gapminder_clean, year == 2007), by = join_by(ISO3))
+
+ggplot() +
+  geom_sf(data = map_with_gapminder, aes(fill = lifeExp)) +
+  theme_void() +
+  # Make the countries with missing data a different color
+  scale_fill_gradient(na.value = "grey90")
+```
+
+What if we want to facet though? This is just one year—what if we want to show panels for multiple years? This gets a little tricky. The gapminder data has rows for different country/year combinations (Afghanistan 1952, Afghanistan 1957, Albania 1952, etc.), but the world map data only has rows for countries. If we join the gapminder data to the world map data and gapminder has multiple rows for years, there's no clear place for the gapminder rows to connect with the world map rows. R will try to make it work and repeat world_map rows for each of the repeated years, but it can be unpredictable.
+
+The best approach I've found for doing this is to create what I call a "skeleton" data frame that has all the possible combinations of (1) unique countries in the map data and (2) unique years in gapminder (or the refugee data if you're using that). The `expand_grid()` function does this automatically. Like, look what happens if we tell it to make rows for every combination of A, B, C and 1, 2, 3—we get A1, A2, A3, B1, B2, and so on:
+
+```{r expand-grid-example}
+expand_grid(column_1 = c("A", "B", "C"),
+            column_2 = c(1, 2, 3))
+```
+
+We'll make a similar skeleton with all the countries in the map and all the years we care about in gapminder. We'll just show two panels—1952 and 2007—so we'll make a little filtered dataset first. Then we'll use `expand_grid()` to make a dataset with all those combinations: Afghanistan 1952, Afghanistan 2007, Albania 1952, Albania 2007, and so on:
+
+```{r create-initial-skeleton}
+gapminder_smaller <- gapminder_clean %>%
+  filter(year %in% c(1952, 2007))
+
+skeleton <- expand_grid(ISO3 = unique(world_map$ISO3),
+                        year = unique(gapminder_smaller$year))
+skeleton
+```
+
+Neat, that works. There's Fiji in 1952 and 2007, Tanzania in 1952 and 2007, and so on. Those are all the possible countries in `world_map` with all the possible years in `gapminder_smaller`.
+
+Next we can join in the gapminder data for each country and year, and join in the map data for each country. Notice how it has the same number of rows as `skeleton` (352). If a country doesn't have gapminder data (like Fiji here), it gets an NA for `lifeExp` and `pop` and `gdpPercap`. But it still has map data for both 1952 and 2007, so it'll show up in a plot.
+
+```{r make-full-gapminder-data}
+full_gapminder_map <- skeleton %>% 
+  left_join(gapminder_smaller, by = join_by(ISO3, year)) %>%
+  left_join(world_map, by = join_by(ISO3)) %>% 
+  # The geometry column lost its magic powers after joining, so add it back
+  st_set_geometry("geometry")
+full_gapminder_map
+```
+
+Now we can plot it and we'll have consistent countries in each panel:
+
+```{r gapminder-map-fixed}
+ggplot() +
+  geom_sf(data = full_gapminder_map, aes(fill = lifeExp)) +
+  facet_wrap(vars(year), ncol = 1) +
+  scale_fill_gradient(na.value = "grey90") +
+  theme_void()
+```
+
+Perfect!
+
+
+### Saving data that takes a long time to make
+
+In these later sessions, I've had you do things with data from different places on the internet. In [session 13](/example/13-example.qmd) you'll grab books from Project Gutenberg. Some of you used [`osrmRoute()`](https://www.andrewheiss.com/blog/2023/06/01/geocoding-routing-openstreetmap-r/#routing) in exercise 12 to create a mapped route between cities. Some of you used [{tidygeocoder}](/example/12-example.qmd#automatic-geocoding-by-address) to geocode addresses in exercise 12. In past sessions you've used `WDI()` to download data from the World Bank.
+
+When you knit a document, R starts with a brand new empty session without any packages or data loaded, and then it runs all your chunks to load packages, load data, and run all your other code. If you have code that grabs data from the internet, **it will run every time you knit your document**. [Remember my suggestion to knit often](/news/2023-07-12_cleaner-nicer-rmd-output.qmd#knit-often)? You'll re-download the data, re-create routes, re-geocode addresses, and so on every time you keep re-knitting. This is excessive, slow, and—most especially—bad R etiquette. You don't want to keep accessing those servers and recalculate things and redownload things you don't need to update. 
+
+BUT at the same time, you should care about reproducibility. You want others—and future you—to be able to run your code and create the same plots and tables and get the same data. But you don't want to do all that excessively and impolitely.
+
+The solution is to be a little tricky with your R Markdown file. If you have code that needs to grab something from the internet, put it in a chunk that doesn't run—use `eval=FALSE` in its chunk options. Then, in an invisible chunk (with `include=FALSE`) load the pre-downloaded data manually. I showed this in [example 8](/example/08-example.qmd#load-and-clean-data) (with {WDI}) and [example 11](/example/11-example.qmd#get-data) (with {tidyquant}) and [example 13](/example/13-example.qmd#get-data) (with {gutenberger})
+
+Here's a quick basic example with Project Gutenberg book data. There are two chunks: `get-book-fake` and `load-book-real`: 
+
+````markdown
+```{{r get-book-fake, eval=FALSE}}
+little_women_raw <- gutenberg_download(514, meta_fields = "title")
+```
+
+```{{r load-book-data-real, include=FALSE}}
+little_women_file <- "data/little_women_raw.csv"
+
+if (file.exists(little_women_file)) {
+  little_women_raw <- read_csv(little_women_file)
+} else {
+  little_women_raw <- gutenberg_download(514, meta_fields = "title")
+  
+  write_csv(little_women_raw, little_women_file)
+}
+```
+````
+
+1. The first chunk (`get-book-fake`) contains the code for downloading data with `gutenberg_download()`. It will appear in the document, but **it will not run** since it has `eval=FALSE` on. It will not try to grab anything from the internet. If someone were to follow along with the code in your document, they could run that code and get the book (good!), and it won't run repeatedly on your end (also good!).
+2. The second chunk (`load-book-data-real`) does a neat little trick. It first checks to see if a CSV file named `data/little_women_raw.csv` exists. If it does, it'll just load it with `read_csv()`. If it doesn't, it'll grab data from the internet with `gutenberg_download()` and then it will save that as `data/little_women_raw.csv`. This is really neat stuff. If you're knitting your document for the first time, you won't have the Little Women data yet, so the code will connect to Project Gutenberg and get it. The code will then save that data to your computer as a CSV file. The next time you knit, R won't need to connect to the internet again—it'll load the CSV file instead of grabbing it from Project Gutenberg. You can knit as many times as you want—you won't need to reconnect to any remote servers again.
+
+Again, the general pattern for this is to create two chunks: (1) a fake one that people will see in the document but won't run, and (2) a real one that will run and load data locally if it exists, but that people won't see. 
+
+::: {.callout-note}
+#### How should you save your intermediate data?
+
+In the example above, I saved the Little Women data from Project Gutenberg as a CSV file. This is fine—a CSV file is plain text, so it can store any kind of text-based data like numbers and text without any problems.
+
+But sometimes you'll work with slightly more complex types of data. For instance, with geographic data, the magical `geometry` column contains a whole host of extra metadata, like projection details and multiple points (if it's something like country boundaries). If you save a data frame with a `geometry` column as a CSV file you'll lose all that data—CSVs can't store that extra nested metadata. 
+
+Similarly, if you have a factor or categorical variable (i.e. something like "Strongly disagree", "Disagree", "Agree", "Strongly agree"), behind the scenes R stores those as numbers (i.e. 1, 2, 3, 4) with labels attached to the numbers (1 = "Strongly disagree", 2 = "Disagree", etc.). If you save a data frame with a categorical column like that as a CSV, by default R will only store the numbers and you'll lose the labels. You *could* convert the categorical column to text before saving as CSV and then the text labels would get stored, but if the variable is ordered (i.e. "Strongly disagree" is lower than "disagree", etc.), you'll lose that ordering when saving as CSV.
+
+The safest way to save intermediate files like this is to actually not use CSV, but instead use a special kind of file called .rds, which lets you take an entire object from your Environment panel and save it as a file. The .rds file will keep all the extra metadata and attributes (i.e. the projection details and nested points inside a `geometry` column; factor labels and ordering for categorical variables, and so on).
+
+So instead of saving that Little Women book as a CSV file, the better approach is to use `saveRDS()` and `readRDS()` to store it and load it as an .rds file, like this:
+
+````markdown
+```{{r get-book-fake, eval=FALSE}}
+little_women_raw <- gutenberg_download(514, meta_fields = "title")
+```
+
+```{{r load-book-data-real, include=FALSE}}
+little_women_file <- "data/little_women_raw.rds"
+
+if (file.exists(little_women_file)) {
+  little_women_raw <- readRDS(little_women_file)
+} else {
+  little_women_raw <- gutenberg_download(514, meta_fields = "title")
+  
+  saveRDS(little_women_raw, little_women_file)
+}
+```
+````
+:::
+
+::: {.callout-tip}
+#### The fancy pro version of all this
+
+If you want to be super cool, check out [the {targets} package](https://books.ropensci.org/targets/), which is like the professional version of this approach to caching data. {targets} lets you keep track of all your different objects and it will only re-run stuff if absolutely necessary. 
+
+For instance, imagine that in a document you load data, clean it, and plot it. Standard stuff. There's a linear relationship between all this—the raw data leads to the clean data, which leads to a plot. If you change code in your plot, the data cleaning and loading code didn't change, so there's no real reason to need to re-run it. If you change your data cleaning code, your downstream plot will be affected and its code would need to be re-run.
+
+{targets} keeps track of all these dependencies and re-runs code only when there are upstream changes. It's great for plots and models that take a long time to run, or for grabbing data from the internet.
+
+The best way to learn {targets} is to play with [their short little walkthrough tutorial here](https://books.ropensci.org/targets/walkthrough.html), which has you make a simple document that loads data, builds a regression model, and makes a plot.
+
+I use {targets} for all my projects ([including this course website!](https://github.com/andrewheiss/datavizs23.classes.andrewheiss.com#targets-pipeline)) and it makes life a ton easier for any kind of project that involves more than one .Rmd file or R script ([see this for an example](https://stats.andrewheiss.com/mountainous-mackerel/analysis/targets.html)). I *highly* recommend checking it out.
+:::
