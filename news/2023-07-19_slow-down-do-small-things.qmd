@@ -1,0 +1,125 @@
+---
+title: "Slow down, simplify and do small things"
+date: "2023-07-19T12:33"
+categories: [advice]
+toc-depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 6 * 0.618, 
+  fig.align = "center", 
+  out.width = "90%",
+  collapse = TRUE
+)
+```
+
+Hi everyone!
+
+As we're nearing the end of the course, your plots and data manipulation are becoming way more detailed and complex, which is good! Remember exercise 1, so long ago? All you had to do was this:
+
+```{r basic-example, eval=FALSE}
+library(tidyverse)
+
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point()
+```
+
+That's all! Literally 3 lines of code.
+
+But now with interactivity, maps, text analysis, your mini projects, your final project, and so on, your code is getting longer and more complex. You'll have lots and lots of ggplot layers and functions chained together with `%>%`. You've learned so much!
+
+It is *incredibly* tempting to write out all the code you want in one go and then try to run a complete chunk and hope that you got it all correct. And then when it's not correct, you try to change a bunch of things, hoping that they'll fix it and then they don't and you stay stuck and frustrated.
+
+Over the weekend while helping you all on Slack and e-mail, this was a very common sight! You'd have a chunk of code that was 20–30 lines with an error somewhere and couldn't find what went wrong or what was broken.
+
+**Don't do this!**
+
+Here's my best piece of advice for making more complex plots and for figuring out how to fix errors:
+
+> **Slow down, simplify, and do small things**
+
+Run your code incrementally (see [this past post here](/news/2023-07-05_messy-broken-code-tips.html) for some video examples about how to run stuff incrementally.). Start with a super basic plot and run it, then add a layer for labels and run it, then add a layer to change the fill gradient and run it, then add a layer to change the theme and run it, and so on. It feels slow, but it helps you understand what's going on and helps you fix things when they break.
+
+This is not just my advice. [Julia Evans's](https://jvns.ca/) fantastic [*The Pocket Guide to Debugging*](https://wizardzines.com/zines/debugging-guide/) has the same piece of advice:
+
+![Page 39 from Julia Evans's *The Pocket Guide to Debugging*](img/pocket-debugging.png)
+
+When something doesn't work as expected, change just one thing at a time. Or even better, simplify it and then change one thing at a time.
+
+Here's a quick common example. Let's say you have a plot like this and you want to use the [plasma viridis scale](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#the-color-scales) for the colors of the points. It looks like it should work, but the colors aren't right! Those are just the default colors!
+
+```{r example-broken, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  labs(x = "Displacement",
+       y = "Highway MPG",
+       color = "Drive") +
+  scale_fill_viridis_d(option = "plasma", end = 0.9) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+Here's the process I would go through to figure out what's wrong and fix it:
+
+::: {.panel-tabset .nav-pills}
+### 1. Strip it down to a basic plot
+
+Right now there are a bunch of other layers (themes, labels, etc.). Maybe one of those is messing stuff up? We want to make sure the underlying plot works fine, so we'll strip down the plot to its simplest form—just the geoms
+
+```{r step-1, warning=FALSE, message=FALSE}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point()
+```
+
+### 2. Add simplified broken part
+
+Good, that works. Next we want to change the colors so that they use the viridis plasma palette. We used `scale_fill_viridis_d()` originally, but we also included a bunch of extra options (`option = "plamsa", end = 0.9`). Before using those, let's simplify it down and just use the default settings:
+
+```{r step-2}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  scale_fill_viridis_d()
+```
+
+### 3. Figure out broken part
+
+The colors still didn't change. But now we have a simplified working example of our broken code and we can examine it without worrying about the labels, themes, extra options, and all those other things. This should make it easier to see what's going on.
+
+The issue here is that we used the color aesthetic (`color = drv`) and we're trying to change it with `scale_fill_*()`. That lets us control filled things (i.e. `fill = drv`). Since we're working with the color aesthetic, we need to use `scale_color_*()`. Let's try `scale_color_viridis_d()` and see if that fixes it:
+
+```{r step-3}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  scale_color_viridis_d()
+```
+
+### 4. Add some parts back in
+
+That fixed it! It's still not exactly what we wanted yet—we want the plasma palette and `end = 0.9`—but it's working now and we can add that back in: 
+
+```{r step-4}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  scale_color_viridis_d(option = "plasma", end = 0.9)
+```
+
+### 5. Add the rest back in
+
+Cool, the palette changed and the other settings worked. The problem seems to be fixed now, so we can re-add all those other layers from the original plot. It's fixed!
+
+```{r step-5}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  labs(x = "Displacement",
+       y = "Highway MPG",
+       color = "Drive") +
+  scale_color_viridis_d(option = "plasma", end = 0.9) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+:::
