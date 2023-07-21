@@ -1,0 +1,16 @@
+---
+title: "Final deadlines for things"
+date: "2023-07-21T09:48"
+categories: [course details]
+---
+
+Hi everyone!
+
+Remember [from the syllabus](/syllabus.qmd#late-work) that there aren't really any official deadlines:
+
+> With the exception of the mini projects and the final project, **there’s no penalty for late work**. There’s no such thing as late work. I would **highly recommend** staying caught up as much as possible, but if you need to turn something in late, that’s fine—there’s **no penalty**. I might not be able to give you good feedback if you turn something in late, but that’s really the only practical penalty—there’s no harm to your grade.
+
+**Two deadlines do matter though:**
+
+1. Everything except the final project needs to be turned in by **11:59 PM on Wednesday, July 26** (that's the day after the last day of classes)
+2. The final project has to be submitted by **11:59 PM on Sunday, July 30** (I have to submit grades shortly thereafter)
