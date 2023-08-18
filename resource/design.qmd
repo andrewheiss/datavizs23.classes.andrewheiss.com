@@ -12,7 +12,7 @@ title: Design
 - [**Adobe Color**](https://color.adobe.com): Create, share, and explore rule-based and custom color palettes.
 - [**ColourLovers**](http://www.colourlovers.com/): Like Facebook for color palettes.
 - [**Coolors**](https://coolors.co/): Generate random palettes that look great.
-- [**viridis**](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): Percetually uniform color scales.
+- [**viridis**](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): Perceptually uniform color scales.
 - [**Scientific Colour-Maps**](http://www.fabiocrameri.ch/colourmaps.php): Perceptually uniform color scales like viridis. Use them in R with [{scico}](https://github.com/thomasp85/scico).
 - [**ColorBrewer**](http://colorbrewer2.org/): Sequential, diverging, and qualitative color palettes that take accessibility into account.
 - [**Paletteer**](https://emilhvitfeldt.github.io/paletteer/): The {paletteer} package for R includes hundreds of different palettes.
